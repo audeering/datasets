@@ -249,6 +249,10 @@ def run():
     df = df.sort_index()
     print('done')
 
+    # Clear existing data cards
+    audeer.rmdir('datasets')
+    audeer.mkdir('datasets')
+
     # Iterate datasets and create data card pages
     names = list(df.index)
     versions = list(df['version'])
