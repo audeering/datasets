@@ -1,7 +1,7 @@
 .. include:: ../README.rst
 
 .. toctree::
-    :caption: Datasets
+    :caption: Overview
     :maxdepth: 2
     :hidden:
     

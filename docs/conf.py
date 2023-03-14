@@ -5,9 +5,9 @@ import docs.datacard
 
 # Project -----------------------------------------------------------------
 project = 'datasets'
-author = 'Hagen Wierstorf'
+author = 'Hagen Wierstorf, Johannes Wagner'
 version = audeer.git_repo_version()
-title = '{} Documentation'.format(project)
+title = project
 
 
 # General -----------------------------------------------------------------
@@ -16,6 +16,8 @@ source_suffix = '.rst'
 exclude_patterns = ['build', 'Thumbs.db', '.DS_Store']
 pygments_style = None
 linkcheck_ignore = [
+    'https://doi.org',
+    'https://github.com/audeering/datasets/emodb.html',
     'https://sphinx-doc.org/',
 ]
 
@@ -25,7 +27,6 @@ html_theme = 'sphinx_audeering_theme'
 html_theme_options = {
     'display_version': True,
     'logo_only': False,
-    # 'wide_pages': ['datasets'],
     'footer_links': False,
 }
 html_context = {
