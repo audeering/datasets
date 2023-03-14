@@ -1,0 +1,7 @@
+build/
+docs/__pycache__/
+docs/build/
+docs/cache/
+docs/datasets.csv
+docs/datasets.rst
+docs/datasets/
