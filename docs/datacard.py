@@ -315,7 +315,6 @@ def create_datacard_page(dataset: Dataset):
         fp.write(f'bit depth     {dataset.bit_depths}\n')
         fp.write(f'duration      {dataset.duration}\n')
         fp.write(f'files         {dataset.files}\n')
-        fp.write(f'archives      {dataset.archives}\n')
         fp.write(f'repository    {dataset.repository_link}\n')
         fp.write(f'published     {dataset.publication}\n')
         fp.write('============= ======================\n')
