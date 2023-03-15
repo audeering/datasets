@@ -22,6 +22,7 @@ linkcheck_ignore = [
     'https://github.com/audeering/datasets/emodb.html',
     'https://sphinx-doc.org/',
     'https://audeering.jfrog.io/artifactory',
+    'http://emodb.bilderbar.info/download/download.zip',
 ]
 
 
