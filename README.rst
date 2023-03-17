@@ -2,16 +2,16 @@
 datasets
 ========
 
-Overview_ of publicly available audb_ datasets.
-For each dataset
-a standardized documentation is provided
-in the form of single data card.
+Overview_ of public datasets
+available with audb_.
+Each dataset is 
+summarized in a data card.
 
-You can easily load all audio files
-and annotations associated with a dataset
-by a single command.
-For example, to load version 1.3.0 of emodb_
-run
+Use the :func:`audb.load`
+command to load the audio files
+and annotations of a dataset.
+The following example
+loads version 1.3.0 of emodb_:
 
 .. code-block:: python
 
