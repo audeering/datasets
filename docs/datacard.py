@@ -494,7 +494,7 @@ def create_datasets_page(datasets: typing.Sequence):
         fp.write('========\n')
         fp.write('\n')
         fp.write('Datasets available with audb_ as of |today|.\n')
-        fp.write('Only the latest version per dataset is shown.\n')
+        fp.write('For each dataset, the latest version is shown.\n')
         fp.write('\n')
         fp.write('.. csv-table::\n')
         fp.write('    :header-rows: 1\n')
