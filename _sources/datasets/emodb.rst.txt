@@ -1,0 +1,67 @@
+.. _emodb:
+
+emodb
+-----
+
+Created by Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter Sendlmeier, Benjamin Weiss
+
+
+============= ======================
+version       `1.3.0 <https://github.com/audeering/emodb/blob/main/CHANGELOG.md>`__
+license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
+source        http://emodb.bilderbar.info/download/download.zip
+usage         unrestricted
+languages     deu
+format        wav
+channel       1
+sampling rate 16000
+bit depth     16
+duration      0 days 00:24:47.092187500
+files         535
+repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/emodb>`__
+published     2022-08-05 by audeering-unittest
+============= ======================
+
+
+Description
+^^^^^^^^^^^
+
+Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research project SE462/3-1 in 1997 and 1999. Recordings took place in the anechoic chamber of the Technical University Berlin, department of Technical Acoustics. It contains about 500 utterances from ten different actors expressing basic six emotions and neutral.
+
+Example
+^^^^^^^
+
+:file:`wav/13b09La.wav`
+
+.. raw:: html
+
+    <p><audio controls src="emodb/wav/13b09La.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. csv-table::
+   :header: ID,Type,Columns
+   :widths: 20, 10, 70
+
+    "emotion", "filewise", "emotion, emotion.confidence"
+    "emotion.categories.test.gold_standard", "filewise", "emotion, emotion.confidence"
+    "emotion.categories.train.gold_standard", "filewise", "emotion, emotion.confidence"
+    "files", "filewise", "duration, speaker, transcription"
+    "speaker", "misc", "age, gender, language"
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+   :header: ID,Dtype,Min,Max,Labels,Mappings
+
+    "age", "int", "", "", ""
+    "confidence", "float", "", "1", ""
+    "duration", "time", "", "", ""
+    "emotion", "str", "", "", "anger, boredom, disgust, fear, happiness, neutral, sadness"
+    "gender", "str", "", "", "female, male"
+    "language", "str", "", "", ""
+    "speaker", "int", "", "", "3, 8, 9, 10, 11, 12, 13, 14, 15, 16", "age, gender, language"
+    "transcription", "str", "", "", "a01, a02, a04, a05, a07, b01, b02, b03, b09, b10", "✓"
