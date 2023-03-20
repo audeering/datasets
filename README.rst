@@ -17,7 +17,7 @@ loads version 1.3.0 of emodb_:
 
     db = audb.load('emodb', version='1.3.0')
 
-compare the `audb quickstart guide`_.
+See also the `audb quickstart guide`_.
 
 
 .. _audb: https://github.com/audeering/audb
