@@ -7,6 +7,12 @@ The format is based on `Keep a Changelog`_,
 and this project adheres to `Semantic Versioning`_.
 
 
+Version 1.0.1 (2023-03-20)
+--------------------------
+
+* Fixed: link to Github pages in README
+
+
 Version 1.0.0 (2023-03-20)
 --------------------------
 
