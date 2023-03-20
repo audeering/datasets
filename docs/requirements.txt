@@ -1,0 +1,3 @@
+audb >=1.4.2
+sphinx
+sphinx-audeering-theme >=1.2.1
