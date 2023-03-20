@@ -18,8 +18,6 @@ pygments_style = None
 linkcheck_ignore = [
     './datasets/emodb.html',
     'https://doi.org',
-    'https://github.com/audeering/datasets.html',
-    'https://github.com/audeering/datasets/emodb.html',
     'https://sphinx-doc.org/',
     'https://audeering.jfrog.io/artifactory',
     'http://emodb.bilderbar.info/download/download.zip',
