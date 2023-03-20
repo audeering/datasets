@@ -7,7 +7,7 @@ available with audb_.
 Each dataset is 
 summarized in a data card.
 
-Use the :func:`audb.load`
+Use the ``audb.load()``
 command to load the audio files
 and annotations of a dataset.
 The following example
