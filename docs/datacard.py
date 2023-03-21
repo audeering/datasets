@@ -3,7 +3,9 @@ import shutil
 import typing
 
 import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 import audb
 import audeer
@@ -49,6 +51,13 @@ class Dataset:
             cache_root=CACHE,
             verbose=False,
         )
+
+        self._durations = [
+            self.deps.duration(file) for file in self.deps.media
+        ]
+        # Store RST code that should be injected
+        # to the actual data card page
+        self._rst = ''
 
         # Clean up cache
         # by removing all other versions of the same dataset
@@ -96,13 +105,70 @@ class Dataset:
             )
         )
 
+    def distribution(
+            self,
+            values: typing.Sequence,
+            unit: str,
+            name: str,
+    ) -> str:
+        r"""String with min, max, and plotted distribution.
+
+        Args:
+            values: sequence of values
+            unit: unit of values
+            name: name for the distribution plot
+                without file extension
+
+        Returns:
+            string containing min, max and plot
+
+        """
+        min_ = np.min(values)
+        max_ = np.max(values)
+        plt.figure(figsize=[.5, .15])
+        # Remove all margins besides bottom
+        plt.subplot(111)
+        plt.subplots_adjust(
+            left=0,
+            bottom=0.25,
+            right=1,
+            top=1,
+            wspace=0,
+            hspace=0,
+        )
+        # Plot duration distribution
+        sns.kdeplot(
+            values,
+            fill=True,
+            cut=0,
+            clip=(min_, max_),
+            linewidth=0,
+            alpha=1,
+            color='#d54239',
+        )
+        # Remove al tiks, labels
+        sns.despine(left=True, bottom=True)
+        plt.tick_params(
+            axis='both',
+            which='both',
+            bottom=False,
+            left=False,
+            labelbottom=False,
+            labelleft=False,
+        )
+        plt.xlabel('')
+        plt.ylabel('')
+        plt.savefig(f'{name}.png', transparent=True)
+        plt.close()
+        self._rst = f'.. |{name}| image:: ../{name}.png\n'
+        return f'{min_:.1f} {unit} |{name}| {max_:.1f} {unit}'
+
     @property
     def duration(self) -> str:
         r"""Total duration of media files in dataset."""
-        durations = [self.deps.duration(file) for file in self.deps.media]
         return str(
             pd.to_timedelta(
-                sum([d for d in durations if d is not None]),
+                sum([d for d in self._durations if d is not None]),
                 unit='s',
             )
         )
@@ -113,17 +179,16 @@ class Dataset:
         # Pick a meaningful duration for the example audio file
         min_dur = 0.5
         max_dur = 300  # 5 min
-        durations = [self.deps.duration(file) for file in self.deps.media]
         selected_duration = np.median(
-            [d for d in durations if d >= min_dur and d <= max_dur]
+            [d for d in self._durations if d >= min_dur and d <= max_dur]
         )
         # Get index for duration closest to selected duration
         # see https://stackoverflow.com/a/9706105
         # durations.index(selected_duration)
         # is an alternative but fails due to rounding errors
         index = min(
-            range(len(durations)),
-            key=lambda n: abs(durations[n] - selected_duration),
+            range(len(self._durations)),
+            key=lambda n: abs(self._durations[n] - selected_duration),
         )
         # Download of example data might fail
         try:
@@ -138,6 +203,11 @@ class Dataset:
         except:  # noqa: E722
             media = ''
         return media
+
+    @property
+    def file_durations(self) -> typing.List:
+        r"""File durations in dataset in seconds."""
+        return self._durations
 
     @property
     def files(self) -> str:
@@ -301,23 +371,33 @@ def create_datacard_page(dataset: Dataset):
             fp.write(f'Created by {db.author}\n')
             fp.write('\n\n')
 
+        # Pre-execute some table entries to prefill _rst
+        files = (
+            f'{dataset.files} files, '
+            f'duration distribution: '
+            f'{dataset.distribution(dataset.file_durations, "s", "durations")}'
+        )
+
+        # Inject additional code
+        fp.write(f'{dataset._rst}\n')
+
         # Overview table
-        fp.write('============= ======================\n')
-        fp.write(f'version       {dataset.version_link}\n')
-        fp.write(f'license       {dataset.license_link}\n')
-        fp.write(f'source        {db.source}\n')
-        fp.write(f'usage         {db.usage}\n')
+        fp.write('=============== ======================\n')
+        fp.write(f'version         {dataset.version_link}\n')
+        fp.write(f'license         {dataset.license_link}\n')
+        fp.write(f'source          {db.source}\n')
+        fp.write(f'usage           {db.usage}\n')
         if db.languages is not None:
-            fp.write(f'languages     {", ".join(db.languages)}\n')
-        fp.write(f'format        {dataset.formats}\n')
-        fp.write(f'channel       {dataset.channels}\n')
-        fp.write(f'sampling rate {dataset.sampling_rates}\n')
-        fp.write(f'bit depth     {dataset.bit_depths}\n')
-        fp.write(f'duration      {dataset.duration}\n')
-        fp.write(f'files         {dataset.files}\n')
-        fp.write(f'repository    {dataset.repository_link}\n')
-        fp.write(f'published     {dataset.publication}\n')
-        fp.write('============= ======================\n')
+            fp.write(f'languages       {", ".join(db.languages)}\n')
+        fp.write(f'format          {dataset.formats}\n')
+        fp.write(f'channel         {dataset.channels}\n')
+        fp.write(f'sampling rate   {dataset.sampling_rates}\n')
+        fp.write(f'bit depth       {dataset.bit_depths}\n')
+        fp.write(f'duration        {dataset.duration}\n')
+        fp.write(f'files           {files}\n')
+        fp.write(f'repository      {dataset.repository_link}\n')
+        fp.write(f'published       {dataset.publication}\n')
+        fp.write('=============== ======================\n')
         fp.write('\n\n')
 
         # Description
