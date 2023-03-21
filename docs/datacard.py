@@ -105,53 +105,26 @@ class Dataset:
             )
         )
 
-    @property
-    def duration(self) -> str:
-        r"""Total duration of media files in dataset."""
-        return str(
-            pd.to_timedelta(
-                sum([d for d in self._durations if d is not None]),
-                unit='s',
-            )
-        )
+    def distribution(
+            self,
+            values: typing.Sequence,
+            unit: str,
+            name: str,
+    ) -> str:
+        r"""String with min, max, and plotted distribution.
 
-    @property
-    def example(self) -> str:
-        r"""Relative path to example media file in dataset."""
-        # Pick a meaningful duration for the example audio file
-        min_dur = 0.5
-        max_dur = 300  # 5 min
-        durations = [self.deps.duration(file) for file in self.deps.media]
-        selected_duration = np.median(
-            [d for d in durations if d >= min_dur and d <= max_dur]
-        )
-        # Get index for duration closest to selected duration
-        # see https://stackoverflow.com/a/9706105
-        # durations.index(selected_duration)
-        # is an alternative but fails due to rounding errors
-        index = min(
-            range(len(durations)),
-            key=lambda n: abs(durations[n] - selected_duration),
-        )
-        # Download of example data might fail
-        try:
-            media = self.deps.media[index]
-            audb.load_media(
-                self.name,
-                media,
-                version=self.version,
-                cache_root=CACHE,
-                verbose=False,
-            )
-        except:  # noqa: E722
-            media = ''
-        return media
+        Args:
+            values: sequence of values
+            unit: unit of values
+            name: name for the distribution plot
+                without file extension
 
-    @property
-    def file_durations(self) -> typing.List:
-        r"""Distribution of file durations in dataset."""
-        min_ = np.min(self._durations)
-        max_ = np.max(self._durations)
+        Returns:
+            string containing min, max and plot
+
+        """
+        min_ = np.min(values)
+        max_ = np.max(values)
         plt.figure(figsize=[.5, .15])
         # Remove all margins besides bottom
         plt.subplot(111)
@@ -165,7 +138,7 @@ class Dataset:
         )
         # Plot duration distribution
         sns.kdeplot(
-            self._durations,
+            values,
             fill=True,
             cut=0,
             clip=(min_, max_),
@@ -185,10 +158,56 @@ class Dataset:
         )
         plt.xlabel('')
         plt.ylabel('')
-        plt.savefig('durations.png', transparent=True)
+        plt.savefig(f'{name}.png', transparent=True)
         plt.close()
-        self._rst = '.. |durations| image:: ../durations.png\n'
-        return f'{min_:.1f} s |durations| {max_:.1f} s'
+        self._rst = f'.. |{name}| image:: ../{name}.png\n'
+        return f'{min_:.1f} {unit} |{name}| {max_:.1f} {unit}'
+
+    @property
+    def duration(self) -> str:
+        r"""Total duration of media files in dataset."""
+        return str(
+            pd.to_timedelta(
+                sum([d for d in self._durations if d is not None]),
+                unit='s',
+            )
+        )
+
+    @property
+    def example(self) -> str:
+        r"""Relative path to example media file in dataset."""
+        # Pick a meaningful duration for the example audio file
+        min_dur = 0.5
+        max_dur = 300  # 5 min
+        selected_duration = np.median(
+            [d for d in self._durations if d >= min_dur and d <= max_dur]
+        )
+        # Get index for duration closest to selected duration
+        # see https://stackoverflow.com/a/9706105
+        # durations.index(selected_duration)
+        # is an alternative but fails due to rounding errors
+        index = min(
+            range(len(self._durations)),
+            key=lambda n: abs(self._durations[n] - selected_duration),
+        )
+        # Download of example data might fail
+        try:
+            media = self.deps.media[index]
+            audb.load_media(
+                self.name,
+                media,
+                version=self.version,
+                cache_root=CACHE,
+                verbose=False,
+            )
+        except:  # noqa: E722
+            media = ''
+        return media
+
+    @property
+    def file_durations(self) -> typing.List:
+        r"""File durations in dataset in seconds."""
+        return self._durations
 
     @property
     def files(self) -> str:
@@ -355,7 +374,8 @@ def create_datacard_page(dataset: Dataset):
         # Pre-execute some table entries to prefill _rst
         files = (
             f'{dataset.files} files, '
-            f'duraton distribution: {dataset.file_durations}'
+            f'duraton distribution: '
+            f'{dataset.distribution(dataset.file_durations, "s", "durations")}'
         )
 
         # Inject additional code
