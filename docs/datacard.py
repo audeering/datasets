@@ -3,7 +3,9 @@ import shutil
 import typing
 
 import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 import audb
 import audeer
@@ -49,6 +51,13 @@ class Dataset:
             cache_root=CACHE,
             verbose=False,
         )
+
+        self._durations = [
+            self.deps.duration(file) for file in self.deps.media
+        ]
+        # Store RST code that should be injected
+        # to the actual data card page
+        self._rst = ''
 
         # Clean up cache
         # by removing all other versions of the same dataset
@@ -99,13 +108,55 @@ class Dataset:
     @property
     def duration(self) -> str:
         r"""Total duration of media files in dataset."""
-        durations = [self.deps.duration(file) for file in self.deps.media]
         return str(
             pd.to_timedelta(
-                sum([d for d in durations if d is not None]),
+                sum([d for d in self._durations if d is not None]),
                 unit='s',
             )
         )
+
+    @property
+    def file_durations(self) -> typing.List:
+        r"""Distribution of file durations in dataset."""
+        min_ = np.min(self._durations)
+        max_ = np.max(self._durations)
+        plt.figure(figsize=[.5, .15])
+        # Remove all margins besides bottom
+        plt.subplot(111)
+        plt.subplots_adjust(
+            left=0,
+            bottom=0.2,
+            right=1,
+            top=1,
+            wspace=0,
+            hspace=0,
+        )
+        # Plot duration distribution
+        sns.kdeplot(
+            self._durations,
+            fill=True,
+            cut=0,
+            clip=(min_, max_),
+            linewidth=0,
+            alpha=1,
+            color='#d54239',
+        )
+        # Remove al tiks, labels
+        sns.despine(left=True, bottom=True)
+        plt.tick_params(
+            axis='both',
+            which='both',
+            bottom=False,
+            left=False,
+            labelbottom=False,
+            labelleft=False,
+        )
+        plt.xlabel('')
+        plt.ylabel('')
+        plt.savefig('durations.png', transparent=True)
+        plt.close()
+        self._rst = '.. |durations| image:: ../durations.png\n'
+        return f'{min_:.1f} s |durations| {max_:.1f} s'
 
     @property
     def example(self) -> str:
@@ -301,23 +352,32 @@ def create_datacard_page(dataset: Dataset):
             fp.write(f'Created by {db.author}\n')
             fp.write('\n\n')
 
+        # Pre-execute some table entries to prefill _rst
+        files = (
+            f'{dataset.files} files, '
+            f'duraton distribution: {dataset.file_durations}'
+        )
+
+        # Inject additional code
+        fp.write(f'{dataset._rst}\n')
+
         # Overview table
-        fp.write('============= ======================\n')
-        fp.write(f'version       {dataset.version_link}\n')
-        fp.write(f'license       {dataset.license_link}\n')
-        fp.write(f'source        {db.source}\n')
-        fp.write(f'usage         {db.usage}\n')
+        fp.write('=============== ======================\n')
+        fp.write(f'version         {dataset.version_link}\n')
+        fp.write(f'license         {dataset.license_link}\n')
+        fp.write(f'source          {db.source}\n')
+        fp.write(f'usage           {db.usage}\n')
         if db.languages is not None:
-            fp.write(f'languages     {", ".join(db.languages)}\n')
-        fp.write(f'format        {dataset.formats}\n')
-        fp.write(f'channel       {dataset.channels}\n')
-        fp.write(f'sampling rate {dataset.sampling_rates}\n')
-        fp.write(f'bit depth     {dataset.bit_depths}\n')
-        fp.write(f'duration      {dataset.duration}\n')
-        fp.write(f'files         {dataset.files}\n')
-        fp.write(f'repository    {dataset.repository_link}\n')
-        fp.write(f'published     {dataset.publication}\n')
-        fp.write('============= ======================\n')
+            fp.write(f'languages       {", ".join(db.languages)}\n')
+        fp.write(f'format          {dataset.formats}\n')
+        fp.write(f'channel         {dataset.channels}\n')
+        fp.write(f'sampling rate   {dataset.sampling_rates}\n')
+        fp.write(f'bit depth       {dataset.bit_depths}\n')
+        fp.write(f'duration        {dataset.duration}\n')
+        fp.write(f'files           {files}\n')
+        fp.write(f'repository      {dataset.repository_link}\n')
+        fp.write(f'published       {dataset.publication}\n')
+        fp.write('=============== ======================\n')
         fp.write('\n\n')
 
         # Description
