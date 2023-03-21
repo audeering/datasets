@@ -157,7 +157,7 @@ class Dataset:
         plt.subplot(111)
         plt.subplots_adjust(
             left=0,
-            bottom=0.2,
+            bottom=0.25,
             right=1,
             top=1,
             wspace=0,
