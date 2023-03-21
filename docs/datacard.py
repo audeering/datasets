@@ -116,6 +116,38 @@ class Dataset:
         )
 
     @property
+    def example(self) -> str:
+        r"""Relative path to example media file in dataset."""
+        # Pick a meaningful duration for the example audio file
+        min_dur = 0.5
+        max_dur = 300  # 5 min
+        durations = [self.deps.duration(file) for file in self.deps.media]
+        selected_duration = np.median(
+            [d for d in durations if d >= min_dur and d <= max_dur]
+        )
+        # Get index for duration closest to selected duration
+        # see https://stackoverflow.com/a/9706105
+        # durations.index(selected_duration)
+        # is an alternative but fails due to rounding errors
+        index = min(
+            range(len(durations)),
+            key=lambda n: abs(durations[n] - selected_duration),
+        )
+        # Download of example data might fail
+        try:
+            media = self.deps.media[index]
+            audb.load_media(
+                self.name,
+                media,
+                version=self.version,
+                cache_root=CACHE,
+                verbose=False,
+            )
+        except:  # noqa: E722
+            media = ''
+        return media
+
+    @property
     def file_durations(self) -> typing.List:
         r"""Distribution of file durations in dataset."""
         min_ = np.min(self._durations)
@@ -157,38 +189,6 @@ class Dataset:
         plt.close()
         self._rst = '.. |durations| image:: ../durations.png\n'
         return f'{min_:.1f} s |durations| {max_:.1f} s'
-
-    @property
-    def example(self) -> str:
-        r"""Relative path to example media file in dataset."""
-        # Pick a meaningful duration for the example audio file
-        min_dur = 0.5
-        max_dur = 300  # 5 min
-        durations = [self.deps.duration(file) for file in self.deps.media]
-        selected_duration = np.median(
-            [d for d in durations if d >= min_dur and d <= max_dur]
-        )
-        # Get index for duration closest to selected duration
-        # see https://stackoverflow.com/a/9706105
-        # durations.index(selected_duration)
-        # is an alternative but fails due to rounding errors
-        index = min(
-            range(len(durations)),
-            key=lambda n: abs(durations[n] - selected_duration),
-        )
-        # Download of example data might fail
-        try:
-            media = self.deps.media[index]
-            audb.load_media(
-                self.name,
-                media,
-                version=self.version,
-                cache_root=CACHE,
-                verbose=False,
-            )
-        except:  # noqa: E722
-            media = ''
-        return media
 
     @property
     def files(self) -> str:
