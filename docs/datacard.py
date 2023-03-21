@@ -374,7 +374,7 @@ def create_datacard_page(dataset: Dataset):
         # Pre-execute some table entries to prefill _rst
         files = (
             f'{dataset.files} files, '
-            f'duraton distribution: '
+            f'duration distribution: '
             f'{dataset.distribution(dataset.file_durations, "s", "durations")}'
         )
 
