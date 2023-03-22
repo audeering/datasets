@@ -2,6 +2,7 @@ import os
 import shutil
 import typing
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
@@ -9,6 +10,8 @@ import audb
 import audeer
 import audformat
 import audfactory
+import audiofile
+import audplot
 
 
 # Configuration -----------------------------------------------------------
@@ -20,6 +23,7 @@ REPOSITORIES = [
     ),
 ]
 CACHE = audeer.mkdir('./cache')
+BUILD = audeer.path('../build/html')
 
 
 # Functions to create data cards -------------------------------------------
@@ -172,6 +176,48 @@ class Dataset:
     def name_link(self) -> str:
         r"""Name of dataset as internal link to data card."""
         return f'`{self.name} <./datasets/{self.name}.html>`__'
+
+    def player(
+            self,
+            file,
+            *,
+            waveform=True,
+    ) -> str:
+        r"""Create an audio player showing the waveform."""
+        player_str = ''
+        # Move file to build folder
+        src_dir = (
+            f'{CACHE}/{audb.flavor_path(self.name, self.version)}'
+        )
+        dst_dir = f'{BUILD}/datasets/{self.name}'
+        audeer.mkdir(os.path.join(dst_dir, os.path.dirname(file)))
+        shutil.copy(
+            os.path.join(src_dir, file),
+            os.path.join(dst_dir, file),
+        )
+        if waveform:
+            # Add plot of waveform
+            signal, sampling_rate = audiofile.read(
+                os.path.join(src_dir, file),
+                always_2d=True,
+            )
+            plt.figure(figsize=[3, .5])
+            ax = plt.subplot(111)
+            audplot.waveform(signal[0, :], ax=ax)
+            set_plot_margins()
+            plt.savefig(f'{self.name}.png')
+            plt.close()
+
+            player_str += (
+                f'.. image:: ../{self.name}.png\n'
+                '\n'
+            )
+        player_str += (
+            '.. raw:: html\n'
+            '\n'
+            f'    <p><audio controls src="{self.name}/{file}"></audio></p>'
+        )
+        return player_str
 
     @property
     def publication(self) -> str:
@@ -335,24 +381,12 @@ def create_datacard_page(dataset: Dataset):
         # Audio example
         file = dataset.example
         if len(file) > 0:
-            src_dir = (
-                f'{CACHE}/{audb.flavor_path(dataset.name, dataset.version)}'
-            )
-            dst_dir = f'../build/html/datasets/{dataset.name}'
-            audeer.mkdir(os.path.join(dst_dir, os.path.dirname(file)))
-            shutil.copy(
-                os.path.join(src_dir, file),
-                os.path.join(dst_dir, file),
-            )
-            src_file = os.path.join(dataset.name, file)
             fp.write('Example\n')
             fp.write('^^^^^^^\n')
             fp.write('\n')
             fp.write(f':file:`{file}`\n')
             fp.write('\n')
-            fp.write('.. raw:: html\n')
-            fp.write('\n')
-            fp.write(f'    <p><audio controls src="{src_file}"></audio></p>\n')
+            fp.write(f'{dataset.player(file)}\n')
             fp.write('\n')
 
         # Tables
@@ -607,3 +641,29 @@ def limit_presented_samples(
             + samples[-limit // 2:]
         )
     return samples
+
+
+def set_plot_margins(
+        *,
+        left=0,
+        bottom=0,
+        right=1,
+        top=1,
+        wspace=0,
+        hspace=0,
+):
+    r"""Set the margins in a plot.
+
+    As default it will remove all margins.
+    For details on arguments,
+    see :func:`matplotlib.pyplot.subplots_adjust`.
+
+    """
+    plt.subplots_adjust(
+        left=left,
+        bottom=bottom,
+        right=right,
+        top=top,
+        wspace=wspace,
+        hspace=hspace,
+    )
