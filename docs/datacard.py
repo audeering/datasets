@@ -23,7 +23,7 @@ REPOSITORIES = [
     ),
 ]
 CACHE = audeer.mkdir('./cache')
-BUILD = audeer.path('../build/html')
+BUILD = audeer.path('..', 'build', 'html')
 
 
 # Functions to create data cards -------------------------------------------
