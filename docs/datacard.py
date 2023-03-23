@@ -8,8 +8,8 @@ import pandas as pd
 
 import audb
 import audeer
-import audformat
 import audfactory
+import audformat
 import audiofile
 import audplot
 
