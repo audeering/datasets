@@ -41,4 +41,4 @@ def run():
         print('done')
 
     # Create datasets overview page
-    audbcards.core.dataset.create_datasets_page_from_template(datasets)
+    audbcards.core.dataset.create_datasets_page(datasets)
