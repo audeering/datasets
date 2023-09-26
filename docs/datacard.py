@@ -35,7 +35,8 @@ def run():
     for (name, version) in zip(names, versions):
         print(f'Parse {name}-{version}... ', end='', flush=True)
         dataset = audbcards.Dataset(name, version)
-        audbcards.core.dataset.create_datacard_page_from_template(dataset)
+        dc = audbcards.Datacard(dataset)
+        dc.save()
         datasets.append(dataset)
         print('done')
 
