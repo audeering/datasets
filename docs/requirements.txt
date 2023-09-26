@@ -1,4 +1,5 @@
 audb >=1.4.2
+git+https://github.com/audeering/audbcards.git@5-add-support-for-templates#egg=audbcards
 audplot
 sphinx
 sphinx-audeering-theme >=1.2.1
