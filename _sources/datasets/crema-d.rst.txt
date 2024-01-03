@@ -1,0 +1,96 @@
+.. _crema-d:
+
+crema-d
+-------
+
+Created by Houwei Cao, David G. Cooper, Michael K. Keutmann, Ruben C. Gur, Ani Nenkova, Ragini Verma, Samantha L Moore, Adam Savitt
+
+
+============= ======================
+version       `1.2.0 <https://github.com/audeering/crema-d/blob/main/CHANGELOG.md>`__
+license       `Open Data Commons Open Database License (ODbL) v1.0 <http://opendatacommons.org/licenses/odbl/1.0/>`__
+source        https://github.com/CheyneyComputerScience/CREMA-D
+usage         commercial
+languages     English
+format        wav
+channel       1
+sampling rate 16000
+bit depth     16
+duration      0 days 05:15:21.404187500
+files         7441
+repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/crema-d>`__
+published     2024-01-02 by audeering
+============= ======================
+
+
+Description
+^^^^^^^^^^^
+
+CREMA-D: Crowd-sourced Emotional Mutimodal Actors Dataset CREMA-D is a data set of 7,442 original clips from 91 actors.  These clips were from 48 male and 43 female actors between the ages of 20 and 74  coming from a variety of races and ethnicities  (African America, Asian, Caucasian, Hispanic, and Unspecified). When using the database commercially, the database must be referenced together with its license.
+
+Example
+^^^^^^^
+
+:file:`1001/1001_TAI_HAP_XX.wav`
+
+.. image:: ../crema-d.png
+
+.. raw:: html
+
+    <p><audio controls src="crema-d/1001/1001_TAI_HAP_XX.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. csv-table::
+   :header: ID,Type,Columns
+   :widths: 20, 10, 70
+
+    "emotion.categories.desired.dev", "filewise", "emotion, emotion.intensity"
+    "emotion.categories.desired.test", "filewise", "emotion, emotion.intensity"
+    "emotion.categories.desired.train", "filewise", "emotion, emotion.intensity"
+    "emotion.categories.dev", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level"
+    "emotion.categories.dev.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.dev.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.face.dev", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level"
+    "emotion.categories.face.dev.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.face.dev.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.face.test", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level"
+    "emotion.categories.face.test.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.face.test.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.face.train", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level"
+    "emotion.categories.face.train.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.face.train.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.multimodal.dev", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level"
+    "emotion.categories.multimodal.dev.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.multimodal.dev.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.multimodal.test", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level"
+    "emotion.categories.multimodal.test.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.multimodal.test.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.multimodal.train", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level"
+    "emotion.categories.multimodal.train.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.multimodal.train.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.test", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level"
+    "emotion.categories.test.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.test.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "emotion.categories.train", "filewise", "emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level"
+    "emotion.categories.train.gold_standard", "filewise", "emotion, emotion.level, emotion.agreement"
+    "emotion.categories.train.votes", "filewise", "anger, disgust, fear, happiness, neutral, sadness"
+    "files", "filewise", "speaker, corrupted"
+    "sentence", "filewise", "sentence"
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+   :header: ID,Dtype,Min,Max,Labels,Mappings
+
+    "corrupted", "bool", "", "", ""
+    "emotion", "str", "", "", "anger, disgust, fear, happiness, neutral, no_agreement, sadness"
+    "emotion.agreement", "float", "", "1", ""
+    "emotion.intensity", "str", "", "", "high, low, mid, unspecified"
+    "emotion.level", "float", "", "100", ""
+    "sentence", "str", "", "", "DFA, IEO, IOM, ITH, ITS, IWL, IWW, MTI, TAI, TIE, TSI, WSI", "✓"
+    "speaker", "int", "", "", "1001, 1002, 1003, 1004, 1005, 1006, 1007, [...], 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091", "age, ethnicity, race, sex"
+    "votes", "int", "", "", ""

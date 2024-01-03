@@ -1,0 +1,58 @@
+.. _micirp:
+
+micirp
+------
+
+Created by Stewart Tavener (Xaudia.com)
+
+
+============= ======================
+version       `1.0.0 <https://github.com/audeering/micirp/blob/main/CHANGELOG.md>`__
+license       `CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`__
+source        http://micirp.blogspot.com/
+usage         commercial
+languages     
+format        wav
+channel       1
+sampling rate 44100, 48000
+bit depth     24
+duration      0 days 00:00:27.341591837
+files         66
+repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/micirp>`__
+published     2023-12-21 by audeering
+============= ======================
+
+
+Description
+^^^^^^^^^^^
+
+The Microphone Impulse Response Project (MicIRP) contains impulse response data for vintage microphones. The impulse response files were created using the analysis software Fuzzmeasure. The microphones were tested using a swept-sine method in a small booth, treated with much acoustic foam, placed about 20 to 30 cm from the source. Although the recording system and booth are calibrated regularly with a Beyerdynamic measurement microphone, there are problems comparing, for example, a figure-8 ribbon with an omnidirectional standard, as they will see different amounts of reflections from the side. So, it should be noted that the impulse response files describe the microphones measured in the booth, rather than in free space.
+
+Example
+^^^^^^^
+
+:file:`dirs/IR_AKGD12.wav`
+
+.. image:: ../micirp.png
+
+.. raw:: html
+
+    <p><audio controls src="micirp/dirs/IR_AKGD12.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. csv-table::
+   :header: ID,Type,Columns
+   :widths: 20, 10, 70
+
+    "files", "filewise", "manufacturer"
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+   :header: ID,Dtype,Labels
+
+    "manufacturer", "str", "AKG, Altec, American, Amperite, Astatic, B&O, BBC, [...], Oktava, RCA, Reslo, STC, Shure, Sony, Telefunken, Toshiba"

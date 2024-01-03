@@ -18,4 +18,10 @@ For each dataset, the latest version is shown.
     :maxdepth: 1
     :hidden:
 
+    datasets/air
+    datasets/cough-speech-sneeze
+    datasets/crema-d
     datasets/emodb
+    datasets/micirp
+    datasets/musan
+    datasets/vadtoolkit

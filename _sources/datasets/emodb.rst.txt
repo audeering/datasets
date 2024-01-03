@@ -7,7 +7,7 @@ Created by Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter Sendlmeier, B
 
 
 ============= ======================
-version       `1.3.0 <https://github.com/audeering/emodb/blob/main/CHANGELOG.md>`__
+version       `1.4.1 <https://github.com/audeering/emodb/blob/main/CHANGELOG.md>`__
 license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
 source        http://emodb.bilderbar.info/download/download.zip
 usage         unrestricted
@@ -19,7 +19,7 @@ bit depth     16
 duration      0 days 00:24:47.092187500
 files         535
 repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/emodb>`__
-published     2022-08-05 by audeering-unittest
+published     2023-04-05 by audeering-unittest
 ============= ======================
 
 
@@ -32,6 +32,8 @@ Example
 ^^^^^^^
 
 :file:`wav/13b09La.wav`
+
+.. image:: ../emodb.png
 
 .. raw:: html
 

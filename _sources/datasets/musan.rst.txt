@@ -1,0 +1,77 @@
+.. _musan:
+
+musan
+-----
+
+Created by David Snyder, Guoguo Chen, Daniel Povey
+
+
+============= ======================
+version       `1.0.0 <https://github.com/audeering/musan/blob/main/CHANGELOG.md>`__
+license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
+source        http://www.openslr.org/17/
+usage         commercial
+languages     ara, zho, dan, nld, eng, fra, deu, heb, hun, ita, jpn, lat, pol, por, rus, spa, tgl
+format        wav
+channel       1
+sampling rate 16000
+bit depth     16
+duration      4 days 13:17:22.582937499
+files         2016
+repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/musan>`__
+published     2023-12-20 by audeering-unittest
+============= ======================
+
+
+Description
+^^^^^^^^^^^
+
+The goal of this corpus is to provide data for music/speech discrimination, speech/nonspeech detection, and voice activity detection. The corpus is divided into music, speech, and noise portions. In total there are approximately 109 hours of audio. Reference: https://arxiv.org/abs/1510.08484
+
+Example
+^^^^^^^
+
+:file:`noise/free-sound/noise-free-sound-0324.wav`
+
+.. image:: ../musan.png
+
+.. raw:: html
+
+    <p><audio controls src="musan/noise/free-sound/noise-free-sound-0324.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. csv-table::
+   :header: ID,Type,Columns
+   :widths: 20, 10, 70
+
+    "files", "filewise", "duration"
+    "music", "filewise", "genre, vocals, artist, composer"
+    "music.fma", "filewise", "genre, vocals, artist, composer"
+    "music.fma-western-art", "filewise", "genre, vocals, artist, composer"
+    "music.hd-classical", "filewise", "genre, vocals, artist, composer"
+    "music.jamendo", "filewise", "genre, vocals, artist, composer"
+    "music.rfm", "filewise", "genre, vocals, artist, composer"
+    "noise", "filewise", "background_noise"
+    "noise.free-sound", "filewise", "background_noise"
+    "noise.sound-bible", "filewise", "background_noise"
+    "speech", "filewise", "gender, language"
+    "speech.librivox", "filewise", "gender, language"
+    "speech.us-gov", "filewise", "gender, language"
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+   :header: ID,Dtype,Labels
+
+    "artist", "str", ""
+    "background_noise", "bool", ""
+    "composer", "str", ""
+    "duration", "time", ""
+    "gender", "str", "female, male"
+    "genre", "str", ""
+    "language", "str", "ara, dan, deu, eng, fra, heb, hun, [...], lat, nld, pol, por, rus, spa, tgl, zho"
+    "vocals", "bool", ""

@@ -1,0 +1,59 @@
+.. _cough-speech-sneeze:
+
+cough-speech-sneeze
+-------------------
+
+Created by S Amiriparian, S Pugachevskiy, N Cummins, D Hantke, J Pohjalainen, G Keren, Schuller, BW
+
+
+============= ======================
+version       `2.0.1 <https://github.com/audeering/cough-speech-sneeze/blob/main/CHANGELOG.md>`__
+license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
+source        Dataset based on the publication of Shahin Amiriparian: "Amiriparian, S., Pugachevskiy, S., Cummins, N., Hantke, S., Pohjalainen, J., Keren, G., Schuller, B., 2017. CAST a database: Rapid targeted large-scale big data acquisition via small-world modelling of social media platforms, in: 2017 Seventh International Conference on Affective Computing and Intelligent Interaction (ACII). IEEE, pp. 340–345. https://doi.org/10.1109/ACII.2017.8273622"
+usage         commercial
+languages     
+format        wav
+channel       1
+sampling rate 16000, 44100
+bit depth     16
+duration      0 days 03:02:29.436148526
+files         4310
+repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/cough-speech-sneeze>`__
+published     2024-01-02 by audeering
+============= ======================
+
+
+Description
+^^^^^^^^^^^
+
+Cough-speech-sneeze: a data set of human sounds This dataset was collected by Dr. Shahin Amiriparian. It contains samples of human speech, coughing, and sneezing collected from YouTube, as well as silence clips. The original publication of this (possibly then extended) dataset is the following: Amiriparian, S., Pugachevskiy, S., Cummins, N., Hantke, S., Pohjalainen, J., Keren, G., Schuller, B., 2017. CAST a database: Rapid targeted large-scale big data acquisition via small-world modelling of social media platforms, in: 2017 Seventh International Conference on Affective Computing and Intelligent Interaction (ACII). IEEE, pp. 340–345. https://doi.org/10.1109/ACII.2017.8273622
+
+Example
+^^^^^^^
+
+:file:`coughing/6hw6_4eb_hq_18.41-19.81.wav`
+
+.. image:: ../cough-speech-sneeze.png
+
+.. raw:: html
+
+    <p><audio controls src="cough-speech-sneeze/coughing/6hw6_4eb_hq_18.41-19.81.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. csv-table::
+   :header: ID,Type,Columns
+   :widths: 20, 10, 70
+
+    "files", "filewise", "category, duration"
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+   :header: ID,Dtype,Labels
+
+    "category", "str", "coughing, silence, sneezing, speech"
+    "duration", "time", ""

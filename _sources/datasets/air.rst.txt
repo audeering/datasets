@@ -1,0 +1,64 @@
+.. _air:
+
+air
+---
+
+Created by Marco Jeub, Magnus Schäfer, Hauke Krüger, Christoph Matthias Nelke, Christophe Beaugeant, Peter Vary
+
+
+============= ======================
+version       `1.4.2 <https://github.com/audeering/air/blob/main/CHANGELOG.md>`__
+license       `MIT <https://opensource.org/licenses/MIT>`__
+source        https://www.iks.rwth-aachen.de/en/research/tools-downloads/databases/aachen-impulse-response-database/
+usage         commercial
+languages     
+format        wav
+channel       2
+sampling rate 48000
+bit depth     16
+duration      0 days 00:04:43.719958333
+files         107
+repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/air>`__
+published     2023-12-21 by audeering-unittest
+============= ======================
+
+
+Description
+^^^^^^^^^^^
+
+The Aachen Impulse Response (AIR) database is a set of impulse responses that were measured in a wide variety of rooms. The initial aim of the AIR database was to allow for realistic studies of signal processing algorithms in reverberant environments with a special focus on hearing aids applications. The first version was published in 2009 and offers binaural room impulse responses (BRIR) measured with a dummy head in different locations with different acoustical properties, such as reverberation time and room volume. Besides the evaluation of dereverberation algorithms and perceptual investigations of reverberant speech, this part of the database allows for the investigation of head shadowing influence since all recordings where made with and without the dummy head. In a first update, the database was extended to BRIRs with various azimuth angles between head and desired source. This further allows to investigate (binaural) direction-of-arrival (DOA) algorithms as well as the influence of signal processing algorithms on the binaural cues. Since dereverberation can also be applied to telephone speech, the latest extension includes (dual-channel) impulse responses between the artificial mouth of a dummy head and a mock-up phone. The measurements were carried out in compliance with the ITU standards for both the hand-held and the hands-free position. Additional microphone configurations were added in the latest extension. For the third big extension, the IKS has carried out measurements of binaural room impulse responses in the Aula Carolina Aachen. The former church with a ground area of 570m² and a high ceiling shows very strong reverberation effects. The database will successively be extended to further application scenarios. 
+
+Example
+^^^^^^^
+
+:file:`data/air_binaural_stairway_1_1_0.wav`
+
+.. image:: ../air.png
+
+.. raw:: html
+
+    <p><audio controls src="air/data/air_binaural_stairway_1_1_0.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. csv-table::
+   :header: ID,Type,Columns
+   :widths: 20, 10, 70
+
+    "brir", "filewise", "room, azimuth"
+    "phone", "filewise", "room, mode"
+    "rir", "filewise", "room, distance, reverberation-time"
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+   :header: ID,Dtype,Labels,Mappings
+
+    "azimuth", "float", ""
+    "distance", "float", ""
+    "mode", "str", "hand-held, hands-free"
+    "reverberation-time", "float", ""
+    "room", "str", "aula_carolina, bathroom, booth, corridor, kitchen, lecture, meeting, office, stairway", "floor cover, furniture, room height, room length, room width, wall surface"

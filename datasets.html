@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="_static/css/audeering.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="emodb" href="datasets/emodb.html" />
+    <link rel="next" title="air" href="datasets/air.html" />
     <link rel="prev" title="datasets" href="index.html" />
     
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                v1.0.1
+                v5c9d40c
               </div>
             
           
@@ -91,7 +91,13 @@
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets/air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/crema-d.html">crema-d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/vadtoolkit.html">vadtoolkit</a></li>
 </ul>
 </li>
 </ul>
@@ -137,7 +143,7 @@
             
   <div class="section" id="datasets">
 <span id="id1"></span><h1>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">¶</a></h1>
-<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Mar 20, 2023.
+<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Jan 03, 2024.
 For each dataset, the latest version is shown.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -156,11 +162,47 @@ For each dataset, the latest version is shown.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="./datasets/emodb.html">emodb</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="./datasets/air.html">air</a></p></td>
+<td><p>The Aachen Impulse Response (AIR) database is a set of impulse responses that were measured in a wide variety of rooms. The initial aim of the AIR …</p></td>
+<td><p><a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a></p></td>
+<td><p>1.4.2</p></td>
+<td><p>azimuth, distance, mode, reverberation-time, room</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="./datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></p></td>
+<td><p>Cough-speech-sneeze: a data set of human sounds This dataset was collected by Dr. Shahin Amiriparian. It contains samples of human speech, coughing…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>2.0.1</p></td>
+<td><p>category</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="./datasets/crema-d.html">crema-d</a></p></td>
+<td><p>CREMA-D: Crowd-sourced Emotional Mutimodal Actors Dataset CREMA-D is a data set of 7,442 original clips from 91 actors.  These clips were from 48 m…</p></td>
+<td><p><a class="reference external" href="http://opendatacommons.org/licenses/odbl/1.0/">Open Data Commons Open Database License (ODbL) v1.0</a></p></td>
+<td><p>1.2.0</p></td>
+<td><p>emotion: [anger, disgust, fear, happiness, neutral, no_agreement, sadness], speaker: [age, sex, race, ethnicity], corrupted, emotion.agreement, emotion.intensity, emotion.level, sentence, votes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="./datasets/emodb.html">emodb</a></p></td>
 <td><p>Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research proje…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
-<td><p>1.3.0</p></td>
+<td><p>1.4.1</p></td>
 <td><p>emotion: [anger, boredom, disgust, fear, happiness, sadness, neutral], speaker: [age, gender, language], age, confidence, gender, language, transcription</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="./datasets/micirp.html">micirp</a></p></td>
+<td><p>The Microphone Impulse Response Project (MicIRP) contains impulse response data for vintage microphones. The impulse response files were created us…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>manufacturer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="./datasets/musan.html">musan</a></p></td>
+<td><p>The goal of this corpus is to provide data for music/speech discrimination, speech/nonspeech detection, and voice activity detection. The corpus is…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>artist, background_noise, composer, gender, genre, language, vocals</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="./datasets/vadtoolkit.html">vadtoolkit</a></p></td>
+<td><p>VAD Toolkit: A Database for Voice Activity Detection At each environment, conversational speech by two Korean male speakers was recorded. The groun…</p></td>
+<td><p><a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></p></td>
+<td><p>1.1.0</p></td>
+<td><p>noise</p></td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +218,7 @@ For each dataset, the latest version is shown.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="datasets/emodb.html" class="btn btn-neutral float-right" title="emodb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="datasets/air.html" class="btn btn-neutral float-right" title="air" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -191,7 +233,7 @@ For each dataset, the latest version is shown.</p>
         
         
         
-          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2023/03/20 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2024/01/03 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>

@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crema-d &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="emodb" href="emodb.html" />
+    <link rel="prev" title="cough-speech-sneeze" href="cough-speech-sneeze.html" />
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v5c9d40c
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">crema-d</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>crema-d</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="crema-d">
+<span id="id1"></span><h1>crema-d<a class="headerlink" href="#crema-d" title="Permalink to this heading">¶</a></h1>
+<p>Created by Houwei Cao, David G. Cooper, Michael K. Keutmann, Ruben C. Gur, Ani Nenkova, Ragini Verma, Samantha L Moore, Adam Savitt</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p><a class="reference external" href="https://github.com/audeering/crema-d/blob/main/CHANGELOG.md">1.2.0</a></p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="http://opendatacommons.org/licenses/odbl/1.0/">Open Data Commons Open Database License (ODbL) v1.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p><a class="reference external" href="https://github.com/CheyneyComputerScience/CREMA-D">https://github.com/CheyneyComputerScience/CREMA-D</a></p></td>
+</tr>
+<tr class="row-even"><td><p>usage</p></td>
+<td><p>commercial</p></td>
+</tr>
+<tr class="row-odd"><td><p>languages</p></td>
+<td><p>English</p></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-odd"><td><p>channel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sampling rate</p></td>
+<td><p>16000</p></td>
+</tr>
+<tr class="row-odd"><td><p>bit depth</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
+<td><p>0 days 05:15:21.404187500</p></td>
+</tr>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>7441</p></td>
+</tr>
+<tr class="row-even"><td><p>repository</p></td>
+<td><p><a class="reference external" href="https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/crema-d">data-public</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>published</p></td>
+<td><p>2024-01-02 by audeering</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>CREMA-D: Crowd-sourced Emotional Mutimodal Actors Dataset CREMA-D is a data set of 7,442 original clips from 91 actors.  These clips were from 48 male and 43 female actors between the ages of 20 and 74  coming from a variety of races and ethnicities  (African America, Asian, Caucasian, Hispanic, and Unspecified). When using the database commercially, the database must be referenced together with its license.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">1001/1001_TAI_HAP_XX.wav</span></code></p>
+<img alt="../_images/crema-d.png" src="../_images/crema-d.png" />
+<p><audio controls src="crema-d/1001/1001_TAI_HAP_XX.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Columns</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>emotion.categories.desired.dev</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.intensity</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.desired.test</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.intensity</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.desired.train</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.intensity</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.dev</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.dev.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.dev.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.face.dev</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.face.dev.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.face.dev.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.face.test</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.face.test.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.face.test.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.face.train</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.face.train.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.face.train.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.multimodal.dev</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.multimodal.dev.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.multimodal.dev.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.multimodal.test</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.multimodal.test.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.multimodal.test.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.multimodal.train</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.multimodal.train.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.multimodal.train.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.test</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.test.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.test.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.train</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion.0, emotion.0.level, emotion.1, emotion.1.level, emotion.2, emotion.2.level, emotion.3, emotion.3.level, emotion.4, emotion.4.level</p></td>
+</tr>
+<tr class="row-even"><td><p>emotion.categories.train.gold_standard</p></td>
+<td><p>filewise</p></td>
+<td><p>emotion, emotion.level, emotion.agreement</p></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.categories.train.votes</p></td>
+<td><p>filewise</p></td>
+<td><p>anger, disgust, fear, happiness, neutral, sadness</p></td>
+</tr>
+<tr class="row-even"><td><p>files</p></td>
+<td><p>filewise</p></td>
+<td><p>speaker, corrupted</p></td>
+</tr>
+<tr class="row-odd"><td><p>sentence</p></td>
+<td><p>filewise</p></td>
+<td><p>sentence</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Min</p></th>
+<th class="head"><p>Max</p></th>
+<th class="head"><p>Labels</p></th>
+<th class="head"><p>Mappings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>corrupted</p></td>
+<td><p>bool</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>emotion</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>anger, disgust, fear, happiness, neutral, no_agreement, sadness</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>emotion.agreement</p></td>
+<td><p>float</p></td>
+<td></td>
+<td><p>1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>emotion.intensity</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>high, low, mid, unspecified</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>emotion.level</p></td>
+<td><p>float</p></td>
+<td></td>
+<td><p>100</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sentence</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>DFA, IEO, IOM, ITH, ITS, IWL, IWW, MTI, TAI, TIE, TSI, WSI</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>speaker</p></td>
+<td><p>int</p></td>
+<td></td>
+<td></td>
+<td><p>1001, 1002, 1003, 1004, 1005, 1006, 1007, […], 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091</p></td>
+<td><p>age, ethnicity, race, sex</p></td>
+</tr>
+<tr class="row-odd"><td><p>votes</p></td>
+<td><p>int</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="emodb.html" class="btn btn-neutral float-right" title="emodb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cough-speech-sneeze.html" class="btn btn-neutral float-left" title="cough-speech-sneeze" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2024/01/03 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
