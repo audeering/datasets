@@ -1,9 +1,6 @@
-name: Publish
+name: Update pages
 
-on:
-  push:
-    tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+on: workflow_dispatch
 
 jobs:
   deploy:
@@ -39,27 +36,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/build
-
-    # Github release
-    - name: Read CHANGELOG
-      id: changelog
-      run: |
-        # Get bullet points from last CHANGELOG entry
-        CHANGELOG=$(git diff -U0 HEAD^ HEAD | grep '^[+][\* ]' | sed 's/\+//')
-        # Support for multiline, see
-        # https://github.com/actions/create-release/pull/11#issuecomment-640071918
-        CHANGELOG="${CHANGELOG//'%'/'%25'}"
-        CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
-        CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
-        echo "Got changelog: $CHANGELOG"
-        echo "::set-output name=body::$CHANGELOG"
-
-    - name: Create release on Github
-      id: create_release
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        name: Release ${{ github.ref_name }}
-        body: ${{ steps.changelog.outputs.body }}
