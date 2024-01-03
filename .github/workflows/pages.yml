@@ -1,0 +1,38 @@
+name: Update pages
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+
+    # Remove apt repos that are known to break from time to time
+    # See https://github.com/actions/virtual-environments/issues/323
+    - name: Remove broken apt repos
+      run: |
+        for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
+
+    # Docuemntation
+    - name: Install doc dependencies
+      run: |
+        sudo apt-get install --no-install-recommends --yes libsndfile1 sox
+        pip install -r docs/requirements.txt
+
+    - name: Build documentation
+      run: |
+        python -m sphinx docs/ docs/build/ -b html
+
+    - name: Deploy documentation to Github pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/build
