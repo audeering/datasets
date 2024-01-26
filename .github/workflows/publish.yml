@@ -32,13 +32,13 @@ jobs:
 
     - name: Build documentation
       run: |
-        python -m sphinx docs/ docs/build/ -b html
+        python -m sphinx docs/ build/html -b html
 
     - name: Deploy documentation to Github pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/build
+        publish_dir: ./build/html
 
     # Github release
     - name: Read CHANGELOG
