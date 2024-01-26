@@ -14,7 +14,7 @@ usage         commercial
 languages     
 format        wav
 channel       1
-sampling rate 44100, 48000
+sampling rate 48000, 44100
 bit depth     24
 duration      0 days 00:00:27.341591837
 files         66
