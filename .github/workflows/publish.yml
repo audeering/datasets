@@ -35,7 +35,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install --no-install-recommends --yes libsndfile1 sox ffmpeg mediainfo
-        pip install docs/requirements.txt
+        pip install -r docs/requirements.txt
 
     - name: Build documentation
       run: |
