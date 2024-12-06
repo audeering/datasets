@@ -21,8 +21,8 @@ jobs:
     - name: Cache
       uses: actions/cache@v3
       with:
-        path: docs/cache
-        key: datasets
+        path: .cache/audbcards
+        key: audbcards
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
@@ -39,7 +39,10 @@ jobs:
       run: pip install -r docs/requirements.txt
 
     - name: Test building documentation
-      run: python -m sphinx docs/ docs/build/ -b html -W
+      run: |
+        export AUDBCARDS_CACHE_ROOT=".cache/audbcards"
+        python pre-fill-cache.py
+        python -m sphinx docs/ docs/build/ -b html -W
 
     #- name: Check links in documentation
     #  run: python -m sphinx docs/ docs/build/ -b linkcheck -W
