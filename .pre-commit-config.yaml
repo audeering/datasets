@@ -7,8 +7,20 @@
 # $ pre-commit install
 # $ pre-commit run --all-files
 #
+#
+default_language_version:
+  python: python3.10
+
 repos:
--   repo: https://github.com/pycqa/flake8
-    rev: '5.0.4'
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.7.0
     hooks:
-    -   id: flake8
+      - id: ruff
+        args: [ --fix ]
+      - id: ruff-format
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        additional_dependencies:
+          - tomli
