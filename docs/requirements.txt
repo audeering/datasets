@@ -1,4 +1,4 @@
-audb >=1.11.0
+audb >=1.10.2
 audbcards >= 0.3.2
 audplot
 sphinx
