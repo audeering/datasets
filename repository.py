@@ -2,7 +2,7 @@ import audb
 
 
 repository = audb.Repository(
-    "data-public",
-    "https://audeering.jfrog.io/artifactory",
-    "artifactory",
+    "audb-public",
+    "s3.dualstack.eu-north-1.amazonaws.com",
+    "s3",
 )

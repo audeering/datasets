@@ -29,10 +29,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Ubuntu - install libsndfile
+    - name: Install audio + video libraries
       run: |
         sudo apt-get update
-        sudo apt-get install --no-install-recommends --yes libsndfile1
+        sudo apt-get install --no-install-recommends --yes libsndfile1 ffmpeg mediainfo
 
     # DOCS
     - name: Install docs requirements

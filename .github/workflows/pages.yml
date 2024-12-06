@@ -30,7 +30,8 @@ jobs:
     # Documentation
     - name: Install doc dependencies
       run: |
-        sudo apt-get install --no-install-recommends --yes libsndfile1 sox
+        sudo apt-get update
+        sudo apt-get install --no-install-recommends --yes libsndfile1 ffmpeg mediainfo
         pip install -r docs/requirements.txt
 
     - name: Build documentation

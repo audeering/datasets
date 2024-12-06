@@ -31,9 +31,10 @@ jobs:
         for apt_file in `grep -lr microsoft /etc/apt/sources.list.d/`; do sudo rm $apt_file; done
 
     # Documentation
-    - name: Install doc dependencies
+    - name: Install audio + video libraries
       run: |
-        sudo apt-get install --no-install-recommends --yes libsndfile1 sox
+        sudo apt-get update
+        sudo apt-get install --no-install-recommends --yes libsndfile1 sox ffmpeg mediainfo
         pip install -r docs/requirements.txt
 
     - name: Build documentation
