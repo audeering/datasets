@@ -13,6 +13,12 @@ jobs:
       with:
         fetch-depth: 2
 
+    - name: Cache
+      uses: actions/cache@v3
+      with:
+        path: .cache/audbcards
+        key: audbcards
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -32,6 +38,8 @@ jobs:
 
     - name: Build documentation
       run: |
+        export AUDBCARDS_CACHE_ROOT=".cache/audbcards"
+        python pre-fill-cache.py
         python -m sphinx docs/ build/html -b html
 
     - name: Deploy documentation to Github pages

@@ -1,5 +1,6 @@
-import audb
 import audeer
+
+from repository import repository
 
 
 # Project -----------------------------------------------------------------
@@ -42,11 +43,7 @@ audbcards_datasets = [
     (
         "datasets",  # folder name
         "Datasets",  # datasets overview page header
-        audb.Repository(
-            "data-public",
-            "https://audeering.jfrog.io/artifactory",
-            "artifactory",
-        ),
+        repository,
         True,  # don't show audio examples
     ),
 ]

@@ -1,0 +1,129 @@
+# ----- codespell ---------------------------------------------------------
+[tool.codespell]
+builtin = 'clear,rare,informal,usage,names'
+skip = './build'
+
+
+# ----- ruff --------------------------------------------------------------
+#
+[tool.ruff]
+cache-dir = '~/.cache/ruff'
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    'D',     # pydocstyle
+    'E',     # pycodestyle errors
+    'F',     # Pyflakes
+    'I',     # isort
+    'N',     # pep8-naming
+    'W',     # pycodestyle warnings
+]
+
+extend-ignore = [
+    'D100',  # Missing docstring in public module
+    'D101',  # Missing docstring in public class
+    'D102',  # Missing docstring in public method
+    'D103',  # Missing docstring in public function
+    'D104',  # Missing docstring in public package
+    'D107',  # Missing docstring in `__init__`
+]
+
+[tool.ruff.lint.per-file-ignores]
+'__init__.py' = [
+    'F401',  # * imported but unused
+]
+'common.py' = [
+    'D105',  # Missing docstring in magic method
+]
+
+
+# ----- I: isort -----
+#
+# Check correct order/syntax of import statements
+#
+[tool.ruff.lint.isort]
+
+# All from imports have their own line, e.g.
+#
+#   from .utils import util_a
+#   from .utils import util_b
+#
+force-single-line = true
+
+# Sort by module names
+# and not import before from, e.g.
+#
+#     from datetime import date
+#     import os
+#
+force-sort-within-sections = true
+
+# Ensure we have two empty lines
+# after last import
+lines-after-imports = 2
+
+# Group all audEERING packages into a separate section, e.g.
+#
+#     import os
+#
+#     import numpy as np
+#
+#     import audmath
+#
+section-order = [
+    'future',
+    'standard-library',
+    'third-party',
+    'audeering',
+    'first-party',
+    'local-folder',
+]
+[tool.ruff.lint.isort.sections]
+'audeering' = [
+    'audb',
+    'audbcards',
+    'audbackend',
+    'audbenchmark',
+    'audbgui',
+    'audeer',
+    'audformat',
+    'audinterface',
+    'audiofile',
+    'audmath',
+    'audmetric',
+    'audmodel',
+    'audobject',
+    'audonnx',
+    'audpann',
+    'audplot',
+    'audresample',
+    'audtorch',
+    'auglib',
+    'auglibgui',
+    'auvad',
+    'opensmile',
+    'productionmodels',
+    'sphinx-audeering-theme',
+]
+
+
+# ----- N: pep8-naming -----
+#
+# Check variable/class names follow PEP8 naming convention
+#
+[tool.ruff.lint.pep8-naming]
+ignore-names = [
+    'config',  # allow lowercase class name
+    'test_*',  # allow uppercase name when testing a class
+]
+
+
+# ----- W: pycodestyle -----
+#
+# Check docstrings follow selected convention
+#
+[tool.ruff.lint.pydocstyle]
+convention = 'google'
