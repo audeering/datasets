@@ -1,4 +1,3 @@
-import audb
 import audeer
 
 from repository import repository
