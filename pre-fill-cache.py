@@ -13,6 +13,8 @@ import audb
 import audbcards
 import audeer
 
+from repository import repository
+
 
 def cache_media_path(dataset: audbcards.Dataset) -> str:
     r"""Return path to example media in audbcards cache.
@@ -39,6 +41,7 @@ def cache_media_path(dataset: audbcards.Dataset) -> str:
 _, _, free = shutil.disk_usage("/")
 print(f"Free disk space: {free // (2**30):d} GiB")
 
+audb.config.REPOSITORIES = [repository]
 df = audb.available(only_latest=True)
 datasets = list(df.index)
 print(f"Number of datasets: {len(datasets)}")
