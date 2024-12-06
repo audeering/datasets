@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ljspeech &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mesd" href="mesd.html" />
+    <link rel="prev" title="ir-c4dm" href="ir-c4dm.html" />
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ljspeech</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>ljspeech</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ljspeech">
+<span id="datasets-ljspeech"></span><h1>ljspeech<a class="headerlink" href="#ljspeech" title="Permalink to this heading">¶</a></h1>
+<p>Created by Keith Ito and Linda Johnson</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p><a class="reference external" href="https://keithito.com/LJ-Speech-Dataset">https://keithito.com/LJ-Speech-Dataset</a></p></td>
+</tr>
+<tr class="row-even"><td><p>usage</p></td>
+<td><p>unrestricted</p></td>
+</tr>
+<tr class="row-odd"><td><p>languages</p></td>
+<td><p>eng</p></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-odd"><td><p>channel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sampling rate</p></td>
+<td><p>22050</p></td>
+</tr>
+<tr class="row-odd"><td><p>bit depth</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
+<td><p>0 days 23:55:17.076281179</p></td>
+</tr>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>13100, duration distribution: 1.1 s <img alt="ljspeech-1.0.0-file-duration-distribution" src="../_images/ljspeech-1.0.0-file-duration-distribution.png" /> 10.1 s</p></td>
+</tr>
+<tr class="row-even"><td><p>repository</p></td>
+<td><p><a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ljspeech">audb-public</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>published</p></td>
+<td><p>2024-11-27 by hwierstorf</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>LJSpeech consists of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours. The texts were published between 1884 and 1964, and are in the public domain. The audio was recorded in 2016-17 by the LibriVox project and is also in the public domain. The audio clips were segmented automatically based on silences in the recording. Clip boundaries generally align with sentence or clause boundaries, but not always. The text was matched to the audio manually, and a quality assurance pass was done to ensure that the text accurately matched the words spoken in the audio. The original LibriVox recordings were distributed as 128 kbps MP3 files. As a result, they may contain artifacts introduced by the MP3 encoding.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">wavs/LJ002-0146.wav</span></code></p>
+<img alt="../_images/ljspeech-1.0.0-player-waveform.png" src="../_images/ljspeech-1.0.0-player-waveform.png" />
+<p><audio controls src="./ljspeech/wavs/LJ002-0146.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>files</p></td>
+    <td><p>filewise</p></td>
+    <td><p>transcription, normalized-transcription, speaker</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>transcription</p></th>
+    <th class="head"><p>normalized-transcription</p></th>
+    <th class="head"><p>speaker</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>wavs/LJ001-0001.wav</p></td>
+    <td><p>Printing, in the only sense with which we are at present concerned, differs from most if not from...</p></td>
+    <td><p>Printing, in the only sense with which we are at present concerned, differs from most if not from...</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>wavs/LJ001-0002.wav</p></td>
+    <td><p>in being comparatively modern.</p></td>
+    <td><p>in being comparatively modern.</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>wavs/LJ001-0003.wav</p></td>
+    <td><p>For although the Chinese took impressions from wood blocks engraved in relief for centuries befor...</p></td>
+    <td><p>For although the Chinese took impressions from wood blocks engraved in relief for centuries befor...</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>wavs/LJ001-0004.wav</p></td>
+    <td><p>produced the block books, which were the immediate predecessors of the true printed book,</p></td>
+    <td><p>produced the block books, which were the immediate predecessors of the true printed book,</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>wavs/LJ001-0005.wav</p></td>
+    <td><p>the invention of movable metal letters in the middle of the fifteenth century may justly be consi...</p></td>
+    <td><p>the invention of movable metal letters in the middle of the fifteenth century may justly be consi...</p></td>
+    <td><p>0</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">13100 rows x 3 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>speaker</p></td>
+    <td><p>misc</p></td>
+    <td><p>gender</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>speaker</p></th>
+    <th class="head"><p>gender</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>0</p></td>
+    <td><p>female</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">1 row x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Labels</p></th>
+<th class="head"><p>Mappings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>gender</p></td>
+<td><p>str</p></td>
+<td><p>female, male, other</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>normalized-transcription</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>speaker</p></td>
+<td><p>int</p></td>
+<td><p>0</p></td>
+<td><p>gender</p></td>
+</tr>
+<tr class="row-odd"><td><p>transcription</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mesd.html" class="btn btn-neutral float-right" title="mesd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ir-c4dm.html" class="btn btn-neutral float-left" title="ir-c4dm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

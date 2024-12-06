@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="_static/table-preview.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="air" href="datasets/air.html" />
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                v1.0.2
+                v1.1.0
               </div>
             
           
@@ -92,12 +93,32 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="datasets/air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/cochlscene.html">cochlscene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/css10.html">css10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/mesd.html">mesd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/micirp.html">micirp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/urbansound8k.html">urbansound8k</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/wham.html">wham</a></li>
 </ul>
 </li>
 </ul>
@@ -143,7 +164,10 @@
             
   <div class="section" id="datasets">
 <span id="id1"></span><h1>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">¶</a></h1>
-<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Jan 26, 2024.
+<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Dec 06, 2024
+in the
+repository
+<a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com">audb-public</a>.
 For each dataset, the latest version is shown.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -162,47 +186,167 @@ For each dataset, the latest version is shown.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="./datasets/air.html">air</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/air.html">air</a></p></td>
 <td><p>The Aachen Impulse Response (AIR) database is a set of impulse responses that were measured in a wide variety of rooms. The initial aim of the AIR …</p></td>
 <td><p><a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a></p></td>
 <td><p>1.4.2</p></td>
 <td><p>azimuth, distance, mode, reverberation-time, room</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="./datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/clac.html">clac</a></p></td>
+<td><p>The Crowdsourced Language Assessment Corpus (CLAC) consists of audio recordings and automatically-generated transcripts from 1,832 speakers for sev…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
+<td><p>1.1.0</p></td>
+<td><p>speaker: [age, gender, country, region, city, education(years), symptoms], age, city, country, education(years), gender, region, symptoms, task-name, transcript</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/cmu-mosei.html">cmu-mosei</a></p></td>
+<td><p>Multimodal Opinion Sentiment and Emotion Intensity Sentiment and emotion annotated multimodal data automatically collected from YouTube. The datase…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
+<td><p>1.2.4</p></td>
+<td><p>emotion.intensity, emotion.presence, sentiment, sentiment.binarized, sentiment.binary, sentiment.binary.old, transcription</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/cmu-mosi.html">cmu-mosi</a></p></td>
+<td><p>Opinion-level annotated corpus of sentiment and subjectivity analysis in online videos. The dataset is annotated with labels for subjectivity, sent…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
+<td><p>1.1.1</p></td>
+<td><p>gender, phoneme, sentiment, sentiment.binarized, sentiment.binary, sentiment.binary.old, transcription</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/cochlscene.html">cochlscene</a></p></td>
+<td><p>Cochl Acoustic Scene Dataset (CochlScene), is an acoustic scene dataset whose recordings are fully collected from crowdsourcing participants. Most …</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>scene</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></p></td>
 <td><p>Cough-speech-sneeze: a data set of human sounds This dataset was collected by Dr. Shahin Amiriparian. It contains samples of human speech, coughing…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
 <td><p>2.0.1</p></td>
 <td><p>category</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="./datasets/crema-d.html">crema-d</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/crema-d.html">crema-d</a></p></td>
 <td><p>CREMA-D: Crowd-sourced Emotional Mutimodal Actors Dataset CREMA-D is a data set of 7,442 original clips from 91 actors.  These clips were from 48 m…</p></td>
 <td><p><a class="reference external" href="http://opendatacommons.org/licenses/odbl/1.0/">Open Data Commons Open Database License (ODbL) v1.0</a></p></td>
-<td><p>1.2.0</p></td>
+<td><p>1.3.0</p></td>
 <td><p>emotion: [anger, disgust, fear, happiness, neutral, no_agreement, sadness], speaker: [age, sex, race, ethnicity], corrupted, emotion.agreement, emotion.intensity, emotion.level, sentence, votes</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="./datasets/emodb.html">emodb</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/css10.html">css10</a></p></td>
+<td><p>CSS10 is a collection of single speaker speech data for 10 languages. Each of them consists of audio files recorded by a single volunteer and their…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>speaker:], language, normalized-transcription, transcription</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/emodb.html">emodb</a></p></td>
 <td><p>Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research proje…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
 <td><p>1.4.1</p></td>
 <td><p>emotion: [anger, boredom, disgust, fear, happiness, sadness, neutral], speaker: [age, gender, language], age, confidence, gender, language, transcription</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="./datasets/micirp.html">micirp</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/emouerj.html">emouerj</a></p></td>
+<td><p>emoUERJ contains recordings of 10 portuguese sentences pronounced by 8 speakers in 4 emotions: happiness,anger,sadness,neutral.</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>emotion: [happiness, anger, sadness, neutral], speaker: [gender], gender, take</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/esc-50.html">esc-50</a></p></td>
+<td><p>The ESC-50 dataset is a labeled collection of 2000 environmental audio recordings suitable for benchmarking methods of environmental sound classifi…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/3.0/">CC-BY-NC-3.0</a></p></td>
+<td><p>1.0.1</p></td>
+<td><p>category, clip_id, esc10, fold, major, take</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/expresso.html">expresso</a></p></td>
+<td><p>Expresso is a dataset of expressive speech recordings. It contains read speech and singing in various styles including default, confused, enunciate…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>speaker:], channel, corpus, id, speaking_style, style</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/fsdnoisy18k.html">fsdnoisy18k</a></p></td>
+<td><p>FSDnoisy18k is an audio dataset collected with the aim of fostering the investigation of label noise in sound event classification. It contains 42….</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/">CC-BY-3.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>categories, license, manually_verified, noisy_small</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/ir-c4dm.html">ir-c4dm</a></p></td>
+<td><p>This collection of room impulse responses was measured in the Great Hall, the Octagon, and a classroom at the Mile End campus of Queen Mary, Univer…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>room, x, y</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/ljspeech.html">ljspeech</a></p></td>
+<td><p>LJSpeech consists of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each c…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>speaker: [gender], gender, normalized-transcription, transcription</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/mesd.html">mesd</a></p></td>
+<td><p>MESD (Mexican Emotional Speech Database) contains single-word utterances for different emotions like anger, disgust, fear, happiness, neutral, and …</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.1</p></td>
+<td><p>emotion: [anger, disgust, fear, happiness, neutral, sadness], gender, word, word_corpus</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/micirp.html">micirp</a></p></td>
 <td><p>The Microphone Impulse Response Project (MicIRP) contains impulse response data for vintage microphones. The impulse response files were created us…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>manufacturer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="./datasets/musan.html">musan</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/musan.html">musan</a></p></td>
 <td><p>The goal of this corpus is to provide data for music/speech discrimination, speech/nonspeech detection, and voice activity detection. The corpus is…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>artist, background_noise, composer, gender, genre, language, vocals</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="./datasets/vadtoolkit.html">vadtoolkit</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/openair.html">openair</a></p></td>
+<td><p>Impulse Responses (IR) and Reverberation Time (RT60) for different rooms. RT is given in seconds at 500Hz. Openair also has BRIRs and RT60s for 31….</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>reverberation-time</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/quechua.html">quechua</a></p></td>
+<td><p>Quechua contains 12420 recordings of emotional speech in Quechua Collao. Six actors were asked to read words and sentences with nine emotional cate…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.2</p></td>
+<td><p>emotion: [anger, boredom, happiness, sleepiness, sadness, calmness, fear, exitement, neutral], speaker: [gender], arousal, arousal.agreement, arousal.original, dominance, …, is_single_word, sentence, transcription, translation, valence, valence.agreement, valence.original</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/ravdess.html">ravdess</a></p></td>
+<td><p>The Ryerson Audio-Visual Database of Emotional Speech and Song The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) contains 73…</p></td>
+<td><p><a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">CC-BY-NC-SA-4.0</a></p></td>
+<td><p>1.1.3</p></td>
+<td><p>emotion: [anger, calm, disgust, fear, happiness, neutral, sadness, surprise], speaker: [gender, language], emotional intensity, transcription, vocal channel</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/ravdess-videos.html">ravdess-videos</a></p></td>
+<td><p>The Ryerson Audio-Visual Database of Emotional Speech and Song The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) contains 73…</p></td>
+<td><p><a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">CC-BY-NC-SA-4.0</a></p></td>
+<td><p>1.0.3</p></td>
+<td><p>emotion: [neutral, calm, happy, sad, angry, fearful, disgust, suprised], speaker: [gender, language], emotional intensity, transcription, vocal channel</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/speech-accent-archive.html">speech-accent-archive</a></p></td>
+<td><p>This dataset contains 2138 speech samples, each from a different talker reading the same reading passage. Talkers come from 177 countries and have …</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</a></p></td>
+<td><p>2.2.0</p></td>
+<td><p>speaker, age, age_onset, birthplace, content, country, native_language, sex, tone</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/subesco.html">subesco</a></p></td>
+<td><p>SUBESCO is an audio-only emotional speech corpus of 7000 sentence-level utterances of the Bangla language. The corpus contains 7:40:40h of audio an…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>emotion: [anger, disgust, fear, happiness, neutral, sadness, surprise], speaker: [gender], gender, sentence_number, speaker_name, take_number</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/urbansound8k.html">urbansound8k</a></p></td>
+<td><p>The UrbanSound8k dataset contains 8732 labeled sound excerpts (&lt;=4s) of urban sounds from 10 classes. All excerpts are taken from field recordings …</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/3.0/">CC-BY-NC-3.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>category, clip_id, fold, salience</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/vadtoolkit.html">vadtoolkit</a></p></td>
 <td><p>VAD Toolkit: A Database for Voice Activity Detection At each environment, conversational speech by two Korean male speakers was recorded. The groun…</p></td>
 <td><p><a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></p></td>
 <td><p>1.1.0</p></td>
 <td><p>noise</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/wham.html">wham</a></p></td>
+<td><p>The noise audio was collected at various urban locations throughout the San Francisco Bay Area in late 2018. The environments primarily consist of …</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>day, file-id, l-to-r-width, location, noise-band, reverberation</p></td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +377,7 @@ For each dataset, the latest version is shown.</p>
         
         
         
-          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2024/01/26 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>
@@ -271,6 +415,7 @@ For each dataset, the latest version is shown.</p>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/table-preview.js"></script>
     
 
   

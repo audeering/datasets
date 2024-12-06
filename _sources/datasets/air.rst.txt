@@ -1,13 +1,14 @@
-.. _air:
+.. |air-1.4.2-file-duration-distribution| image:: ./air/air-1.4.2-file-duration-distribution.png
+
+.. _datasets-air:
 
 air
 ---
 
 Created by Marco Jeub, Magnus Schäfer, Hauke Krüger, Christoph Matthias Nelke, Christophe Beaugeant, Peter Vary
 
-
 ============= ======================
-version       `1.4.2 <https://github.com/audeering/air/blob/main/CHANGELOG.md>`__
+version       1.4.2
 license       `MIT <https://opensource.org/licenses/MIT>`__
 source        https://www.iks.rwth-aachen.de/en/research/tools-downloads/databases/aachen-impulse-response-database/
 usage         commercial
@@ -17,11 +18,10 @@ channel       2
 sampling rate 48000
 bit depth     16
 duration      0 days 00:04:43.719958333
-files         107
+files         107, duration distribution: 0.7 s |air-1.4.2-file-duration-distribution| 10.0 s
 repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/air>`__
 published     2023-12-21 by audeering-unittest
 ============= ======================
-
 
 Description
 ^^^^^^^^^^^
@@ -33,32 +33,189 @@ Example
 
 :file:`data/air_binaural_stairway_1_1_0.wav`
 
-.. image:: ../air.png
+.. image:: ./air/air-1.4.2-player-waveform.png
 
 .. raw:: html
 
-    <p><audio controls src="air/data/air_binaural_stairway_1_1_0.wav"></audio></p>
+    <p><audio controls src="./air/data/air_binaural_stairway_1_1_0.wav"></audio></p>
 
 Tables
 ^^^^^^
 
-.. csv-table::
-   :header: ID,Type,Columns
-   :widths: 20, 10, 70
+.. raw:: html
 
-    "brir", "filewise", "room, azimuth"
-    "phone", "filewise", "room, mode"
-    "rir", "filewise", "room, distance, reverberation-time"
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>brir</p></td>
+        <td><p>filewise</p></td>
+        <td><p>room, azimuth</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>room</p></th>
+        <th class="head"><p>azimuth</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>data/air_binaural_aula_carolina_1_1_90_3.wav</p></td>
+        <td><p>aula_carolina</p></td>
+        <td><p>90.0</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_aula_carolina_1_2_90_3.wav</p></td>
+        <td><p>aula_carolina</p></td>
+        <td><p>90.0</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_aula_carolina_1_3_0_3.wav</p></td>
+        <td><p>aula_carolina</p></td>
+        <td><p>0.0</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_aula_carolina_1_3_135_3.wav</p></td>
+        <td><p>aula_carolina</p></td>
+        <td><p>135.0</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_aula_carolina_1_3_180_3.wav</p></td>
+        <td><p>aula_carolina</p></td>
+        <td><p>180.0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">67 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>phone</p></td>
+        <td><p>filewise</p></td>
+        <td><p>room, mode</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>room</p></th>
+        <th class="head"><p>mode</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>data/air_phone_BT_corridor_hhp.wav</p></td>
+        <td><p>corridor</p></td>
+        <td><p>hand-held</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_phone_BT_office_hhp.wav</p></td>
+        <td><p>office</p></td>
+        <td><p>hand-held</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_phone_BT_stairway_hhp.wav</p></td>
+        <td><p>stairway</p></td>
+        <td><p>hand-held</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_phone_bathroom_hfrp.wav</p></td>
+        <td><p>bathroom</p></td>
+        <td><p>hands-free</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_phone_bathroom_hhp.wav</p></td>
+        <td><p>bathroom</p></td>
+        <td><p>hand-held</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">23 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>rir</p></td>
+        <td><p>filewise</p></td>
+        <td><p>room, distance, reverberation-time</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>room</p></th>
+        <th class="head"><p>distance</p></th>
+        <th class="head"><p>reverberation-time</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>data/air_binaural_booth_0_1.wav</p></td>
+        <td><p>booth</p></td>
+        <td><p>0.5</p></td>
+        <td><p>0.08</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_booth_0_2.wav</p></td>
+        <td><p>booth</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.11</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_booth_0_3.wav</p></td>
+        <td><p>booth</p></td>
+        <td><p>1.5</p></td>
+        <td><p>0.18</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_lecture_0_1.wav</p></td>
+        <td><p>lecture</p></td>
+        <td><p>2.25</p></td>
+        <td><p>0.7</p></td>
+        </tr>
+                <tr>
+        <td><p>data/air_binaural_lecture_0_2.wav</p></td>
+        <td><p>lecture</p></td>
+        <td><p>4.0</p></td>
+        <td><p>0.72</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">17 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
 
 
 Schemes
 ^^^^^^^
 
 .. csv-table::
-   :header: ID,Dtype,Labels,Mappings
+    :header-rows: 1
 
-    "azimuth", "float", ""
-    "distance", "float", ""
-    "mode", "str", "hand-held, hands-free"
-    "reverberation-time", "float", ""
+    "ID", "Dtype", "Labels", "Mappings"
+    "azimuth", "float", "", ""
+    "distance", "float", "", ""
+    "mode", "str", "hand-held, hands-free", ""
+    "reverberation-time", "float", "", ""
     "room", "str", "aula_carolina, bathroom, booth, corridor, kitchen, lecture, meeting, office, stairway", "floor cover, furniture, room height, room length, room width, wall surface"

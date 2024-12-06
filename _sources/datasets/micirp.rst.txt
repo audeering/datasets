@@ -1,27 +1,27 @@
-.. _micirp:
+.. |micirp-1.0.0-file-duration-distribution| image:: ./micirp/micirp-1.0.0-file-duration-distribution.png
+
+.. _datasets-micirp:
 
 micirp
 ------
 
 Created by Stewart Tavener (Xaudia.com)
 
-
 ============= ======================
-version       `1.0.0 <https://github.com/audeering/micirp/blob/main/CHANGELOG.md>`__
+version       1.0.0
 license       `CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`__
 source        http://micirp.blogspot.com/
 usage         commercial
 languages     
 format        wav
 channel       1
-sampling rate 48000, 44100
+sampling rate 44100, 48000
 bit depth     24
 duration      0 days 00:00:27.341591837
-files         66
+files         66, duration distribution: 0.3 s |micirp-1.0.0-file-duration-distribution| 0.5 s
 repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/micirp>`__
 published     2023-12-21 by audeering
 ============= ======================
-
 
 Description
 ^^^^^^^^^^^
@@ -33,26 +33,77 @@ Example
 
 :file:`dirs/IR_AKGD12.wav`
 
-.. image:: ../micirp.png
+.. image:: ./micirp/micirp-1.0.0-player-waveform.png
 
 .. raw:: html
 
-    <p><audio controls src="micirp/dirs/IR_AKGD12.wav"></audio></p>
+    <p><audio controls src="./micirp/dirs/IR_AKGD12.wav"></audio></p>
 
 Tables
 ^^^^^^
 
-.. csv-table::
-   :header: ID,Type,Columns
-   :widths: 20, 10, 70
+.. raw:: html
 
-    "files", "filewise", "manufacturer"
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>manufacturer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>manufacturer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>dirs/Altec_639.wav</p></td>
+        <td><p>Altec</p></td>
+        </tr>
+                <tr>
+        <td><p>dirs/Altec_670A.wav</p></td>
+        <td><p>Altec</p></td>
+        </tr>
+                <tr>
+        <td><p>dirs/Altec_670B.wav</p></td>
+        <td><p>Altec</p></td>
+        </tr>
+                <tr>
+        <td><p>dirs/American_R331.wav</p></td>
+        <td><p>American</p></td>
+        </tr>
+                <tr>
+        <td><p>dirs/Amperite_RA.wav</p></td>
+        <td><p>Amperite</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">66 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
 
 
 Schemes
 ^^^^^^^
 
 .. csv-table::
-   :header: ID,Dtype,Labels
+    :header-rows: 1
 
+    "ID", "Dtype", "Labels"
     "manufacturer", "str", "AKG, Altec, American, Amperite, Astatic, B&O, BBC, [...], Oktava, RCA, Reslo, STC, Shure, Sony, Telefunken, Toshiba"

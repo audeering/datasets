@@ -1,0 +1,150 @@
+.. |ljspeech-1.0.0-file-duration-distribution| image:: ./ljspeech/ljspeech-1.0.0-file-duration-distribution.png
+
+.. _datasets-ljspeech:
+
+ljspeech
+--------
+
+Created by Keith Ito and Linda Johnson
+
+============= ======================
+version       1.0.0
+license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
+source        https://keithito.com/LJ-Speech-Dataset
+usage         unrestricted
+languages     eng
+format        wav
+channel       1
+sampling rate 22050
+bit depth     16
+duration      0 days 23:55:17.076281179
+files         13100, duration distribution: 1.1 s |ljspeech-1.0.0-file-duration-distribution| 10.1 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ljspeech>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+LJSpeech consists of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours. The texts were published between 1884 and 1964, and are in the public domain. The audio was recorded in 2016-17 by the LibriVox project and is also in the public domain. The audio clips were segmented automatically based on silences in the recording. Clip boundaries generally align with sentence or clause boundaries, but not always. The text was matched to the audio manually, and a quality assurance pass was done to ensure that the text accurately matched the words spoken in the audio. The original LibriVox recordings were distributed as 128 kbps MP3 files. As a result, they may contain artifacts introduced by the MP3 encoding.
+
+Example
+^^^^^^^
+
+:file:`wavs/LJ002-0146.wav`
+
+.. image:: ./ljspeech/ljspeech-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./ljspeech/wavs/LJ002-0146.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>transcription, normalized-transcription, speaker</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>transcription</p></th>
+        <th class="head"><p>normalized-transcription</p></th>
+        <th class="head"><p>speaker</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wavs/LJ001-0001.wav</p></td>
+        <td><p>Printing, in the only sense with which we are at present concerned, differs from most if not from...</p></td>
+        <td><p>Printing, in the only sense with which we are at present concerned, differs from most if not from...</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>wavs/LJ001-0002.wav</p></td>
+        <td><p>in being comparatively modern.</p></td>
+        <td><p>in being comparatively modern.</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>wavs/LJ001-0003.wav</p></td>
+        <td><p>For although the Chinese took impressions from wood blocks engraved in relief for centuries befor...</p></td>
+        <td><p>For although the Chinese took impressions from wood blocks engraved in relief for centuries befor...</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>wavs/LJ001-0004.wav</p></td>
+        <td><p>produced the block books, which were the immediate predecessors of the true printed book,</p></td>
+        <td><p>produced the block books, which were the immediate predecessors of the true printed book,</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>wavs/LJ001-0005.wav</p></td>
+        <td><p>the invention of movable metal letters in the middle of the fifteenth century may justly be consi...</p></td>
+        <td><p>the invention of movable metal letters in the middle of the fifteenth century may justly be consi...</p></td>
+        <td><p>0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">13100 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>gender</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>gender</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>0</p></td>
+        <td><p>female</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1 row x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "gender", "str", "female, male, other", ""
+    "normalized-transcription", "str", "", ""
+    "speaker", "int", "0", "gender"
+    "transcription", "str", "", ""

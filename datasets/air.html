@@ -28,9 +28,10 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cough-speech-sneeze" href="cough-speech-sneeze.html" />
+    <link rel="next" title="clac" href="clac.html" />
     <link rel="prev" title="Datasets" href="../datasets.html" />
     
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                v1.0.2
+                v1.1.0
               </div>
             
           
@@ -98,12 +99,32 @@
 <li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +170,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="air">
-<span id="id1"></span><h1>air<a class="headerlink" href="#air" title="Permalink to this heading">¶</a></h1>
+<span id="datasets-air"></span><h1>air<a class="headerlink" href="#air" title="Permalink to this heading">¶</a></h1>
 <p>Created by Marco Jeub, Magnus Schäfer, Hauke Krüger, Christoph Matthias Nelke, Christophe Beaugeant, Peter Vary</p>
 <table class="docutils align-default">
 <colgroup>
@@ -158,7 +179,7 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>version</p></td>
-<td><p><a class="reference external" href="https://github.com/audeering/air/blob/main/CHANGELOG.md">1.4.2</a></p></td>
+<td><p>1.4.2</p></td>
 </tr>
 <tr class="row-even"><td><p>license</p></td>
 <td><p><a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a></p></td>
@@ -188,7 +209,7 @@
 <td><p>0 days 00:04:43.719958333</p></td>
 </tr>
 <tr class="row-odd"><td><p>files</p></td>
-<td><p>107</p></td>
+<td><p>107, duration distribution: 0.7 s <img alt="air-1.4.2-file-duration-distribution" src="../_images/air-1.4.2-file-duration-distribution.png" /> 10.0 s</p></td>
 </tr>
 <tr class="row-even"><td><p>repository</p></td>
 <td><p><a class="reference external" href="https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/air">data-public</a></p></td>
@@ -205,38 +226,171 @@
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p><code class="file docutils literal notranslate"><span class="pre">data/air_binaural_stairway_1_1_0.wav</span></code></p>
-<img alt="../_images/air.png" src="../_images/air.png" />
-<p><audio controls src="air/data/air_binaural_stairway_1_1_0.wav"></audio></p></div>
+<img alt="../_images/air-1.4.2-player-waveform.png" src="../_images/air-1.4.2-player-waveform.png" />
+<p><audio controls src="./air/data/air_binaural_stairway_1_1_0.wav"></audio></p></div>
 <div class="section" id="tables">
 <h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 10%" />
-<col style="width: 70%" />
-</colgroup>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>brir</p></td>
+    <td><p>filewise</p></td>
+    <td><p>room, azimuth</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
 <thead>
-<tr class="row-odd"><th class="head"><p>ID</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Columns</p></th>
-</tr>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>room</p></th>
+    <th class="head"><p>azimuth</p></th>
+    </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>brir</p></td>
-<td><p>filewise</p></td>
-<td><p>room, azimuth</p></td>
-</tr>
-<tr class="row-odd"><td><p>phone</p></td>
-<td><p>filewise</p></td>
-<td><p>room, mode</p></td>
-</tr>
-<tr class="row-even"><td><p>rir</p></td>
-<td><p>filewise</p></td>
-<td><p>room, distance, reverberation-time</p></td>
-</tr>
+                <tr>
+    <td><p>data/air_binaural_aula_carolina_1_1_90_3.wav</p></td>
+    <td><p>aula_carolina</p></td>
+    <td><p>90.0</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_aula_carolina_1_2_90_3.wav</p></td>
+    <td><p>aula_carolina</p></td>
+    <td><p>90.0</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_aula_carolina_1_3_0_3.wav</p></td>
+    <td><p>aula_carolina</p></td>
+    <td><p>0.0</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_aula_carolina_1_3_135_3.wav</p></td>
+    <td><p>aula_carolina</p></td>
+    <td><p>135.0</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_aula_carolina_1_3_180_3.wav</p></td>
+    <td><p>aula_carolina</p></td>
+    <td><p>180.0</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">67 rows x 2 columns</p></td></tr>
 </tbody>
 </table>
-</div>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>phone</p></td>
+    <td><p>filewise</p></td>
+    <td><p>room, mode</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>room</p></th>
+    <th class="head"><p>mode</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>data/air_phone_BT_corridor_hhp.wav</p></td>
+    <td><p>corridor</p></td>
+    <td><p>hand-held</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_phone_BT_office_hhp.wav</p></td>
+    <td><p>office</p></td>
+    <td><p>hand-held</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_phone_BT_stairway_hhp.wav</p></td>
+    <td><p>stairway</p></td>
+    <td><p>hand-held</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_phone_bathroom_hfrp.wav</p></td>
+    <td><p>bathroom</p></td>
+    <td><p>hands-free</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_phone_bathroom_hhp.wav</p></td>
+    <td><p>bathroom</p></td>
+    <td><p>hand-held</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">23 rows x 2 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>rir</p></td>
+    <td><p>filewise</p></td>
+    <td><p>room, distance, reverberation-time</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>room</p></th>
+    <th class="head"><p>distance</p></th>
+    <th class="head"><p>reverberation-time</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>data/air_binaural_booth_0_1.wav</p></td>
+    <td><p>booth</p></td>
+    <td><p>0.5</p></td>
+    <td><p>0.08</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_booth_0_2.wav</p></td>
+    <td><p>booth</p></td>
+    <td><p>1.0</p></td>
+    <td><p>0.11</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_booth_0_3.wav</p></td>
+    <td><p>booth</p></td>
+    <td><p>1.5</p></td>
+    <td><p>0.18</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_lecture_0_1.wav</p></td>
+    <td><p>lecture</p></td>
+    <td><p>2.25</p></td>
+    <td><p>0.7</p></td>
+    </tr>
+            <tr>
+    <td><p>data/air_binaural_lecture_0_2.wav</p></td>
+    <td><p>lecture</p></td>
+    <td><p>4.0</p></td>
+    <td><p>0.72</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">17 rows x 3 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
 <div class="section" id="schemes">
 <h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default">
@@ -292,7 +446,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cough-speech-sneeze.html" class="btn btn-neutral float-right" title="cough-speech-sneeze" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="clac.html" class="btn btn-neutral float-right" title="clac" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../datasets.html" class="btn btn-neutral float-left" title="Datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -307,7 +461,7 @@
         
         
         
-          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2024/01/26 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>
@@ -345,6 +499,7 @@
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
     
 
   

@@ -1,0 +1,178 @@
+.. |ravdess-videos-1.0.3-file-duration-distribution| image:: ./ravdess-videos/ravdess-videos-1.0.3-file-duration-distribution.png
+
+.. _datasets-ravdess-videos:
+
+ravdess-videos
+--------------
+
+============= ======================
+version       1.0.3
+license       `CC-BY-NC-SA-4.0 <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>`__
+source        https://doi.org/10.5281/zenodo.1188975
+usage         research
+languages     English
+format        mp4
+channel       2
+sampling rate 48000
+bit depth     
+duration      0 days 05:34:26.009000
+files         4904, duration distribution: 2.9 s |ravdess-videos-1.0.3-file-duration-distribution| 6.4 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ravdess-videos>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The Ryerson Audio-Visual Database of Emotional Speech and Song The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS) contains 7356 files (total size: 24.8 GB). The database contains 24 professional actors (12 female, 12 male), vocalizing two lexically-matched statements in a neutral North American accent. Speech includes calm, happy, sad, angry, fearful, surprise, and disgust expressions, and song contains calm, happy, sad, angry, and fearful emotions. Each expression is produced at two levels of emotional intensity (normal, strong), with an additional neutral expression. All conditions are available in three modality formats: Audio-only (16bit, 48kHz .wav), Audio-Video (720p H.264, AAC 48kHz, .mp4), and Video-only (no sound). Note, there are no song files for Actor_18.
+
+Example
+^^^^^^^
+
+:file:`songs/actor_04/01-02-05-02-02-01-04.mp4`
+
+.. image:: ./ravdess-videos/ravdess-videos-1.0.3-player-waveform.png
+
+.. raw:: html
+
+    <p><video controls src="./ravdess-videos/songs/actor_04/01-02-05-02-02-01-04.mp4"></video></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotional intensity</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotional intensity</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>songs/actor_06/01-02-04-01-01-01-06.mp4</p></td>
+        <td><p>sad</p></td>
+        <td><p>normal</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/02-02-02-02-02-01-06.mp4</p></td>
+        <td><p>calm</p></td>
+        <td><p>strong</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/02-02-01-01-02-02-06.mp4</p></td>
+        <td><p>neutral</p></td>
+        <td><p>normal</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/02-02-04-01-01-02-06.mp4</p></td>
+        <td><p>sad</p></td>
+        <td><p>normal</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/01-02-06-01-02-02-06.mp4</p></td>
+        <td><p>fearful</p></td>
+        <td><p>normal</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">4904 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>speaker, duration, transcription, vocal channel</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>duration</p></th>
+        <th class="head"><p>transcription</p></th>
+        <th class="head"><p>vocal channel</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>songs/actor_06/01-02-04-01-01-01-06.mp4</p></td>
+        <td><p>06</p></td>
+        <td><p>0 days 00:00:05.141333333</p></td>
+        <td><p>Kids are talking by the door</p></td>
+        <td><p>song</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/02-02-02-02-02-01-06.mp4</p></td>
+        <td><p>06</p></td>
+        <td><p>0 days 00:00:05.418666667</p></td>
+        <td><p>Dogs are sitting by the door</p></td>
+        <td><p>song</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/02-02-01-01-02-02-06.mp4</p></td>
+        <td><p>06</p></td>
+        <td><p>0 days 00:00:04.543979167</p></td>
+        <td><p>Dogs are sitting by the door</p></td>
+        <td><p>song</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/02-02-04-01-01-02-06.mp4</p></td>
+        <td><p>06</p></td>
+        <td><p>0 days 00:00:05.056000</p></td>
+        <td><p>Kids are talking by the door</p></td>
+        <td><p>song</p></td>
+        </tr>
+                <tr>
+        <td><p>songs/actor_06/01-02-06-01-02-02-06.mp4</p></td>
+        <td><p>06</p></td>
+        <td><p>0 days 00:00:04.522666667</p></td>
+        <td><p>Dogs are sitting by the door</p></td>
+        <td><p>song</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">4904 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "duration", "time", "", ""
+    "emotion", "str", "angry, calm, disgust, fearful, happy, neutral, sad, suprised", ""
+    "emotional intensity", "str", "normal, strong", ""
+    "speaker", "str", "01, 02, 03, 04, 05, 06, 07, [...], 17, 18, 19, 20, 21, 22, 23, 24", "gender, language"
+    "transcription", "str", "Dogs are sitting by the door, Kids are talking by the door", ""
+    "vocal channel", "str", "song, speech", ""

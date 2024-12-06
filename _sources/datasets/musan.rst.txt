@@ -1,13 +1,14 @@
-.. _musan:
+.. |musan-1.0.0-file-duration-distribution| image:: ./musan/musan-1.0.0-file-duration-distribution.png
+
+.. _datasets-musan:
 
 musan
 -----
 
 Created by David Snyder, Guoguo Chen, Daniel Povey
 
-
 ============= ======================
-version       `1.0.0 <https://github.com/audeering/musan/blob/main/CHANGELOG.md>`__
+version       1.0.0
 license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
 source        http://www.openslr.org/17/
 usage         commercial
@@ -17,11 +18,10 @@ channel       1
 sampling rate 16000
 bit depth     16
 duration      4 days 13:17:22.582937499
-files         2016
+files         2016, duration distribution: 0.0 s |musan-1.0.0-file-duration-distribution| 1048.0 s
 repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/musan>`__
 published     2023-12-20 by audeering-unittest
 ============= ======================
-
 
 Description
 ^^^^^^^^^^^
@@ -33,40 +33,709 @@ Example
 
 :file:`noise/free-sound/noise-free-sound-0324.wav`
 
-.. image:: ../musan.png
+.. image:: ./musan/musan-1.0.0-player-waveform.png
 
 .. raw:: html
 
-    <p><audio controls src="musan/noise/free-sound/noise-free-sound-0324.wav"></audio></p>
+    <p><audio controls src="./musan/noise/free-sound/noise-free-sound-0324.wav"></audio></p>
 
 Tables
 ^^^^^^
 
-.. csv-table::
-   :header: ID,Type,Columns
-   :widths: 20, 10, 70
+.. raw:: html
 
-    "files", "filewise", "duration"
-    "music", "filewise", "genre, vocals, artist, composer"
-    "music.fma", "filewise", "genre, vocals, artist, composer"
-    "music.fma-western-art", "filewise", "genre, vocals, artist, composer"
-    "music.hd-classical", "filewise", "genre, vocals, artist, composer"
-    "music.jamendo", "filewise", "genre, vocals, artist, composer"
-    "music.rfm", "filewise", "genre, vocals, artist, composer"
-    "noise", "filewise", "background_noise"
-    "noise.free-sound", "filewise", "background_noise"
-    "noise.sound-bible", "filewise", "background_noise"
-    "speech", "filewise", "gender, language"
-    "speech.librivox", "filewise", "gender, language"
-    "speech.us-gov", "filewise", "gender, language"
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>duration</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>duration</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/fma/music-fma-0000.wav</p></td>
+        <td><p>0 days 00:04:57.978750</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0001.wav</p></td>
+        <td><p>0 days 00:03:38.044062500</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0002.wav</p></td>
+        <td><p>0 days 00:04:09.547750</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0003.wav</p></td>
+        <td><p>0 days 00:05:24.780437500</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0004.wav</p></td>
+        <td><p>0 days 00:05:22.298750</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2016 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>music</p></td>
+        <td><p>filewise</p></td>
+        <td><p>genre, vocals, artist, composer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>genre</p></th>
+        <th class="head"><p>vocals</p></th>
+        <th class="head"><p>artist</p></th>
+        <th class="head"><p>composer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/fma/music-fma-0026.wav</p></td>
+        <td><p>blues</p></td>
+        <td><p>True</p></td>
+        <td><p>Cullah</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0097.wav</p></td>
+        <td><p>pop,electronica</p></td>
+        <td><p>True</p></td>
+        <td><p>Quiet_Music_for_Tiny_Robots</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0099.wav</p></td>
+        <td><p>pop,electronica</p></td>
+        <td><p>True</p></td>
+        <td><p>Quiet_Music_for_Tiny_Robots</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0098.wav</p></td>
+        <td><p>pop,electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Quiet_Music_for_Tiny_Robots</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0100.wav</p></td>
+        <td><p>pop,electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Quiet_Music_for_Tiny_Robots</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">645 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>music.fma</p></td>
+        <td><p>filewise</p></td>
+        <td><p>genre, vocals, artist, composer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>genre</p></th>
+        <th class="head"><p>vocals</p></th>
+        <th class="head"><p>artist</p></th>
+        <th class="head"><p>composer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/fma/music-fma-0000.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Airglow</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0001.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Airglow</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0002.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Airglow</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0003.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Airglow</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma/music-fma-0004.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Airglow</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">128 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>music.fma-western-art</p></td>
+        <td><p>filewise</p></td>
+        <td><p>genre, vocals, artist, composer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>genre</p></th>
+        <th class="head"><p>vocals</p></th>
+        <th class="head"><p>artist</p></th>
+        <th class="head"><p>composer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/fma-western-art/music-fma-wa-0000.wav</p></td>
+        <td><p>westernart,classical</p></td>
+        <td><p>False</p></td>
+        <td><p>Aaron_Dunn</p></td>
+        <td><p>Clementi</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma-western-art/music-fma-wa-0001.wav</p></td>
+        <td><p>westernart,classical</p></td>
+        <td><p>False</p></td>
+        <td><p>Aaron_Dunn</p></td>
+        <td><p>Clementi</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma-western-art/music-fma-wa-0002.wav</p></td>
+        <td><p>westernart,classical</p></td>
+        <td><p>False</p></td>
+        <td><p>Aaron_Dunn</p></td>
+        <td><p>Clementi</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma-western-art/music-fma-wa-0003.wav</p></td>
+        <td><p>westernart,baroque</p></td>
+        <td><p>False</p></td>
+        <td><p>Advent_Chamber</p></td>
+        <td><p>Albinoni</p></td>
+        </tr>
+                <tr>
+        <td><p>music/fma-western-art/music-fma-wa-0004.wav</p></td>
+        <td><p>westernart,baroque</p></td>
+        <td><p>False</p></td>
+        <td><p>Advent_Chamber</p></td>
+        <td><p>Bach</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">93 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>music.hd-classical</p></td>
+        <td><p>filewise</p></td>
+        <td><p>genre, vocals, artist, composer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>genre</p></th>
+        <th class="head"><p>vocals</p></th>
+        <th class="head"><p>artist</p></th>
+        <th class="head"><p>composer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/hd-classical/music-hd-0000.wav</p></td>
+        <td><p>westernart,classical</p></td>
+        <td><p>False</p></td>
+        <td><p>Bernd_Krueger</p></td>
+        <td><p>Granados</p></td>
+        </tr>
+                <tr>
+        <td><p>music/hd-classical/music-hd-0001.wav</p></td>
+        <td><p>westernart,classical</p></td>
+        <td><p>False</p></td>
+        <td><p>Bernd_Krueger</p></td>
+        <td><p>Granados</p></td>
+        </tr>
+                <tr>
+        <td><p>music/hd-classical/music-hd-0002.wav</p></td>
+        <td><p>westernart,classical</p></td>
+        <td><p>False</p></td>
+        <td><p>Bernd_Krueger</p></td>
+        <td><p>Granados</p></td>
+        </tr>
+                <tr>
+        <td><p>music/hd-classical/music-hd-0003.wav</p></td>
+        <td><p>westernart,romantic</p></td>
+        <td><p>False</p></td>
+        <td><p>Bernd_Krueger</p></td>
+        <td><p>Grieg</p></td>
+        </tr>
+                <tr>
+        <td><p>music/hd-classical/music-hd-0004.wav</p></td>
+        <td><p>westernart,romantic</p></td>
+        <td><p>False</p></td>
+        <td><p>Bernd_Krueger</p></td>
+        <td><p>Grieg</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">75 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>music.jamendo</p></td>
+        <td><p>filewise</p></td>
+        <td><p>genre, vocals, artist, composer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>genre</p></th>
+        <th class="head"><p>vocals</p></th>
+        <th class="head"><p>artist</p></th>
+        <th class="head"><p>composer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/jamendo/music-jamendo-0000.wav</p></td>
+        <td><p>jazz,adventure</p></td>
+        <td><p>False</p></td>
+        <td><p>AFTER_WORK</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/jamendo/music-jamendo-0001.wav</p></td>
+        <td><p>jazz,adventure</p></td>
+        <td><p>False</p></td>
+        <td><p>AFTER_WORK</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/jamendo/music-jamendo-0002.wav</p></td>
+        <td><p>jazz,adventure</p></td>
+        <td><p>False</p></td>
+        <td><p>AFTER_WORK</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/jamendo/music-jamendo-0003.wav</p></td>
+        <td><p>jazz</p></td>
+        <td><p>False</p></td>
+        <td><p>AFTER_WORK</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/jamendo/music-jamendo-0004.wav</p></td>
+        <td><p>jazz,adventure</p></td>
+        <td><p>False</p></td>
+        <td><p>AFTER_WORK</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">217 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>music.rfm</p></td>
+        <td><p>filewise</p></td>
+        <td><p>genre, vocals, artist, composer</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>genre</p></th>
+        <th class="head"><p>vocals</p></th>
+        <th class="head"><p>artist</p></th>
+        <th class="head"><p>composer</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>music/rfm/music-rfm-0000.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Kevin_MacLeod</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/rfm/music-rfm-0001.wav</p></td>
+        <td><p>jazz</p></td>
+        <td><p>False</p></td>
+        <td><p>Kevin_MacLeod</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/rfm/music-rfm-0002.wav</p></td>
+        <td><p>rock</p></td>
+        <td><p>False</p></td>
+        <td><p>Kevin_MacLeod</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/rfm/music-rfm-0003.wav</p></td>
+        <td><p>electronica</p></td>
+        <td><p>False</p></td>
+        <td><p>Kevin_MacLeod</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>music/rfm/music-rfm-0004.wav</p></td>
+        <td><p>jazz</p></td>
+        <td><p>False</p></td>
+        <td><p>Kevin_MacLeod</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">147 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>noise</p></td>
+        <td><p>filewise</p></td>
+        <td><p>background_noise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>background_noise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>noise/free-sound/noise-free-sound-0000.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0001.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0002.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0003.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0004.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">930 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>noise.free-sound</p></td>
+        <td><p>filewise</p></td>
+        <td><p>background_noise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>background_noise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>noise/free-sound/noise-free-sound-0000.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0001.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0002.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0003.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/free-sound/noise-free-sound-0004.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">843 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>noise.sound-bible</p></td>
+        <td><p>filewise</p></td>
+        <td><p>background_noise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>background_noise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>noise/sound-bible/noise-sound-bible-0000.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/sound-bible/noise-sound-bible-0001.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/sound-bible/noise-sound-bible-0002.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/sound-bible/noise-sound-bible-0003.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>noise/sound-bible/noise-sound-bible-0004.wav</p></td>
+        <td><p>False</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">87 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speech</p></td>
+        <td><p>filewise</p></td>
+        <td><p>gender, language</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>speech/librivox/speech-librivox-0097.wav</p></td>
+        <td><p>female</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0098.wav</p></td>
+        <td><p>female</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0099.wav</p></td>
+        <td><p>female</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0169.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0168.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">425 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>speech.librivox</p></td>
+        <td><p>filewise</p></td>
+        <td><p>gender, language</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>speech/librivox/speech-librivox-0000.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0001.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0002.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>por</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0003.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/librivox/speech-librivox-0004.wav</p></td>
+        <td><p>male</p></td>
+        <td><p>nld</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">173 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speech.us-gov</p></td>
+        <td><p>filewise</p></td>
+        <td><p>gender, language</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>speech/us-gov/speech-us-gov-0000.wav</p></td>
+        <td><p></p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/us-gov/speech-us-gov-0001.wav</p></td>
+        <td><p></p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/us-gov/speech-us-gov-0002.wav</p></td>
+        <td><p></p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/us-gov/speech-us-gov-0003.wav</p></td>
+        <td><p></p></td>
+        <td><p>eng</p></td>
+        </tr>
+                <tr>
+        <td><p>speech/us-gov/speech-us-gov-0004.wav</p></td>
+        <td><p></p></td>
+        <td><p>eng</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">253 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
 
 
 Schemes
 ^^^^^^^
 
 .. csv-table::
-   :header: ID,Dtype,Labels
+    :header-rows: 1
 
+    "ID", "Dtype", "Labels"
     "artist", "str", ""
     "background_noise", "bool", ""
     "composer", "str", ""

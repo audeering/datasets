@@ -1,0 +1,459 @@
+.. |cmu-mosi-1.1.1-file-duration-distribution| image:: ./cmu-mosi/cmu-mosi-1.1.1-file-duration-distribution.png
+.. |cmu-mosi-1.1.1-segment-duration-distribution| image:: ./cmu-mosi/cmu-mosi-1.1.1-segment-duration-distribution.png
+
+.. _datasets-cmu-mosi:
+
+cmu-mosi
+--------
+
+Created by Amir Zadeh, Rown Zellers, Eli Pincus, Louis-Philippe Morency
+
+============= ======================
+version       1.1.1
+license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
+source        https://github.com/A2Zadeh/CMU-MultimodalSDK
+usage         research
+languages     English
+format        wav
+channel       1
+sampling rate 16000
+bit depth     16
+duration      0 days 04:01:39.517937500
+files         93, duration distribution: 54.9 s |cmu-mosi-1.1.1-file-duration-distribution| 180.1 s
+segments      185263, duration distribution: nan s |cmu-mosi-1.1.1-segment-duration-distribution| nan s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/cmu-mosi>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+Opinion-level annotated corpus of sentiment and subjectivity analysis in online videos. The dataset is annotated with labels for subjectivity, sentiment intensity, per-frame and per-opinion. Reference: https://arxiv.org/abs/1606.06259
+
+Example
+^^^^^^^
+
+:file:`Audio/0h-zjBukYpk.wav`
+
+.. image:: ./cmu-mosi/cmu-mosi-1.1.1-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./cmu-mosi/Audio/0h-zjBukYpk.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>dev</p></td>
+        <td><p>filewise</p></td>
+        <td><p></p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/WKA5OygbEKI.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/c5xsKMxpXnc.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/atnd_PF-Lbs.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/bvLlb-M3UXU.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/bOL9jKpeJRs.wav</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">10 rows x 0 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>gender</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>gender</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/0h-zjBukYpk.wav</p></td>
+        <td><p>male</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/1DmNV9C1hbY.wav</p></td>
+        <td><p>male</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/1iG0909rllw.wav</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/2WGyTLYerpo.wav</p></td>
+        <td><p>male</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">93 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>phonemes</p></td>
+        <td><p>segmented</p></td>
+        <td><p>phonemes</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>phonemes</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:00.012471</p></td>
+        <td><p>0 days 00:00:01.728571</p></td>
+        <td><p>sp</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:01.728571</p></td>
+        <td><p>0 days 00:00:02.117687</p></td>
+        <td><p>ow1</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:02.117687</p></td>
+        <td><p>0 days 00:00:05.160770</p></td>
+        <td><p>sp</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:05.160770</p></td>
+        <td><p>0 days 00:00:05.220634</p></td>
+        <td><p>dh</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:05.220634</p></td>
+        <td><p>0 days 00:00:05.320408</p></td>
+        <td><p>ih1</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">144101 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>sentiment</p></td>
+        <td><p>segmented</p></td>
+        <td><p>sentiment, sentiment.binarized, sentiment.binary, sentiment.binary.old</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>sentiment</p></th>
+        <th class="head"><p>sentiment.binarized</p></th>
+        <th class="head"><p>sentiment.binary</p></th>
+        <th class="head"><p>sentiment.binary.old</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:51.904533</p></td>
+        <td><p>0 days 00:00:55.945351</p></td>
+        <td><p>2.4</p></td>
+        <td><p>highly positive</p></td>
+        <td><p>positive</p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:56.045124</p></td>
+        <td><p>0 days 00:01:06.780725</p></td>
+        <td><p>-0.8</p></td>
+        <td><p>weakly negative</p></td>
+        <td><p>negative</p></td>
+        <td><p>negative</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:01:06.780720</p></td>
+        <td><p>0 days 00:01:08.736281</p></td>
+        <td><p>-1.0</p></td>
+        <td><p>weakly negative</p></td>
+        <td><p>negative</p></td>
+        <td><p>negative</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:01:08.736280</p></td>
+        <td><p>0 days 00:01:10.542176</p></td>
+        <td><p>-1.75</p></td>
+        <td><p>negative</p></td>
+        <td><p>negative</p></td>
+        <td><p>negative</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:01:10.542175</p></td>
+        <td><p>0 days 00:01:11.699546</p></td>
+        <td><p>0.0</p></td>
+        <td><p>neutral</p></td>
+        <td><p></p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2197 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>test</p></td>
+        <td><p>filewise</p></td>
+        <td><p></p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/tmZoasNr4rU.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/zhpQhgha_KU.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/lXPQBPVc5Cw.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/iiK8YX8oH1E.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/tStelxIAHjw.wav</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">31 rows x 0 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>train</p></td>
+        <td><p>filewise</p></td>
+        <td><p></p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/2iD-tVS8NPw.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/8d-gEyoeBzc.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/Qr1Ca94K55A.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/Ci-AH39fi3Y.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/8qrpnFRGt2A.wav</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">52 rows x 0 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>transcription</p></td>
+        <td><p>segmented</p></td>
+        <td><p>transcription</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>transcription</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:51.904533</p></td>
+        <td><p>0 days 00:00:55.945351</p></td>
+        <td><p>anyhow it was really good</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:56.045124</p></td>
+        <td><p>0 days 00:01:06.780725</p></td>
+        <td><p>they didnt really do a whole bunch of background info on why she has to fight and be prepared</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:01:06.780720</p></td>
+        <td><p>0 days 00:01:08.736281</p></td>
+        <td><p>i mean they did a little bit of it</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:01:08.736280</p></td>
+        <td><p>0 days 00:01:10.542176</p></td>
+        <td><p>but not a whole bunch</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:01:10.542175</p></td>
+        <td><p>0 days 00:01:11.699546</p></td>
+        <td><p>and they i guess</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2197 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>words</p></td>
+        <td><p>segmented</p></td>
+        <td><p>words</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>words</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:00.012471</p></td>
+        <td><p>0 days 00:00:01.728571</p></td>
+        <td><p>sp</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:01.728571</p></td>
+        <td><p>0 days 00:00:02.117687</p></td>
+        <td><p>oh</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:02.117687</p></td>
+        <td><p>0 days 00:00:05.160770</p></td>
+        <td><p>sp</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:05.160770</p></td>
+        <td><p>0 days 00:00:05.799319</p></td>
+        <td><p>this</p></td>
+        </tr>
+                <tr>
+        <td><p>Audio/03bSnISJMiM.wav</p></td>
+        <td><p>0 days 00:00:05.799319</p></td>
+        <td><p>0 days 00:00:06.896825</p></td>
+        <td><p>sp</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">49955 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Min", "Max", "Labels"
+    "gender", "str", "", "", "female, male"
+    "phoneme", "str", "", "", "aa0, aa1, aa2, ae0, ae1, ae2, ah0, [...], uw0, uw1, uw2, v, w, y, z, zh"
+    "sentiment", "float", "-3", "3", ""
+    "sentiment.binarized", "str", "", "", "highly negative, highly positive, negative, neutral, positive, weakly negative, weakly positive"
+    "sentiment.binary", "str", "", "", "negative, positive"
+    "sentiment.binary.old", "str", "", "", "negative, non-negative"
+    "transcription", "str", "", "", ""

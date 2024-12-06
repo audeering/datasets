@@ -1,0 +1,130 @@
+.. |urbansound8k-1.0.0-file-duration-distribution| image:: ./urbansound8k/urbansound8k-1.0.0-file-duration-distribution.png
+
+.. _datasets-urbansound8k:
+
+urbansound8k
+------------
+
+Created by Justin Salamon, Christopher Jacoby, Juan Pablo Bello
+
+============= ======================
+version       1.0.0
+license       `CC-BY-NC-3.0 <https://creativecommons.org/licenses/by-nc/3.0/>`__
+source        https://urbansounddataset.weebly.com
+usage         research
+languages     
+format        wav
+channel       1, 2
+sampling rate 8000, 11024, 11025, 16000, 22050, 24000, 32000, 44100, 48000, 96000, 192000
+bit depth     4, 8, 16, 24, 32
+duration      0 days 08:45:00.880612979
+files         8732, duration distribution: 0.1 s |urbansound8k-1.0.0-file-duration-distribution| 4.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/urbansound8k>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The UrbanSound8k dataset contains 8732 labeled sound excerpts (<=4s) of urban sounds from 10 classes. All excerpts are taken from field recordings uploaded to Freesound. The files are pre-sorted into ten folds. The sampling rate, bit depth, and number of channels are the same as those of the original file uploaded to Freesound and may vary from file to file. 
+
+Example
+^^^^^^^
+
+:file:`audio/fold6/101281-3-0-5.wav`
+
+.. image:: ./urbansound8k/urbansound8k-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./urbansound8k/audio/fold6/101281-3-0-5.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>category, clip_id, fold, salience</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>category</p></th>
+        <th class="head"><p>clip_id</p></th>
+        <th class="head"><p>fold</p></th>
+        <th class="head"><p>salience</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/fold5/100032-3-0-0.wav</p></td>
+        <td><p>dog_bark</p></td>
+        <td><p>100032</p></td>
+        <td><p>5</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/fold5/100263-2-0-117.wav</p></td>
+        <td><p>children_playing</p></td>
+        <td><p>100263</p></td>
+        <td><p>5</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/fold5/100263-2-0-121.wav</p></td>
+        <td><p>children_playing</p></td>
+        <td><p>100263</p></td>
+        <td><p>5</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/fold5/100263-2-0-126.wav</p></td>
+        <td><p>children_playing</p></td>
+        <td><p>100263</p></td>
+        <td><p>5</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/fold5/100263-2-0-137.wav</p></td>
+        <td><p>children_playing</p></td>
+        <td><p>100263</p></td>
+        <td><p>5</p></td>
+        <td><p>1</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">8732 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "category", "str", "air_conditioner, car_horn, children_playing, dog_bark, drilling, engine_idling, gun_shot, jackhammer, siren, street_music", ""
+    "clip_id", "int", "", ""
+    "fold", "int", "1, 2, 3, 4, 5, 6, 7, 8, 9, 10", ""
+    "salience", "int", "1, 2", "✓"

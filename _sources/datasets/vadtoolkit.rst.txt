@@ -1,13 +1,15 @@
-.. _vadtoolkit:
+.. |vadtoolkit-1.1.0-file-duration-distribution| image:: ./vadtoolkit/vadtoolkit-1.1.0-file-duration-distribution.png
+.. |vadtoolkit-1.1.0-segment-duration-distribution| image:: ./vadtoolkit/vadtoolkit-1.1.0-segment-duration-distribution.png
+
+.. _datasets-vadtoolkit:
 
 vadtoolkit
 ----------
 
 Created by Kim Jaeseok
 
-
 ============= ======================
-version       `1.1.0 <https://github.com/audeering/vadtoolkit/blob/main/CHANGELOG.md>`__
+version       1.1.0
 license       `GPLv3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`__
 source        https://github.com/jtkim-kaist/VAD
 usage         commercial
@@ -15,44 +17,96 @@ languages     kor
 format        wav
 channel       1
 sampling rate 16000
-bit depth     32, 16
+bit depth     16, 32
 duration      0 days 02:00:09.703062500
-files         4
+files         4, duration distribution: 1801.5 s |vadtoolkit-1.1.0-file-duration-distribution| 1804.0 s
+segments      588, duration distribution: 0.0 s |vadtoolkit-1.1.0-segment-duration-distribution| 51.1 s
 repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/vadtoolkit>`__
 published     2024-01-02 by audeering
 ============= ======================
-
 
 Description
 ^^^^^^^^^^^
 
 VAD Toolkit: A Database for Voice Activity Detection At each environment, conversational speech by two Korean male speakers was recorded. The ground truth labels are manually annotated. Because the recording was carried out in the real world, unexpected noises are included to the dataset such as the crying of baby, the chirping of insects, mouse click sound, and etc..
 
-Example
-^^^^^^^
-
-:file:`park.wav`
-
-.. image:: ../vadtoolkit.png
-
-.. raw:: html
-
-    <p><audio controls src="vadtoolkit/park.wav"></audio></p>
-
 Tables
 ^^^^^^
 
-.. csv-table::
-   :header: ID,Type,Columns
-   :widths: 20, 10, 70
+.. raw:: html
 
-    "segments", "segmented", "noise"
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>segments</p></td>
+        <td><p>segmented</p></td>
+        <td><p>noise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>noise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>bus_stop.wav</p></td>
+        <td><p>0 days 00:00:02.173875</p></td>
+        <td><p>0 days 00:00:03.775937</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>bus_stop.wav</p></td>
+        <td><p>0 days 00:00:05.641875</p></td>
+        <td><p>0 days 00:00:07.691937</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>bus_stop.wav</p></td>
+        <td><p>0 days 00:00:08.876875</p></td>
+        <td><p>0 days 00:00:11.498937</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>bus_stop.wav</p></td>
+        <td><p>0 days 00:00:12.468875</p></td>
+        <td><p>0 days 00:00:13.644937</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>bus_stop.wav</p></td>
+        <td><p>0 days 00:00:14.182875</p></td>
+        <td><p>0 days 00:00:16.498937</p></td>
+        <td><p>0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">588 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
 
 
 Schemes
 ^^^^^^^
 
 .. csv-table::
-   :header: ID,Dtype,Labels,Mappings
+    :header-rows: 1
 
+    "ID", "Dtype", "Labels", "Mappings"
     "noise", "int", "0, 1, 2, 3", "✓"

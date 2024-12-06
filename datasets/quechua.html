@@ -1,0 +1,1189 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>quechua &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ravdess" href="ravdess.html" />
+    <link rel="prev" title="openair" href="openair.html" />
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">quechua</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>quechua</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quechua">
+<span id="datasets-quechua"></span><h1>quechua<a class="headerlink" href="#quechua" title="Permalink to this heading">¶</a></h1>
+<p>Created by Rosa Y. G. Paccotacya-Yanque, Candy A. Huanca-Anquise, Judith Escalante-Calcina, Wilber R. Ramos-Lovon, Alvaro E. Cuno-Parari</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>1.0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.6084/m9.figshare.20292516.v4">https://doi.org/10.6084/m9.figshare.20292516.v4</a></p></td>
+</tr>
+<tr class="row-even"><td><p>usage</p></td>
+<td><p>commercial</p></td>
+</tr>
+<tr class="row-odd"><td><p>languages</p></td>
+<td><p>que</p></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-odd"><td><p>channel</p></td>
+<td><p>1, 2</p></td>
+</tr>
+<tr class="row-even"><td><p>sampling rate</p></td>
+<td><p>16000, 44100, 48000</p></td>
+</tr>
+<tr class="row-odd"><td><p>bit depth</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
+<td><p>0 days 15:14:04.898905045</p></td>
+</tr>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>12416, duration distribution: 0.7 s <img alt="quechua-1.0.2-file-duration-distribution" src="../_images/quechua-1.0.2-file-duration-distribution.png" /> 21.8 s</p></td>
+</tr>
+<tr class="row-even"><td><p>repository</p></td>
+<td><p><a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/quechua">audb-public</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>published</p></td>
+<td><p>2024-11-27 by hwierstorf</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>Quechua contains 12420 recordings of emotional speech in Quechua Collao. Six actors were asked to read words and sentences with nine emotional categories. Four human annotators labeled the recordings for arousal, dominance, and valence.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">audios/10415.wav</span></code></p>
+<img alt="../_images/quechua-1.0.2-player-waveform.png" src="../_images/quechua-1.0.2-player-waveform.png" />
+<p><audio controls src="./quechua/audios/10415.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>arousal.test</p></td>
+    <td><p>filewise</p></td>
+    <td><p>Rater01, Rater02, Rater03, Rater04</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>Rater01</p></th>
+    <th class="head"><p>Rater02</p></th>
+    <th class="head"><p>Rater03</p></th>
+    <th class="head"><p>Rater04</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10004.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>2</p></td>
+    <td><p>1</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10009.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10011.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>1</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10016.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10019.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">8278 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>arousal.train</p></td>
+    <td><p>filewise</p></td>
+    <td><p>Rater01, Rater02, Rater03, Rater04</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>Rater01</p></th>
+    <th class="head"><p>Rater02</p></th>
+    <th class="head"><p>Rater03</p></th>
+    <th class="head"><p>Rater04</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10001.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>4</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10002.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>3</p></td>
+    <td><p>1</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10003.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10005.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>4</p></td>
+    <td><p>2</p></td>
+    <td><p>4</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10006.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4138 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>dominance.test</p></td>
+    <td><p>filewise</p></td>
+    <td><p>Rater01, Rater02, Rater03, Rater04</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>Rater01</p></th>
+    <th class="head"><p>Rater02</p></th>
+    <th class="head"><p>Rater03</p></th>
+    <th class="head"><p>Rater04</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10004.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    <td><p>3</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10009.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10011.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>4</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10016.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>4</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10019.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>2</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">8278 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>dominance.train</p></td>
+    <td><p>filewise</p></td>
+    <td><p>Rater01, Rater02, Rater03, Rater04</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>Rater01</p></th>
+    <th class="head"><p>Rater02</p></th>
+    <th class="head"><p>Rater03</p></th>
+    <th class="head"><p>Rater04</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10001.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>3</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10002.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10003.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10005.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>3</p></td>
+    <td><p>4</p></td>
+    <td><p>4</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10006.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>5</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4138 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>emotion.categories.test.desired</p></td>
+    <td><p>filewise</p></td>
+    <td><p>emotion</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>emotion</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10004.wav</p></td>
+    <td><p>boredom</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10009.wav</p></td>
+    <td><p>sleepiness</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10011.wav</p></td>
+    <td><p>sleepiness</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10016.wav</p></td>
+    <td><p>anger</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10019.wav</p></td>
+    <td><p>anger</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">8278 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>emotion.categories.train.desired</p></td>
+    <td><p>filewise</p></td>
+    <td><p>emotion</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>emotion</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10001.wav</p></td>
+    <td><p>anger</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10002.wav</p></td>
+    <td><p>boredom</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10003.wav</p></td>
+    <td><p>anger</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10005.wav</p></td>
+    <td><p>happiness</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10006.wav</p></td>
+    <td><p>boredom</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4138 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>emotion.dimensions.test.gold_standard</p></td>
+    <td><p>filewise</p></td>
+    <td><p>arousal, arousal.agreement, dominance, dominance.agreement, valence, valence.agreement</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>arousal</p></th>
+    <th class="head"><p>arousal.agreement</p></th>
+    <th class="head"><p>dominance</p></th>
+    <th class="head"><p>dominance.agreement</p></th>
+    <th class="head"><p>valence</p></th>
+    <th class="head"><p>valence.agreement</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10004.wav</p></td>
+    <td><p>0.3125</p></td>
+    <td><p>0.45513763205741575</p></td>
+    <td><p>0.375</p></td>
+    <td><p>0.75</p></td>
+    <td><p>0.6875</p></td>
+    <td><p>0.45513763205741575</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10009.wav</p></td>
+    <td><p>0.0</p></td>
+    <td><p>1.0</p></td>
+    <td><p>0.125</p></td>
+    <td><p>0.75</p></td>
+    <td><p>0.6875</p></td>
+    <td><p>1.0</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10011.wav</p></td>
+    <td><p>0.375</p></td>
+    <td><p>0.44098300562505255</p></td>
+    <td><p>0.5</p></td>
+    <td><p>0.5</p></td>
+    <td><p>0.5</p></td>
+    <td><p>0.44098300562505255</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10016.wav</p></td>
+    <td><p>1.0</p></td>
+    <td><p>1.0</p></td>
+    <td><p>0.875</p></td>
+    <td><p>0.75</p></td>
+    <td><p>0.3125</p></td>
+    <td><p>1.0</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10019.wav</p></td>
+    <td><p>1.0</p></td>
+    <td><p>1.0</p></td>
+    <td><p>0.8125</p></td>
+    <td><p>0.350480947161671</p></td>
+    <td><p>0.0</p></td>
+    <td><p>1.0</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">8278 rows x 6 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>emotion.dimensions.train.gold_standard</p></td>
+    <td><p>filewise</p></td>
+    <td><p>arousal, arousal.agreement, dominance, dominance.agreement, valence, valence.agreement</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>arousal</p></th>
+    <th class="head"><p>arousal.agreement</p></th>
+    <th class="head"><p>dominance</p></th>
+    <th class="head"><p>dominance.agreement</p></th>
+    <th class="head"><p>valence</p></th>
+    <th class="head"><p>valence.agreement</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10001.wav</p></td>
+    <td><p>0.9375</p></td>
+    <td><p>0.7834936490538904</p></td>
+    <td><p>0.875</p></td>
+    <td><p>0.5669872981077807</p></td>
+    <td><p>0.0625</p></td>
+    <td><p>0.7834936490538904</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10002.wav</p></td>
+    <td><p>0.25</p></td>
+    <td><p>0.6464466094067263</p></td>
+    <td><p>0.3125</p></td>
+    <td><p>0.7834936490538904</p></td>
+    <td><p>0.625</p></td>
+    <td><p>0.6464466094067263</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10003.wav</p></td>
+    <td><p>0.4375</p></td>
+    <td><p>0.585421901205575</p></td>
+    <td><p>0.375</p></td>
+    <td><p>0.75</p></td>
+    <td><p>0.5625</p></td>
+    <td><p>0.585421901205575</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10005.wav</p></td>
+    <td><p>0.625</p></td>
+    <td><p>0.5669872981077807</p></td>
+    <td><p>0.6875</p></td>
+    <td><p>0.7834936490538904</p></td>
+    <td><p>0.625</p></td>
+    <td><p>0.5669872981077807</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10006.wav</p></td>
+    <td><p>0.3125</p></td>
+    <td><p>0.7834936490538904</p></td>
+    <td><p>0.6675</p></td>
+    <td><p>0.45513763205741575</p></td>
+    <td><p>0.6875</p></td>
+    <td><p>0.7834936490538904</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4138 rows x 6 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>files</p></td>
+    <td><p>filewise</p></td>
+    <td><p>speaker, sentence</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>speaker</p></th>
+    <th class="head"><p>sentence</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10001.wav</p></td>
+    <td><p>a2</p></td>
+    <td><p>A069</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10002.wav</p></td>
+    <td><p>a2</p></td>
+    <td><p>B159</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10003.wav</p></td>
+    <td><p>a2</p></td>
+    <td><p>A211</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10004.wav</p></td>
+    <td><p>a5</p></td>
+    <td><p>B221</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10005.wav</p></td>
+    <td><p>a2</p></td>
+    <td><p>H089</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">12416 rows x 2 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>sentence</p></td>
+    <td><p>misc</p></td>
+    <td><p>transcription, translation.spa, is_single_word</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>transcription</p></th>
+    <th class="head"><p>translation.spa</p></th>
+    <th class="head"><p>is_single_word</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>H001</p></td>
+    <td><p>Yana</p></td>
+    <td><p>Enamorado (a)</p></td>
+    <td><p>True</p></td>
+    </tr>
+            <tr>
+    <td><p>H002</p></td>
+    <td><p>Tayta</p></td>
+    <td><p>Padre</p></td>
+    <td><p>True</p></td>
+    </tr>
+            <tr>
+    <td><p>H003</p></td>
+    <td><p>Kaqniyuq</p></td>
+    <td><p>Adinerado</p></td>
+    <td><p>True</p></td>
+    </tr>
+            <tr>
+    <td><p>H004</p></td>
+    <td><p>Alaqha</p></td>
+    <td><p>Adorno</p></td>
+    <td><p>True</p></td>
+    </tr>
+            <tr>
+    <td><p>H005</p></td>
+    <td><p>K'anchayay</p></td>
+    <td><p>Brillar</p></td>
+    <td><p>True</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">2070 rows x 3 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>speaker</p></td>
+    <td><p>misc</p></td>
+    <td><p>gender</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>speaker</p></th>
+    <th class="head"><p>gender</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>a1</p></td>
+    <td><p>female</p></td>
+    </tr>
+            <tr>
+    <td><p>a2</p></td>
+    <td><p>male</p></td>
+    </tr>
+            <tr>
+    <td><p>a3</p></td>
+    <td><p>female</p></td>
+    </tr>
+            <tr>
+    <td><p>a4</p></td>
+    <td><p>female</p></td>
+    </tr>
+            <tr>
+    <td><p>a5</p></td>
+    <td><p>male</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">6 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>valence.test</p></td>
+    <td><p>filewise</p></td>
+    <td><p>Rater01, Rater02, Rater03, Rater04</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>Rater01</p></th>
+    <th class="head"><p>Rater02</p></th>
+    <th class="head"><p>Rater03</p></th>
+    <th class="head"><p>Rater04</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10004.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>2</p></td>
+    <td><p>1</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10009.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    <td><p>1</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10011.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>1</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10016.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10019.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">8278 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>valence.train</p></td>
+    <td><p>filewise</p></td>
+    <td><p>Rater01, Rater02, Rater03, Rater04</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>Rater01</p></th>
+    <th class="head"><p>Rater02</p></th>
+    <th class="head"><p>Rater03</p></th>
+    <th class="head"><p>Rater04</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/10001.wav</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>5</p></td>
+    <td><p>4</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10002.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>3</p></td>
+    <td><p>1</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10003.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10005.wav</p></td>
+    <td><p>4</p></td>
+    <td><p>4</p></td>
+    <td><p>2</p></td>
+    <td><p>4</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/10006.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>3</p></td>
+    <td><p>2</p></td>
+    <td><p>2</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4138 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Min</p></th>
+<th class="head"><p>Max</p></th>
+<th class="head"><p>Labels</p></th>
+<th class="head"><p>Mappings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>arousal</p></td>
+<td><p>float</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>arousal.agreement</p></td>
+<td><p>float</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>arousal.original</p></td>
+<td><p>int</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>dominance</p></td>
+<td><p>float</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>dominance.agreement</p></td>
+<td><p>float</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>dominance.original</p></td>
+<td><p>int</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>emotion</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>anger, boredom, calmness, exitement, fear, happiness, neutral, sadness, sleepiness</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>gender</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>is_single_word</p></td>
+<td><p>bool</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sentence</p></td>
+<td><p>object</p></td>
+<td></td>
+<td></td>
+<td><p>A001, A002, A003, A004, A005, A006, A007, […], T223, T224, T225, T226, T227, T228, T229, T230</p></td>
+<td><p>is_single_word, transcription, translation.spa</p></td>
+</tr>
+<tr class="row-even"><td><p>speaker</p></td>
+<td><p>object</p></td>
+<td></td>
+<td></td>
+<td><p>a1, a2, a3, a4, a5, a6</p></td>
+<td><p>gender</p></td>
+</tr>
+<tr class="row-odd"><td><p>transcription</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>translation</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>valence</p></td>
+<td><p>float</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>valence.agreement</p></td>
+<td><p>float</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>valence.original</p></td>
+<td><p>int</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ravdess.html" class="btn btn-neutral float-right" title="ravdess" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="openair.html" class="btn btn-neutral float-left" title="openair" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

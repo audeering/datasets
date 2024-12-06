@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>css10 &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="emodb" href="emodb.html" />
+    <link rel="prev" title="crema-d" href="crema-d.html" />
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">css10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>css10</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="css10">
+<span id="datasets-css10"></span><h1>css10<a class="headerlink" href="#css10" title="Permalink to this heading">¶</a></h1>
+<p>Created by Kyubyong Park and Thomas Mulc</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p><a class="reference external" href="https://github.com/Kyubyong/css10">https://github.com/Kyubyong/css10</a></p></td>
+</tr>
+<tr class="row-even"><td><p>usage</p></td>
+<td><p>unrestricted</p></td>
+</tr>
+<tr class="row-odd"><td><p>languages</p></td>
+<td><p>zho, nld, fin, fra, deu, ell, hun, jpn, rus, spa</p></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-odd"><td><p>channel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sampling rate</p></td>
+<td><p>22050</p></td>
+</tr>
+<tr class="row-odd"><td><p>bit depth</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
+<td><p>5 days 19:41:56.206122452</p></td>
+</tr>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>63857, duration distribution: 1.0 s <img alt="css10-1.0.0-file-duration-distribution" src="../_images/css10-1.0.0-file-duration-distribution.png" /> 39.5 s</p></td>
+</tr>
+<tr class="row-even"><td><p>repository</p></td>
+<td><p><a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/css10">audb-public</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>published</p></td>
+<td><p>2024-11-27 by hwierstorf</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>CSS10 is a collection of single speaker speech data for 10 languages. Each of them consists of audio files recorded by a single volunteer and their aligned text sourced from LibriVox. The dataset contains: 6h for Chinese, 13h for Dutch, 10h for Finnish, 19h for French, 16h for German, 4h for Greek, 10h for Hungarian, 15h for Japanese, 21h for Russian, 24h for Spanish.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">19demarzo/19demarzo_0073.wav</span></code></p>
+<img alt="../_images/css10-1.0.0-player-waveform.png" src="../_images/css10-1.0.0-player-waveform.png" />
+<p><audio controls src="./css10/19demarzo/19demarzo_0073.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>files</p></td>
+    <td><p>filewise</p></td>
+    <td><p>transcription, normalized-transcription, language, speaker</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>transcription</p></th>
+    <th class="head"><p>normalized-transcription</p></th>
+    <th class="head"><p>language</p></th>
+    <th class="head"><p>speaker</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>call_to_arms/call_to_arms_0000.wav</p></td>
+    <td><p>《呐喊》自序·鲁迅·我在年青时候也曾经做过许多梦，</p></td>
+    <td><p>nà hǎn zì xù · lǔ xùn · wǒ zài nián qīng shí hou yě céng jīng zuò guò xǔ duō mèng ，</p></td>
+    <td><p>chinese</p></td>
+    <td><p>Jing Li</p></td>
+    </tr>
+            <tr>
+    <td><p>call_to_arms/call_to_arms_0001.wav</p></td>
+    <td><p>后来大半忘却了，但自己也并不以为可惜。所谓回忆者，虽说可以使人欢欣，有时也不免使人寂寞，</p></td>
+    <td><p>hòu lái dà bàn wàng què liào ， dàn zì jǐ yě bìng bù yǐ wéi kě xī 。 suǒ wèi huí yì zhě ， suī shuō ...</p></td>
+    <td><p>chinese</p></td>
+    <td><p>Jing Li</p></td>
+    </tr>
+            <tr>
+    <td><p>call_to_arms/call_to_arms_0002.wav</p></td>
+    <td><p>使精神的丝缕还牵着己逝的寂寞的时光，又有什么意味呢，而我偏苦于不能全忘却，</p></td>
+    <td><p>shǐ jīng shen dì sī lǚ huán qiān zháo jǐ shì dì jì mò dì shí guāng ， yòu yǒu shén me yì wèi ní ， ...</p></td>
+    <td><p>chinese</p></td>
+    <td><p>Jing Li</p></td>
+    </tr>
+            <tr>
+    <td><p>call_to_arms/call_to_arms_0003.wav</p></td>
+    <td><p>这不能全忘的一部分，到现在便成了《呐喊》的来由。我有四年多，曾经常常，</p></td>
+    <td><p>zhè bù néng quán wàng dì yī bù fen ， dào xiàn zài biàn chéng liào nà hǎn dì lái yóu 。 wǒ yǒu sì n...</p></td>
+    <td><p>chinese</p></td>
+    <td><p>Jing Li</p></td>
+    </tr>
+            <tr>
+    <td><p>call_to_arms/call_to_arms_0004.wav</p></td>
+    <td><p>——几乎是每天，出入于质铺和药店里，</p></td>
+    <td><p>— — jī hū shì měi tiān ， chū rù yú zhí pù hé yào diàn lǐ ，</p></td>
+    <td><p>chinese</p></td>
+    <td><p>Jing Li</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">63857 rows x 4 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Labels</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>language</p></td>
+<td><p>str</p></td>
+<td><p>chinese, dutch, finnish, french, german, greek, hungarian, japanese, russian, spanish</p></td>
+</tr>
+<tr class="row-odd"><td><p>normalized-transcription</p></td>
+<td><p>str</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>speaker</p></td>
+<td><p>str</p></td>
+<td><p>Bart de Leeuw, Diana Majlinger, Gilles G. Le Blanc, Harri Tapani Ylilammi, Hokuspokus, Jing Li, Mark Chulsky, Rapunzelina, Tux, ekzemplaro</p></td>
+</tr>
+<tr class="row-odd"><td><p>transcription</p></td>
+<td><p>str</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="emodb.html" class="btn btn-neutral float-right" title="emodb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crema-d.html" class="btn btn-neutral float-left" title="crema-d" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

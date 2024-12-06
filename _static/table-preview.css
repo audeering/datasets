@@ -1,0 +1,90 @@
+/* Expand rows in Tables table to show preview of each tables content.
+/*
+/* Implementation based on https://github.com/chhikaradi1993/Expandable-table-row
+*/
+.expanded-row-content {
+    font-size: 13px;
+    /* Add scroll bar if table preview is too big */
+    overflow: auto !important;
+    /* Let column appear as additional row in next line */
+    display: grid;
+    grid-column: 1/-1;
+    justify-content: flex-start;
+    border-left: none;
+}
+.hide-row {
+    display: None;
+}
+table.clickable {
+    /* Ensure we don't get double border lines */
+    border-bottom: none;
+    border-right: none;
+    /* Force to use full width */
+    width: 100%;
+}
+table.clickable td,
+table.clickable th {
+    /* Ensure we don't get double border lines */
+    border-left: none;
+    border-top: none;
+}
+table.preview td {
+    /* Remove all borders inside preview table cells */
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+table.preview td p.table-statistic {
+    /* Make "N rows x M columns" smaller */
+    font-size: 90%;
+}
+table.clickable td:not(.expanded-row-content),
+table.clickable th {
+    /* Allow to center cell copntent with `margin: auto` */
+    display: flex;
+}
+table.clickable td:not(.expanded-row-content) p,
+table.clickable th p {
+    /* Verrtically center cell content */
+    margin: auto 0;
+}
+table.clickable td:not(.expanded-row-content) p:last-child,
+table.clickable th p:last-child {
+    /* Verrtically center cell content for ReadTheDocs based themes*/
+    margin: auto 0 !important;
+}
+table.clickable td.expanded-row-content td,
+table.clickable td.expanded-row-content th {
+    display: table-cell;
+}
+table.clickable tr.grid {
+    /* Fixed grid of 3 columns */
+    display: grid;
+    grid-template-columns: repeat(1, 1.1fr) 15% repeat(1, 1fr);
+}
+table.clickable tr.clickable {
+    /* Show pointer as cursor to highlight the row can be clicked */
+    cursor: pointer;
+    /* Overflow of table preview column */
+    justify-content: flex-start;
+}
+table.clickable tr.clicked td:not(.expanded-row-content) {
+    /* Remove bottom border on clicked row when preview is shown */
+    border-bottom: none;
+}
+table.preview {
+    /* Padding around table preview */
+    padding: 10px;
+}
+table.preview td {
+    /* Ensure minimal distance between columns */
+    padding-right: 0.3em;
+}
+table.preview th {
+    /* Use normal font in header row of preview table */
+    font-weight: normal !important;
+}
+/* Ensure example video fits onto page */
+#example.section video {
+    max-width: 100%;
+}

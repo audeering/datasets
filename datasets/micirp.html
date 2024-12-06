@@ -28,10 +28,11 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="musan" href="musan.html" />
-    <link rel="prev" title="emodb" href="emodb.html" />
+    <link rel="prev" title="mesd" href="mesd.html" />
     
   
 
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                v1.0.2
+                v1.1.0
               </div>
             
           
@@ -92,9 +93,21 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">micirp</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
@@ -103,7 +116,15 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +170,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="micirp">
-<span id="id1"></span><h1>micirp<a class="headerlink" href="#micirp" title="Permalink to this heading">¶</a></h1>
+<span id="datasets-micirp"></span><h1>micirp<a class="headerlink" href="#micirp" title="Permalink to this heading">¶</a></h1>
 <p>Created by Stewart Tavener (Xaudia.com)</p>
 <table class="docutils align-default">
 <colgroup>
@@ -158,7 +179,7 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>version</p></td>
-<td><p><a class="reference external" href="https://github.com/audeering/micirp/blob/main/CHANGELOG.md">1.0.0</a></p></td>
+<td><p>1.0.0</p></td>
 </tr>
 <tr class="row-even"><td><p>license</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
@@ -179,7 +200,7 @@
 <td><p>1</p></td>
 </tr>
 <tr class="row-even"><td><p>sampling rate</p></td>
-<td><p>48000, 44100</p></td>
+<td><p>44100, 48000</p></td>
 </tr>
 <tr class="row-odd"><td><p>bit depth</p></td>
 <td><p>24</p></td>
@@ -188,7 +209,7 @@
 <td><p>0 days 00:00:27.341591837</p></td>
 </tr>
 <tr class="row-odd"><td><p>files</p></td>
-<td><p>66</p></td>
+<td><p>66, duration distribution: 0.3 s <img alt="micirp-1.0.0-file-duration-distribution" src="../_images/micirp-1.0.0-file-duration-distribution.png" /> 0.5 s</p></td>
 </tr>
 <tr class="row-even"><td><p>repository</p></td>
 <td><p><a class="reference external" href="https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/micirp">data-public</a></p></td>
@@ -205,30 +226,63 @@
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
 <p><code class="file docutils literal notranslate"><span class="pre">dirs/IR_AKGD12.wav</span></code></p>
-<img alt="../_images/micirp.png" src="../_images/micirp.png" />
-<p><audio controls src="micirp/dirs/IR_AKGD12.wav"></audio></p></div>
+<img alt="../_images/micirp-1.0.0-player-waveform.png" src="../_images/micirp-1.0.0-player-waveform.png" />
+<p><audio controls src="./micirp/dirs/IR_AKGD12.wav"></audio></p></div>
 <div class="section" id="tables">
 <h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 10%" />
-<col style="width: 70%" />
-</colgroup>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>files</p></td>
+    <td><p>filewise</p></td>
+    <td><p>manufacturer</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
 <thead>
-<tr class="row-odd"><th class="head"><p>ID</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Columns</p></th>
-</tr>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>manufacturer</p></th>
+    </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>files</p></td>
-<td><p>filewise</p></td>
-<td><p>manufacturer</p></td>
-</tr>
+                <tr>
+    <td><p>dirs/Altec_639.wav</p></td>
+    <td><p>Altec</p></td>
+    </tr>
+            <tr>
+    <td><p>dirs/Altec_670A.wav</p></td>
+    <td><p>Altec</p></td>
+    </tr>
+            <tr>
+    <td><p>dirs/Altec_670B.wav</p></td>
+    <td><p>Altec</p></td>
+    </tr>
+            <tr>
+    <td><p>dirs/American_R331.wav</p></td>
+    <td><p>American</p></td>
+    </tr>
+            <tr>
+    <td><p>dirs/Amperite_RA.wav</p></td>
+    <td><p>Amperite</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">66 rows x 1 column</p></td></tr>
 </tbody>
 </table>
-</div>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
 <div class="section" id="schemes">
 <h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default">
@@ -264,7 +318,7 @@
         <a href="musan.html" class="btn btn-neutral float-right" title="musan" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="emodb.html" class="btn btn-neutral float-left" title="emodb" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mesd.html" class="btn btn-neutral float-left" title="mesd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -276,7 +330,7 @@
         
         
         
-          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2024/01/26 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>
@@ -314,6 +368,7 @@
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
     
 
   

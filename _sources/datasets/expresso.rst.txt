@@ -1,0 +1,626 @@
+.. |expresso-1.0.0-file-duration-distribution| image:: ./expresso/expresso-1.0.0-file-duration-distribution.png
+.. |expresso-1.0.0-segment-duration-distribution| image:: ./expresso/expresso-1.0.0-segment-duration-distribution.png
+
+.. _datasets-expresso:
+
+expresso
+--------
+
+Created by TA Nguyen, W-N Hsu, A D'Avirro, B Shi, I Gat, M Fazel-Zarani, T Remez, Ja Copet, G Synnaeve, M Hassid, F Kreuk, Y Adi, E Dupoux
+
+============= ======================
+version       1.0.0
+license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
+source        https://github.com/facebookresearch/textlesslib/tree/main/examples/expresso/dataset
+usage         research
+languages     eng
+format        wav
+channel       1, 2
+sampling rate 48000
+bit depth     24
+duration      1 days 18:23:42.549854165
+files         11954, duration distribution: 0.6 s |expresso-1.0.0-file-duration-distribution| 1346.7 s
+segments      27545, duration distribution: nan s |expresso-1.0.0-segment-duration-distribution| nan s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/expresso>`__
+published     2024-12-05 by cgeng
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+Expresso is a dataset of expressive speech recordings. It contains read speech and singing in various styles including default, confused, enunciated, happy, laughing, narration, sad, singing, and whisper. The dataset is part of the TextlessLib project.
+
+Example
+^^^^^^^
+
+:file:`audio_48khz/read/ex02/happy/base/ex02_happy_00339.wav`
+
+.. image:: ./expresso/expresso-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./expresso/audio_48khz/read/ex02/happy/base/ex02_happy_00339.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>dev.channel0</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker, style, corpus</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>style</p></th>
+        <th class="head"><p>corpus</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/read/ex01/default/longform/ex01_default_longform_00001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:00:16.490000</p></td>
+        <td><p>ex01</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex01/narration/longform/ex01_narration_longform_00001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:00:16.990000</p></td>
+        <td><p>ex01</p></td>
+        <td><p>narration</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex02/default/longform/ex02_default_longform_00001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:00:14.070000</p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex02/narration/longform/ex02_narration_longform_00001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:00:18.590000</p></td>
+        <td><p>ex02</p></td>
+        <td><p>narration</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex03/default/longform/ex03_default_longform_00001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:00:13.390000</p></td>
+        <td><p>ex03</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">688 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>dev.channel1</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker, style, corpus</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>style</p></th>
+        <th class="head"><p>corpus</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_007.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/enunciated/ex01-ex02_enunciated_001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:00:50.270000</p></td>
+        <td><p>ex02</p></td>
+        <td><p>enunciated</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/fast/ex01-ex02_fast_004.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>fast</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/projected/ex01-ex02_projected_006.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>projected</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/whisper/ex01-ex02_whisper_001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>whisper</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">52 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>id, speaking_style</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>id</p></th>
+        <th class="head"><p>speaking_style</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>001</p></td>
+        <td><p>conversational</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_002.wav</p></td>
+        <td><p>002</p></td>
+        <td><p>conversational</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_003.wav</p></td>
+        <td><p>003</p></td>
+        <td><p>conversational</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_004.wav</p></td>
+        <td><p>004</p></td>
+        <td><p>conversational</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_005.wav</p></td>
+        <td><p>005</p></td>
+        <td><p>conversational</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">11954 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>test.channel0</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker, style, corpus</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>style</p></th>
+        <th class="head"><p>corpus</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/read/ex01/default/longform/ex01_default_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:16.490000</p></td>
+        <td><p>0 days 00:00:32.980000</p></td>
+        <td><p>ex01</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex01/narration/longform/ex01_narration_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:16.990000</p></td>
+        <td><p>0 days 00:00:33.980000</p></td>
+        <td><p>ex01</p></td>
+        <td><p>narration</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex02/default/longform/ex02_default_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:14.070000</p></td>
+        <td><p>0 days 00:00:28.140000</p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex02/narration/longform/ex02_narration_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:18.590000</p></td>
+        <td><p>0 days 00:00:37.180000</p></td>
+        <td><p>ex02</p></td>
+        <td><p>narration</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex03/default/longform/ex03_default_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:13.390000</p></td>
+        <td><p>0 days 00:00:26.780000</p></td>
+        <td><p>ex03</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">648 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>test.channel1</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker, style, corpus</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>style</p></th>
+        <th class="head"><p>corpus</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_008.wav</p></td>
+        <td><p>0 days 00:00:00</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/enunciated/ex01-ex02_enunciated_001.wav</p></td>
+        <td><p>0 days 00:00:50.270000</p></td>
+        <td><p>0 days 00:01:40.540000</p></td>
+        <td><p>ex02</p></td>
+        <td><p>enunciated</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/fast/ex01-ex02_fast_003.wav</p></td>
+        <td><p>0 days 00:00:00</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>fast</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/projected/ex01-ex02_projected_005.wav</p></td>
+        <td><p>0 days 00:00:00</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>projected</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/whisper/ex01-ex02_whisper_004.wav</p></td>
+        <td><p>0 days 00:00:00</p></td>
+        <td><p>0 days 00:01:00</p></td>
+        <td><p>ex02</p></td>
+        <td><p>whisper</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">52 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>train.channel0</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker, style, corpus</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>style</p></th>
+        <th class="head"><p>corpus</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/read/ex01/default/longform/ex01_default_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:32.980000</p></td>
+        <td><p></p></td>
+        <td><p>ex01</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex01/narration/longform/ex01_narration_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:33.980000</p></td>
+        <td><p></p></td>
+        <td><p>ex01</p></td>
+        <td><p>narration</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex02/default/longform/ex02_default_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:28.140000</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex02/narration/longform/ex02_narration_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:37.180000</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>narration</p></td>
+        <td><p>longform</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/read/ex03/default/longform/ex03_default_longform_00001.wav</p></td>
+        <td><p>0 days 00:00:26.780000</p></td>
+        <td><p></p></td>
+        <td><p>ex03</p></td>
+        <td><p>default</p></td>
+        <td><p>longform</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">10727 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>train.channel1</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker, style, corpus</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>style</p></th>
+        <th class="head"><p>corpus</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_002.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_003.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_004.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_005.wav</p></td>
+        <td><p>0 days</p></td>
+        <td><p></p></td>
+        <td><p>ex02</p></td>
+        <td><p>default</p></td>
+        <td><p></p></td>
+        </tr>
+            <tr><td><p class="table-statistic">339 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>vad.channel0</p></td>
+        <td><p>segmented</p></td>
+        <td><p>channel</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>channel</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:00:23.880000</p></td>
+        <td><p>0 days 00:00:28.140000</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:00:55.120000</p></td>
+        <td><p>0 days 00:01:01.830000</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:01:21.760000</p></td>
+        <td><p>0 days 00:01:34.580000</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:01:36.140000</p></td>
+        <td><p>0 days 00:01:39.490000</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:02:10.750000</p></td>
+        <td><p>0 days 00:02:21.900000</p></td>
+        <td><p>0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">7790 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>vad.channel1</p></td>
+        <td><p>segmented</p></td>
+        <td><p>channel</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>channel</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:00:00</p></td>
+        <td><p>0 days 00:00:23.760000</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:00:28.560000</p></td>
+        <td><p>0 days 00:00:55.040000</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:01:01.930000</p></td>
+        <td><p>0 days 00:01:21.330000</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:01:38.890000</p></td>
+        <td><p>0 days 00:01:50.970000</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio_48khz/conversational/ex01-ex02/default/ex01-ex02_default_001.wav</p></td>
+        <td><p>0 days 00:01:51.880000</p></td>
+        <td><p>0 days 00:02:06.950000</p></td>
+        <td><p>1</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">7694 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels"
+    "channel", "int", "0, 1"
+    "corpus", "str", "base, longform"
+    "id", "str", "00001, 00002, 00003, 00004, 00005, 00006, 00007, [...], 014, 015, 016, 017, 018, 019, 020, 021"
+    "speaker", "str", "ex01, ex02, ex03, ex04"
+    "speaking_style", "str", "conversational, read"
+    "style", "str", "angry, animal, animal_directed, awe, bored, calm, child, [...], narration, non_verbal, projected, sad, sarcastic, sleepy, sympathetic, whisper"

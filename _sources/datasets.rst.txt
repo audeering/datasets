@@ -2,8 +2,10 @@
 
 Datasets
 ========
-
-Datasets available with audb_ as of |today|.
+Datasets available with audb_ as of |today|
+in the
+repository
+`audb-public <s3.dualstack.eu-north-1.amazonaws.com>`__.
 For each dataset, the latest version is shown.
 
 .. csv-table::
@@ -19,9 +21,29 @@ For each dataset, the latest version is shown.
     :hidden:
 
     datasets/air
+    datasets/clac
+    datasets/cmu-mosei
+    datasets/cmu-mosi
+    datasets/cochlscene
     datasets/cough-speech-sneeze
     datasets/crema-d
+    datasets/css10
     datasets/emodb
+    datasets/emouerj
+    datasets/esc-50
+    datasets/expresso
+    datasets/fsdnoisy18k
+    datasets/ir-c4dm
+    datasets/ljspeech
+    datasets/mesd
     datasets/micirp
     datasets/musan
+    datasets/openair
+    datasets/quechua
+    datasets/ravdess
+    datasets/ravdess-videos
+    datasets/speech-accent-archive
+    datasets/subesco
+    datasets/urbansound8k
     datasets/vadtoolkit
+    datasets/wham

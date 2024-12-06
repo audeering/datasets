@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>wham &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing" href="../contributing.html" />
+    <link rel="prev" title="vadtoolkit" href="vadtoolkit.html" />
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wham</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>wham</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wham">
+<span id="datasets-wham"></span><h1>wham<a class="headerlink" href="#wham" title="Permalink to this heading">¶</a></h1>
+<p>Created by Gordon Wichern, Joe Antognini, Michael Flynn, Licheng Richard Zhu, Emmett McQuinn, Dwight Crow, Ethan Manilow, Jonathan Le Roux</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p><a class="reference external" href="http://wham.whisper.ai">http://wham.whisper.ai</a></p></td>
+</tr>
+<tr class="row-even"><td><p>usage</p></td>
+<td><p>research</p></td>
+</tr>
+<tr class="row-odd"><td><p>languages</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-odd"><td><p>channel</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>sampling rate</p></td>
+<td><p>16000</p></td>
+</tr>
+<tr class="row-odd"><td><p>bit depth</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
+<td><p>3 days 09:41:18.774249999</p></td>
+</tr>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>28000, duration distribution: 3.4 s <img alt="wham-1.0.0-file-duration-distribution" src="../_images/wham-1.0.0-file-duration-distribution.png" /> 47.7 s</p></td>
+</tr>
+<tr class="row-even"><td><p>repository</p></td>
+<td><p><a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/wham">audb-public</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>published</p></td>
+<td><p>2024-11-27 by hwierstorf</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>The noise audio was collected at various urban locations throughout the San Francisco Bay Area in late 2018. The environments primarily consist of restaurants, cafes, bars, and parks. Audio was recorded using an Apogee Sennheiser binaural microphone on a tripod between 1.0 and 1.5 meters off the ground. The noise dataset has been processed to remove any segments containing intelligible speech. The average clip duration is 10.5 seconds with the shortest clip being 3.4 seconds and the longest 47.7 seconds.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">cv/40fo030v_1.89_206c0108_-1.89.wav</span></code></p>
+<img alt="../_images/wham-1.0.0-player-waveform.png" src="../_images/wham-1.0.0-player-waveform.png" />
+<p><audio controls src="./wham/cv/40fo030v_1.89_206c0108_-1.89.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>dev</p></td>
+    <td><p>filewise</p></td>
+    <td><p>noise-band, file-id, l-to-r-width, reverberation, location, day</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>noise-band</p></th>
+    <th class="head"><p>file-id</p></th>
+    <th class="head"><p>l-to-r-width</p></th>
+    <th class="head"><p>reverberation</p></th>
+    <th class="head"><p>location</p></th>
+    <th class="head"><p>day</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>cv/01to030v_0.76421_20ga010m_-0.76421.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>file205</p></td>
+    <td><p>0.15</p></td>
+    <td><p>medium</p></td>
+    <td><p>loc32</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>cv/40eo030g_0.54807_017c0210_-0.54807.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>file205</p></td>
+    <td><p>0.15</p></td>
+    <td><p>medium</p></td>
+    <td><p>loc32</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>cv/01ko030v_2.0083_019a0105_-2.0083.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>file205</p></td>
+    <td><p>0.15</p></td>
+    <td><p>medium</p></td>
+    <td><p>loc32</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>cv/01vo0301_0.87121_018o030i_-0.87121.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>file205</p></td>
+    <td><p>0.15</p></td>
+    <td><p>medium</p></td>
+    <td><p>loc32</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>cv/02ao0315_0.54557_40ma010x_-0.54557.wav</p></td>
+    <td><p>1</p></td>
+    <td><p>file205</p></td>
+    <td><p>0.15</p></td>
+    <td><p>medium</p></td>
+    <td><p>loc32</p></td>
+    <td><p>day1</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">5000 rows x 6 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>test</p></td>
+    <td><p>filewise</p></td>
+    <td><p>noise-band, file-id, l-to-r-width, reverberation, location, day</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>noise-band</p></th>
+    <th class="head"><p>file-id</p></th>
+    <th class="head"><p>l-to-r-width</p></th>
+    <th class="head"><p>reverberation</p></th>
+    <th class="head"><p>location</p></th>
+    <th class="head"><p>day</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>tt/445c0206_0.60431_22gc0105_-0.60431.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>file248</p></td>
+    <td><p>0.17</p></td>
+    <td><p>high</p></td>
+    <td><p>loc24</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tt/420c020h_1.1139_442c0203_-1.1139.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>file248</p></td>
+    <td><p>0.17</p></td>
+    <td><p>high</p></td>
+    <td><p>loc24</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tt/423o0304_1.419_420c020x_-1.419.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>file248</p></td>
+    <td><p>0.17</p></td>
+    <td><p>high</p></td>
+    <td><p>loc24</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tt/422o0304_0.13358_052a050o_-0.13358.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>file248</p></td>
+    <td><p>0.17</p></td>
+    <td><p>high</p></td>
+    <td><p>loc24</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tt/444c0203_2.4753_445c020c_-2.4753.wav</p></td>
+    <td><p>3</p></td>
+    <td><p>file248</p></td>
+    <td><p>0.17</p></td>
+    <td><p>high</p></td>
+    <td><p>loc24</p></td>
+    <td><p>day1</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">3000 rows x 6 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>train</p></td>
+    <td><p>filewise</p></td>
+    <td><p>noise-band, file-id, l-to-r-width, reverberation, location, day</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>noise-band</p></th>
+    <th class="head"><p>file-id</p></th>
+    <th class="head"><p>l-to-r-width</p></th>
+    <th class="head"><p>reverberation</p></th>
+    <th class="head"><p>location</p></th>
+    <th class="head"><p>day</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>tr/40na010x_1.9857_01xo031a_-1.9857.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>file154</p></td>
+    <td><p>0.15</p></td>
+    <td><p>high</p></td>
+    <td><p>loc37</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tr/01qo0319_0.44617_01ka0113_-0.44617.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>file154</p></td>
+    <td><p>0.15</p></td>
+    <td><p>high</p></td>
+    <td><p>loc37</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tr/01vo0312_1.36_40ho030l_-1.36.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>file154</p></td>
+    <td><p>0.15</p></td>
+    <td><p>high</p></td>
+    <td><p>loc37</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tr/01gc0206_2.0173_20no0108_-2.0173.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>file154</p></td>
+    <td><p>0.15</p></td>
+    <td><p>high</p></td>
+    <td><p>loc37</p></td>
+    <td><p>day1</p></td>
+    </tr>
+            <tr>
+    <td><p>tr/209a010h_1.6324_01mc020w_-1.6324.wav</p></td>
+    <td><p>2</p></td>
+    <td><p>file154</p></td>
+    <td><p>0.15</p></td>
+    <td><p>high</p></td>
+    <td><p>loc37</p></td>
+    <td><p>day1</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">20000 rows x 6 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Labels</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>day</p></td>
+<td><p>str</p></td>
+<td><p>day1, day2, day3, day4</p></td>
+</tr>
+<tr class="row-odd"><td><p>file-id</p></td>
+<td><p>str</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>l-to-r-width</p></td>
+<td><p>float</p></td>
+<td><p>0.15, 0.16, 0.17</p></td>
+</tr>
+<tr class="row-odd"><td><p>location</p></td>
+<td><p>str</p></td>
+<td><p>loc00, loc01, loc02, loc03, loc04, loc05, loc06, […], loc36, loc37, loc38, loc39, loc40, loc41, loc42, loc43</p></td>
+</tr>
+<tr class="row-even"><td><p>noise-band</p></td>
+<td><p>int</p></td>
+<td><p>0, 1, 2, 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>reverberation</p></td>
+<td><p>str</p></td>
+<td><p>high, low, medium</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vadtoolkit.html" class="btn btn-neutral float-left" title="vadtoolkit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

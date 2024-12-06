@@ -1,0 +1,370 @@
+.. |clac-1.1.0-file-duration-distribution| image:: ./clac/clac-1.1.0-file-duration-distribution.png
+.. |clac-1.1.0-segment-duration-distribution| image:: ./clac/clac-1.1.0-segment-duration-distribution.png
+
+.. _datasets-clac:
+
+clac
+----
+
+============= ======================
+version       1.1.0
+license       `CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`__
+source        https://groups.csail.mit.edu/sls/downloads/clac/index.cgi
+usage         commercial
+languages     eng
+format        wav
+channel       1
+sampling rate 8000, 16000, 44100, 48000
+bit depth     16
+duration      4 days 08:45:53.120362812
+files         18609, duration distribution: 3.2 s |clac-1.1.0-file-duration-distribution| 183.7 s
+segments      25214, duration distribution: 0.8 s |clac-1.1.0-segment-duration-distribution| 7.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/clac>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The Crowdsourced Language Assessment Corpus (CLAC) consists of audio recordings and automatically-generated transcripts from 1,832 speakers for several speech and language tasks, as well as metadata for each of the speakers. The speaker metadata contains information about the age, gender, years of eduction, residence of each speaker and whether they had health-related symptoms during the recordings.
+
+Example
+^^^^^^^
+
+:file:`audio/cookie_theft/spk1383.wav`
+
+.. image:: ./clac/clac-1.1.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./clac/audio/cookie_theft/spk1383.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>age.dev</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/grandfather/spk1537.wav</p></td>
+        <td><p>0 days 00:00:01.280000</p></td>
+        <td><p>0 days 00:00:03.740000</p></td>
+        <td><p>1537</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk1537.wav</p></td>
+        <td><p>0 days 00:00:04.140000</p></td>
+        <td><p>0 days 00:00:09.080000</p></td>
+        <td><p>1537</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk1537.wav</p></td>
+        <td><p>0 days 00:00:09.720000</p></td>
+        <td><p>0 days 00:00:12.460000</p></td>
+        <td><p>1537</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk1537.wav</p></td>
+        <td><p>0 days 00:00:12.980000</p></td>
+        <td><p>0 days 00:00:15.400000</p></td>
+        <td><p>1537</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk1537.wav</p></td>
+        <td><p>0 days 00:00:16.100000</p></td>
+        <td><p>0 days 00:00:17.180000</p></td>
+        <td><p>1537</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2605 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>age.test</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/grandfather/spk809.wav</p></td>
+        <td><p>0 days 00:00:01.760000</p></td>
+        <td><p>0 days 00:00:07.720000</p></td>
+        <td><p>809</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk809.wav</p></td>
+        <td><p>0 days 00:00:08.160000</p></td>
+        <td><p>0 days 00:00:11.540000</p></td>
+        <td><p>809</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk809.wav</p></td>
+        <td><p>0 days 00:00:12.200000</p></td>
+        <td><p>0 days 00:00:15.020000</p></td>
+        <td><p>809</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk809.wav</p></td>
+        <td><p>0 days 00:00:16.460000</p></td>
+        <td><p>0 days 00:00:18.280000</p></td>
+        <td><p>809</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk809.wav</p></td>
+        <td><p>0 days 00:00:19.100000</p></td>
+        <td><p>0 days 00:00:21.340000</p></td>
+        <td><p>809</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2510 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>age.train</p></td>
+        <td><p>segmented</p></td>
+        <td><p>speaker</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>speaker</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/grandfather/spk386.wav</p></td>
+        <td><p>0 days 00:00:00.960000</p></td>
+        <td><p>0 days 00:00:03.140000</p></td>
+        <td><p>386</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk386.wav</p></td>
+        <td><p>0 days 00:00:04.060000</p></td>
+        <td><p>0 days 00:00:08.460000</p></td>
+        <td><p>386</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk386.wav</p></td>
+        <td><p>0 days 00:00:09.200000</p></td>
+        <td><p>0 days 00:00:11.680000</p></td>
+        <td><p>386</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk386.wav</p></td>
+        <td><p>0 days 00:00:12.200000</p></td>
+        <td><p>0 days 00:00:14.140000</p></td>
+        <td><p>386</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/grandfather/spk386.wav</p></td>
+        <td><p>0 days 00:00:14.840000</p></td>
+        <td><p>0 days 00:00:16.620000</p></td>
+        <td><p>386</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">20099 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>task-name, transcript, speaker</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>task-name</p></th>
+        <th class="head"><p>transcript</p></th>
+        <th class="head"><p>speaker</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/counting_1_to_20/spk386.wav</p></td>
+        <td><p>counting_1_to_20</p></td>
+        <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+        <td><p>386</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/counting_1_to_20/spk107.wav</p></td>
+        <td><p>counting_1_to_20</p></td>
+        <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+        <td><p>107</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/counting_1_to_20/spk1537.wav</p></td>
+        <td><p>counting_1_to_20</p></td>
+        <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+        <td><p>1537</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/counting_1_to_20/spk727.wav</p></td>
+        <td><p>counting_1_to_20</p></td>
+        <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+        <td><p>727</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/counting_1_to_20/spk809.wav</p></td>
+        <td><p>counting_1_to_20</p></td>
+        <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+        <td><p>809</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">18609 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speaker-metadata</p></td>
+        <td><p>misc</p></td>
+        <td><p>age, gender, country, region, city, education(years), symptoms</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>age</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>country</p></th>
+        <th class="head"><p>region</p></th>
+        <th class="head"><p>city</p></th>
+        <th class="head"><p>education(years)</p></th>
+        <th class="head"><p>symptoms</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>1</p></td>
+        <td><p>26</p></td>
+        <td><p>male</p></td>
+        <td><p>United States (US)</p></td>
+        <td><p>Maryland (MD)</p></td>
+        <td><p>Waldorf</p></td>
+        <td><p></p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>2</p></td>
+        <td><p>32</p></td>
+        <td><p>male</p></td>
+        <td><p>United States (US)</p></td>
+        <td><p>North Carolina (NC)</p></td>
+        <td><p>Durham</p></td>
+        <td><p>16</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>3</p></td>
+        <td><p>44</p></td>
+        <td><p>male</p></td>
+        <td><p>United States (US)</p></td>
+        <td><p>California (CA)</p></td>
+        <td><p>North Hills</p></td>
+        <td><p>16</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>4</p></td>
+        <td><p>59</p></td>
+        <td><p>female</p></td>
+        <td><p>United States (US)</p></td>
+        <td><p>None (None)</p></td>
+        <td><p></p></td>
+        <td><p>16</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>5</p></td>
+        <td><p>22</p></td>
+        <td><p>male</p></td>
+        <td><p>United States (US)</p></td>
+        <td><p>Oregon (OR)</p></td>
+        <td><p>Eugene</p></td>
+        <td><p>15</p></td>
+        <td><p>False</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1832 rows x 7 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Min", "Max", "Labels", "Mappings"
+    "age", "int", "0", "100", "", ""
+    "city", "str", "", "", "", ""
+    "country", "str", "", "", "Bangladesh (BD), Hong Kong (HK), India (IN), Italy (IT), Mexico (MX), None (None), Pakistan (PK), Philippines (PH), Romania (RO), Switzerland (CH), United Kingdom (GB), United States (US), Venezuela (VE)", ""
+    "education(years)", "int", "", "", "", ""
+    "gender", "str", "", "", "female, male, other", ""
+    "region", "str", "", "", "", ""
+    "speaker", "int", "", "", "1, 2, 3, 4, 5, 6, 7, [...], 1825, 1826, 1827, 1828, 1829, 1830, 1831, 1832", "age, city, country, education(years), gender, region, symptoms"
+    "symptoms", "bool", "", "", "", ""
+    "task-name", "str", "", "", "cookie_theft, counting_1_to_20, days_of_the_week, grandfather, max_phonation, picnic, rainbow, repeat_5_times, repeat_5_times_artillery, repeat_5_times_catastrophe, repeat_5_times_impossibility, smr", ""
+    "transcript", "str", "", "", "", ""

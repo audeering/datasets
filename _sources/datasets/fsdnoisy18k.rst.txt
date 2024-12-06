@@ -1,0 +1,208 @@
+.. |fsdnoisy18k-1.0.0-file-duration-distribution| image:: ./fsdnoisy18k/fsdnoisy18k-1.0.0-file-duration-distribution.png
+
+.. _datasets-fsdnoisy18k:
+
+fsdnoisy18k
+-----------
+
+Created by Eduardo Fonseca, Mercedes Collado, Manoj Plakal, Daniel P. W. Ellis, Frederic Font, Xavier Favory, and Xavier Serra
+
+============= ======================
+version       1.0.0
+license       `CC-BY-3.0 <https://creativecommons.org/licenses/by/3.0/>`__
+source        http://www.eduardofonseca.net/FSDnoisy18k/
+usage         unrestricted
+languages     
+format        wav
+channel       1
+sampling rate 44100
+bit depth     16
+duration      1 days 18:29:50.962131518
+files         18532, duration distribution: 0.3 s |fsdnoisy18k-1.0.0-file-duration-distribution| 30.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/fsdnoisy18k>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+FSDnoisy18k is an audio dataset collected with the aim of fostering the investigation of label noise in sound event classification. It contains 42.5 hours of audio across 20 sound classes, including a small amount of manually-labeled data and a larger quantity of real-world noisy data. FSDnoisy18k contains 18,532 audio clips (42.5h) unequally distributed in the 20 classes drawn from the AudioSet Ontology. The audio clips are of variable length ranging from 300ms to 30s, and each clip has a single ground truth label (singly-labeled data). Files are released under either CC-BY or CC0. The individual license for each clip is available from the files table. FSDnoisy18k is an expandable dataset that features a per-class varying degree of types and amount of label noise. The dataset allows investigation of label noise as well as other approaches, from semi-supervised learning, e.g., self-training to learning with minimal supervision.
+
+Example
+^^^^^^^
+
+:file:`audio/train/432015.wav`
+
+.. image:: ./fsdnoisy18k/fsdnoisy18k-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./fsdnoisy18k/audio/train/432015.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>license</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>license</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/test/274679.wav</p></td>
+        <td><p>CC0-1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/365220.wav</p></td>
+        <td><p>CC0-1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/233458.wav</p></td>
+        <td><p>CC-BY-3.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/370931.wav</p></td>
+        <td><p>CC-BY-3.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/137172.wav</p></td>
+        <td><p>CC-BY-3.0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">18532 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>test</p></td>
+        <td><p>filewise</p></td>
+        <td><p>label</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>label</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/test/274679.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/365220.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/233458.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/370931.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/test/137172.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">947 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>train</p></td>
+        <td><p>filewise</p></td>
+        <td><p>label, manually_verified, noisy_small</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>label</p></th>
+        <th class="head"><p>manually_verified</p></th>
+        <th class="head"><p>noisy_small</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/train/94322.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/train/85602.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/train/240356.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/train/371015.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/train/264589.wav</p></td>
+        <td><p>Walk, footsteps</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">17585 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "categories", "str", "Acoustic guitar, Bass guitar, Clapping, Coin (dropping), Crash cymbal, Dishes, pots, and pans, Engine, [...], Piano, Rain, Slam, Squeak, Tearing, Walk, footsteps, Wind, Writing", "child_ids, citation_uri, description, id, positive_examples, restrictions"
+    "license", "str", "CC-BY-3.0, CC0-1.0", "✓"
+    "manually_verified", "bool", "", ""
+    "noisy_small", "bool", "", ""

@@ -1,0 +1,282 @@
+.. |speech-accent-archive-2.2.0-file-duration-distribution| image:: ./speech-accent-archive/speech-accent-archive-2.2.0-file-duration-distribution.png
+.. |speech-accent-archive-2.2.0-segment-duration-distribution| image:: ./speech-accent-archive/speech-accent-archive-2.2.0-segment-duration-distribution.png
+
+.. _datasets-speech-accent-archive:
+
+speech-accent-archive
+---------------------
+
+Created by Rachael Tatman, Steven H. Weinberger, et al.
+
+============= ======================
+version       2.2.0
+license       `CC-BY-NC-SA-4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__
+source        https://www.kaggle.com/rtatman/speech-accent-archive
+usage         research
+languages     eng
+format        wav
+channel       1
+sampling rate 16000
+bit depth     16
+duration      0 days 16:29:32.808937500
+files         2138, duration distribution: 15.8 s |speech-accent-archive-2.2.0-file-duration-distribution| 106.6 s
+segments      17688, duration distribution: 0.8 s |speech-accent-archive-2.2.0-segment-duration-distribution| 7.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/speech-accent-archive>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+This dataset contains 2138 speech samples, each from a different talker reading the same reading passage. Talkers come from 177 countries and have 214 different native languages. Each talker is speaking in English. ### All read the following passage: "Please call Stella. Ask her to bring these things with her from the store: Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob. We also need a small plastic snake and a big toy frog for the kids. She can scoop these things into three red bags, and we will go meet her Wednesday at the train station." ### This dataset was collected by many individuals under the supervision of Steven H. Weinberger. The most up-to-date version of the archive is hosted at http://accent.gmu.edu/. If you use this dataset in your work, please include the following citation: Weinberger, S. (2013). Speech accent archive. George Mason University.
+
+Example
+^^^^^^^
+
+:file:`wav/dutch18.wav`
+
+.. image:: ./speech-accent-archive/speech-accent-archive-2.2.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./speech-accent-archive/wav/dutch18.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>accent.test</p></td>
+        <td><p>segmented</p></td>
+        <td><p>tone, native_language, sex</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>tone</p></th>
+        <th class="head"><p>native_language</p></th>
+        <th class="head"><p>sex</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/amharic19.wav</p></td>
+        <td><p>0 days 00:00:00.860000</p></td>
+        <td><p>0 days 00:00:01.920000</p></td>
+        <td><p>neutral</p></td>
+        <td><p>amharic</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/amharic19.wav</p></td>
+        <td><p>0 days 00:00:02.260000</p></td>
+        <td><p>0 days 00:00:04.680000</p></td>
+        <td><p>neutral</p></td>
+        <td><p>amharic</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/amharic19.wav</p></td>
+        <td><p>0 days 00:00:05.280000</p></td>
+        <td><p>0 days 00:00:07.360000</p></td>
+        <td><p>neutral</p></td>
+        <td><p>amharic</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/amharic19.wav</p></td>
+        <td><p>0 days 00:00:07.700000</p></td>
+        <td><p>0 days 00:00:09.700000</p></td>
+        <td><p>neutral</p></td>
+        <td><p>amharic</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/amharic19.wav</p></td>
+        <td><p>0 days 00:00:10.060000</p></td>
+        <td><p>0 days 00:00:12.140000</p></td>
+        <td><p>neutral</p></td>
+        <td><p>amharic</p></td>
+        <td><p>female</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2597 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>age, age_onset, birthplace, native_language, sex, speaker, country, duration</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>age</p></th>
+        <th class="head"><p>age_onset</p></th>
+        <th class="head"><p>birthplace</p></th>
+        <th class="head"><p>native_language</p></th>
+        <th class="head"><p>sex</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>country</p></th>
+        <th class="head"><p>duration</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/afrikaans1.wav</p></td>
+        <td><p>27</p></td>
+        <td><p>9</p></td>
+        <td><p>virginia, south africa</p></td>
+        <td><p>afrikaans</p></td>
+        <td><p>female</p></td>
+        <td><p>1</p></td>
+        <td><p>south africa</p></td>
+        <td><p>0 days 00:00:20.819562500</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans2.wav</p></td>
+        <td><p>40</p></td>
+        <td><p>5</p></td>
+        <td><p>pretoria, south africa</p></td>
+        <td><p>afrikaans</p></td>
+        <td><p>male</p></td>
+        <td><p>2</p></td>
+        <td><p>south africa</p></td>
+        <td><p>0 days 00:00:22.021250</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans3.wav</p></td>
+        <td><p>43</p></td>
+        <td><p>4</p></td>
+        <td><p>pretoria, transvaal, south africa</p></td>
+        <td><p>afrikaans</p></td>
+        <td><p>male</p></td>
+        <td><p>418</p></td>
+        <td><p>south africa</p></td>
+        <td><p>0 days 00:00:26.932250</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans4.wav</p></td>
+        <td><p>26</p></td>
+        <td><p>8</p></td>
+        <td><p>pretoria, south africa</p></td>
+        <td><p>afrikaans</p></td>
+        <td><p>male</p></td>
+        <td><p>1159</p></td>
+        <td><p>south africa</p></td>
+        <td><p>0 days 00:00:23.536312499</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans5.wav</p></td>
+        <td><p>19</p></td>
+        <td><p>6</p></td>
+        <td><p>cape town, south africa</p></td>
+        <td><p>afrikaans</p></td>
+        <td><p>male</p></td>
+        <td><p>1432</p></td>
+        <td><p>south africa</p></td>
+        <td><p>0 days 00:00:20.297125</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2138 rows x 8 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>segments</p></td>
+        <td><p>segmented</p></td>
+        <td><p>content</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>content</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/afrikaans1.wav</p></td>
+        <td><p>0 days 00:00:00.960000</p></td>
+        <td><p>0 days 00:00:03.740000</p></td>
+        <td><p>speech</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans1.wav</p></td>
+        <td><p>0 days 00:00:04.100000</p></td>
+        <td><p>0 days 00:00:06.380000</p></td>
+        <td><p>speech</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans1.wav</p></td>
+        <td><p>0 days 00:00:06.760000</p></td>
+        <td><p>0 days 00:00:10.800000</p></td>
+        <td><p>speech</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans1.wav</p></td>
+        <td><p>0 days 00:00:11.220000</p></td>
+        <td><p>0 days 00:00:14.600000</p></td>
+        <td><p>speech</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/afrikaans1.wav</p></td>
+        <td><p>0 days 00:00:14.900000</p></td>
+        <td><p>0 days 00:00:19.740000</p></td>
+        <td><p>speech</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">17688 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels"
+    "age", "int", ""
+    "age_onset", "int", ""
+    "birthplace", "str", ""
+    "content", "str", "speech"
+    "country", "str", ""
+    "duration", "time", ""
+    "native_language", "str", ""
+    "sex", "str", "female, male"
+    "speaker", "int", ""
+    "tone", "str", "neutral"

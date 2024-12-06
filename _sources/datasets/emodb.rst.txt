@@ -1,13 +1,14 @@
-.. _emodb:
+.. |emodb-1.4.1-file-duration-distribution| image:: ./emodb/emodb-1.4.1-file-duration-distribution.png
+
+.. _datasets-emodb:
 
 emodb
 -----
 
 Created by Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter Sendlmeier, Benjamin Weiss
 
-
 ============= ======================
-version       `1.4.1 <https://github.com/audeering/emodb/blob/main/CHANGELOG.md>`__
+version       1.4.1
 license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
 source        http://emodb.bilderbar.info/download/download.zip
 usage         unrestricted
@@ -17,11 +18,10 @@ channel       1
 sampling rate 16000
 bit depth     16
 duration      0 days 00:24:47.092187500
-files         535
+files         535, duration distribution: 1.2 s |emodb-1.4.1-file-duration-distribution| 9.0 s
 repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/emodb>`__
 published     2023-04-05 by audeering-unittest
 ============= ======================
-
 
 Description
 ^^^^^^^^^^^
@@ -33,37 +33,294 @@ Example
 
 :file:`wav/13b09La.wav`
 
-.. image:: ../emodb.png
+.. image:: ./emodb/emodb-1.4.1-player-waveform.png
 
 .. raw:: html
 
-    <p><audio controls src="emodb/wav/13b09La.wav"></audio></p>
+    <p><audio controls src="./emodb/wav/13b09La.wav"></audio></p>
 
 Tables
 ^^^^^^
 
-.. csv-table::
-   :header: ID,Type,Columns
-   :widths: 20, 10, 70
+.. raw:: html
 
-    "emotion", "filewise", "emotion, emotion.confidence"
-    "emotion.categories.test.gold_standard", "filewise", "emotion, emotion.confidence"
-    "emotion.categories.train.gold_standard", "filewise", "emotion, emotion.confidence"
-    "files", "filewise", "duration, speaker, transcription"
-    "speaker", "misc", "age, gender, language"
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/03a01Fa.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Wa.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Fc.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.85</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">535 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.test.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/12a01Fb.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/12a01Lb.wav</p></td>
+        <td><p>boredom</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/12a01Nb.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/12a01Wc.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/12a02Ac.wav</p></td>
+        <td><p>fear</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">231 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.train.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/03a01Fa.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Wa.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Fc.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.85</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">304 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>duration, speaker, transcription</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>duration</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>transcription</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/03a01Fa.wav</p></td>
+        <td><p>0 days 00:00:01.898250</p></td>
+        <td><p>3</p></td>
+        <td><p>a01</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Nc.wav</p></td>
+        <td><p>0 days 00:00:01.611250</p></td>
+        <td><p>3</p></td>
+        <td><p>a01</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Wa.wav</p></td>
+        <td><p>0 days 00:00:01.877812500</p></td>
+        <td><p>3</p></td>
+        <td><p>a01</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Fc.wav</p></td>
+        <td><p>0 days 00:00:02.006250</p></td>
+        <td><p>3</p></td>
+        <td><p>a02</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Nc.wav</p></td>
+        <td><p>0 days 00:00:01.439812500</p></td>
+        <td><p>3</p></td>
+        <td><p>a02</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">535 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>age, gender, language</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>age</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>3</p></td>
+        <td><p>31</p></td>
+        <td><p>male</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>8</p></td>
+        <td><p>34</p></td>
+        <td><p>female</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>9</p></td>
+        <td><p>21</p></td>
+        <td><p>female</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>10</p></td>
+        <td><p>32</p></td>
+        <td><p>male</p></td>
+        <td><p>deu</p></td>
+        </tr>
+                <tr>
+        <td><p>11</p></td>
+        <td><p>26</p></td>
+        <td><p>male</p></td>
+        <td><p>deu</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">10 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
 
 
 Schemes
 ^^^^^^^
 
 .. csv-table::
-   :header: ID,Dtype,Min,Max,Labels,Mappings
+    :header-rows: 1
 
-    "age", "int", "", "", ""
-    "confidence", "float", "", "1", ""
-    "duration", "time", "", "", ""
-    "emotion", "str", "", "", "anger, boredom, disgust, fear, happiness, neutral, sadness"
-    "gender", "str", "", "", "female, male"
-    "language", "str", "", "", ""
+    "ID", "Dtype", "Min", "Max", "Labels", "Mappings"
+    "age", "int", "0", "", "", ""
+    "confidence", "float", "0", "1", "", ""
+    "duration", "time", "", "", "", ""
+    "emotion", "str", "", "", "anger, boredom, disgust, fear, happiness, neutral, sadness", ""
+    "gender", "str", "", "", "female, male", ""
+    "language", "str", "", "", "", ""
     "speaker", "int", "", "", "3, 8, 9, 10, 11, 12, 13, 14, 15, 16", "age, gender, language"
     "transcription", "str", "", "", "a01, a02, a04, a05, a07, b01, b02, b03, b09, b10", "✓"

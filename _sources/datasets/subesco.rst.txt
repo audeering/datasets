@@ -1,0 +1,294 @@
+.. |subesco-1.0.0-file-duration-distribution| image:: ./subesco/subesco-1.0.0-file-duration-distribution.png
+
+.. _datasets-subesco:
+
+subesco
+-------
+
+Created by Sadia Sultana
+
+============= ======================
+version       1.0.0
+license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
+source        https://zenodo.org/records/4526477
+usage         commercial
+languages     ben
+format        wav
+channel       1, 2
+sampling rate 44100, 48000
+bit depth     16
+duration      0 days 07:49:55.467746030
+files         7000, duration distribution: 2.8 s |subesco-1.0.0-file-duration-distribution| 6.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/subesco>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+SUBESCO is an audio-only emotional speech corpus of 7000 sentence-level utterances of the Bangla language. The corpus contains 7:40:40h of audio and was evaluated by 50 raters. The emotions are Anger, Disgust, Fear, Happiness, Neutral, Sadness and Surprise.
+
+Example
+^^^^^^^
+
+:file:`audios/F_01_OISHI_S_10_ANGRY_1.wav`
+
+.. image:: ./subesco/subesco-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./subesco/audios/F_01_OISHI_S_10_ANGRY_1.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.dev.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/F_06_SIMI_S_3_NEUTRAL_3.wav</p></td>
+        <td><p>neutral</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/F_06_SIMI_S_1_DISGUST_1.wav</p></td>
+        <td><p>disgust</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/F_06_SIMI_S_6_ANGRY_3.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/F_06_SIMI_S_3_SAD_4.wav</p></td>
+        <td><p>sadness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/F_06_SIMI_S_1_SURPRISE_3.wav</p></td>
+        <td><p>surprise</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1400 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.test.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/M_05_DURANTO_S_10_FEAR_2.wav</p></td>
+        <td><p>fear</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_05_DURANTO_S_3_NEUTRAL_2.wav</p></td>
+        <td><p>neutral</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_05_DURANTO_S_3_HAPPY_2.wav</p></td>
+        <td><p>happiness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_05_DURANTO_S_1_SAD_2.wav</p></td>
+        <td><p>sadness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_05_DURANTO_S_1_NEUTRAL_5.wav</p></td>
+        <td><p>neutral</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1400 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.train.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/M_01_BASHIR_S_4_HAPPY_1.wav</p></td>
+        <td><p>happiness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_01_BASHIR_S_8_FEAR_1.wav</p></td>
+        <td><p>fear</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_01_BASHIR_S_1_FEAR_3.wav</p></td>
+        <td><p>fear</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_01_BASHIR_S_7_HAPPY_2.wav</p></td>
+        <td><p>happiness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_01_BASHIR_S_2_DISGUST_2.wav</p></td>
+        <td><p>disgust</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">4200 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>speaker, sentence_number, take_number</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>sentence_number</p></th>
+        <th class="head"><p>take_number</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/M_01_BASHIR_S_4_HAPPY_1.wav</p></td>
+        <td><p>BASHIR</p></td>
+        <td><p>4</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_06_SHUKANTO_S_6_HAPPY_1.wav</p></td>
+        <td><p>SHUKANTO</p></td>
+        <td><p>6</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_02_NIPUN_S_9_NEUTRAL_1.wav</p></td>
+        <td><p>NIPUN</p></td>
+        <td><p>9</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/F_10_FAHMEE_S_2_SAD_4.wav</p></td>
+        <td><p>FAHMEE</p></td>
+        <td><p>2</p></td>
+        <td><p>4</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/M_10_EVAN_S_6_ANGRY_3.wav</p></td>
+        <td><p>EVAN</p></td>
+        <td><p>6</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">7000 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>gender</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>gender</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>BASHIR</p></td>
+        <td><p>male</p></td>
+        </tr>
+                <tr>
+        <td><p>SHUKANTO</p></td>
+        <td><p>male</p></td>
+        </tr>
+                <tr>
+        <td><p>NIPUN</p></td>
+        <td><p>male</p></td>
+        </tr>
+                <tr>
+        <td><p>FAHMEE</p></td>
+        <td><p>female</p></td>
+        </tr>
+                <tr>
+        <td><p>EVAN</p></td>
+        <td><p>male</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">20 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "emotion", "str", "anger, disgust, fear, happiness, neutral, sadness, surprise", ""
+    "gender", "str", "female, male", ""
+    "sentence_number", "int", "", ""
+    "speaker", "object", "BASHIR, BIBHAS, CHAITY, DURANTO, EVAN, FAHMEE, ILIAS, [...], PRASUN, SHUKANTO, SHUMANTA, SIBLY, SIMI, SMITA, SWARNALI, TITHI", "gender"
+    "speaker_name", "str", "", ""
+    "take_number", "int", "", ""

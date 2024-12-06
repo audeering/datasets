@@ -28,10 +28,11 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributing" href="../contributing.html" />
-    <link rel="prev" title="musan" href="musan.html" />
+    <link rel="next" title="wham" href="wham.html" />
+    <link rel="prev" title="urbansound8k" href="urbansound8k.html" />
     
   
 
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                v1.0.2
+                v1.1.0
               </div>
             
           
@@ -92,18 +93,37 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">vadtoolkit</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +169,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="vadtoolkit">
-<span id="id1"></span><h1>vadtoolkit<a class="headerlink" href="#vadtoolkit" title="Permalink to this heading">¶</a></h1>
+<span id="datasets-vadtoolkit"></span><h1>vadtoolkit<a class="headerlink" href="#vadtoolkit" title="Permalink to this heading">¶</a></h1>
 <p>Created by Kim Jaeseok</p>
 <table class="docutils align-default">
 <colgroup>
@@ -158,7 +178,7 @@
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>version</p></td>
-<td><p><a class="reference external" href="https://github.com/audeering/vadtoolkit/blob/main/CHANGELOG.md">1.1.0</a></p></td>
+<td><p>1.1.0</p></td>
 </tr>
 <tr class="row-even"><td><p>license</p></td>
 <td><p><a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a></p></td>
@@ -182,18 +202,21 @@
 <td><p>16000</p></td>
 </tr>
 <tr class="row-odd"><td><p>bit depth</p></td>
-<td><p>32, 16</p></td>
+<td><p>16, 32</p></td>
 </tr>
 <tr class="row-even"><td><p>duration</p></td>
 <td><p>0 days 02:00:09.703062500</p></td>
 </tr>
 <tr class="row-odd"><td><p>files</p></td>
-<td><p>4</p></td>
+<td><p>4, duration distribution: 1801.5 s <img alt="vadtoolkit-1.1.0-file-duration-distribution" src="../_images/vadtoolkit-1.1.0-file-duration-distribution.png" /> 1804.0 s</p></td>
 </tr>
-<tr class="row-even"><td><p>repository</p></td>
+<tr class="row-even"><td><p>segments</p></td>
+<td><p>588, duration distribution: 0.0 s <img alt="vadtoolkit-1.1.0-segment-duration-distribution" src="../_images/vadtoolkit-1.1.0-segment-duration-distribution.png" /> 51.1 s</p></td>
+</tr>
+<tr class="row-odd"><td><p>repository</p></td>
 <td><p><a class="reference external" href="https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/vadtoolkit">data-public</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>published</p></td>
+<tr class="row-even"><td><p>published</p></td>
 <td><p>2024-01-02 by audeering</p></td>
 </tr>
 </tbody>
@@ -202,33 +225,73 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>VAD Toolkit: A Database for Voice Activity Detection At each environment, conversational speech by two Korean male speakers was recorded. The ground truth labels are manually annotated. Because the recording was carried out in the real world, unexpected noises are included to the dataset such as the crying of baby, the chirping of insects, mouse click sound, and etc..</p>
 </div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
-<p><code class="file docutils literal notranslate"><span class="pre">park.wav</span></code></p>
-<img alt="../_images/vadtoolkit.png" src="../_images/vadtoolkit.png" />
-<p><audio controls src="vadtoolkit/park.wav"></audio></p></div>
 <div class="section" id="tables">
 <h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 10%" />
-<col style="width: 70%" />
-</colgroup>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>segments</p></td>
+    <td><p>segmented</p></td>
+    <td><p>noise</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
 <thead>
-<tr class="row-odd"><th class="head"><p>ID</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Columns</p></th>
-</tr>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>start</p></th>
+    <th class="head"><p>end</p></th>
+    <th class="head"><p>noise</p></th>
+    </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>segments</p></td>
-<td><p>segmented</p></td>
-<td><p>noise</p></td>
-</tr>
+                <tr>
+    <td><p>bus_stop.wav</p></td>
+    <td><p>0 days 00:00:02.173875</p></td>
+    <td><p>0 days 00:00:03.775937</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>bus_stop.wav</p></td>
+    <td><p>0 days 00:00:05.641875</p></td>
+    <td><p>0 days 00:00:07.691937</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>bus_stop.wav</p></td>
+    <td><p>0 days 00:00:08.876875</p></td>
+    <td><p>0 days 00:00:11.498937</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>bus_stop.wav</p></td>
+    <td><p>0 days 00:00:12.468875</p></td>
+    <td><p>0 days 00:00:13.644937</p></td>
+    <td><p>0</p></td>
+    </tr>
+            <tr>
+    <td><p>bus_stop.wav</p></td>
+    <td><p>0 days 00:00:14.182875</p></td>
+    <td><p>0 days 00:00:16.498937</p></td>
+    <td><p>0</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">588 rows x 1 column</p></td></tr>
 </tbody>
 </table>
-</div>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
 <div class="section" id="schemes">
 <h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default">
@@ -264,10 +327,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wham.html" class="btn btn-neutral float-right" title="wham" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="musan.html" class="btn btn-neutral float-left" title="musan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="urbansound8k.html" class="btn btn-neutral float-left" title="urbansound8k" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -279,7 +342,7 @@
         
         
         
-          Built with <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> on 2024/01/26 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>
@@ -317,6 +380,7 @@
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
     
 
   

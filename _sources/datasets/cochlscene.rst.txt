@@ -1,0 +1,191 @@
+.. _datasets-cochlscene:
+
+cochlscene
+----------
+
+Created by Il-Young Jeong, Jeongsoo Park
+
+============= ======================
+version       1.0.0
+license       `CC-BY-SA-3.0 <https://creativecommons.org/licenses/by-sa/3.0/>`__
+source        https://zenodo.org/record/7080122/
+usage         unrestricted
+languages     
+format        wav
+channel       1
+sampling rate 44100
+bit depth     16
+duration      8 days 19:25:50
+files         76115, duration distribution: each file is 10.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/cochlscene>`__
+published     2024-12-04 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+Cochl Acoustic Scene Dataset (CochlScene), is an acoustic scene dataset whose recordings are fully collected from crowdsourcing participants. Most of the initial plans and guidelines for the processes were provided by the researchers in the field of audio signal processing and machine learning including the authors, and the actual process was performed by using the crowdsourcing platform developed by SelectStar, a Korean crowdsourcing data company. During the process, the initial plans were reinforced and modified from the discussion about the actual difficulty in the collection process. After extracting the subset of the total collections considering the purpose of the data, we collected 76,115 10 seconds files in 13 different acoustic scenes from 831 participants.
+
+Example
+^^^^^^^
+
+:file:`train/Street/Street_user0391_14832713_003.wav`
+
+.. image:: ./cochlscene/cochlscene-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./cochlscene/train/Street/Street_user0391_14832713_003.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>dev</p></td>
+        <td><p>filewise</p></td>
+        <td><p>scene</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>scene</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>dev/Bus/Bus_user0009_14897252_000.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>dev/Bus/Bus_user0009_14897252_001.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>dev/Bus/Bus_user0009_14897252_002.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>dev/Bus/Bus_user0009_14897252_003.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>dev/Bus/Bus_user0009_14897252_004.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">7573 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>test</p></td>
+        <td><p>filewise</p></td>
+        <td><p>scene</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>scene</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>test/Bus/Bus_user0017_14896147_000.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>test/Bus/Bus_user0017_14896147_001.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>test/Bus/Bus_user0017_14896147_002.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>test/Bus/Bus_user0017_14896147_003.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>test/Bus/Bus_user0017_14896147_004.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">7687 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>train</p></td>
+        <td><p>filewise</p></td>
+        <td><p>scene</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>scene</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>train/Bus/Bus_user0005_14867590_000.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>train/Bus/Bus_user0005_14867590_001.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>train/Bus/Bus_user0005_14867590_002.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>train/Bus/Bus_user0005_14867590_003.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+                <tr>
+        <td><p>train/Bus/Bus_user0005_14867590_004.wav</p></td>
+        <td><p>Bus</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">60855 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels"
+    "scene", "str", "Bus, Cafe, Car, CrowdedIndoor, Elevator, Kitchen, Park, ResidentialArea, Restaurant, Restroom, Street, Subway, SubwayStation"

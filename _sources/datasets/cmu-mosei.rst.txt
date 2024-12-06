@@ -1,0 +1,477 @@
+.. |cmu-mosei-1.2.4-file-duration-distribution| image:: ./cmu-mosei/cmu-mosei-1.2.4-file-duration-distribution.png
+.. |cmu-mosei-1.2.4-segment-duration-distribution| image:: ./cmu-mosei/cmu-mosei-1.2.4-segment-duration-distribution.png
+
+.. _datasets-cmu-mosei:
+
+cmu-mosei
+---------
+
+Created by AmirAli Bagher Zadeh, Paul Pu Liang, Soujanya Poria, Erik Cambria, Louis-Philippe Morency
+
+============= ======================
+version       1.2.4
+license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
+source        https://github.com/A2Zadeh/CMU-MultimodalSDK
+usage         research
+languages     English
+format        wav
+channel       1
+sampling rate 16000
+bit depth     16
+duration      4 days 19:40:44.218500001
+files         3293, duration distribution: 6.0 s |cmu-mosei-1.2.4-file-duration-distribution| 1160.2 s
+segments      23259, duration distribution: 0.1 s |cmu-mosei-1.2.4-segment-duration-distribution| 109.4 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/cmu-mosei>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+Multimodal Opinion Sentiment and Emotion Intensity Sentiment and emotion annotated multimodal data automatically collected from YouTube. The dataset contains more than 23,500 sentence utterance videos from more than 1000 online YouTube speakers. The dataset is gender balanced. All the sentences utterance are randomly chosen from various topics and monologue videos. The videos are transcribed and properly punctuated. All videos are stated to have a creative commons license that allows for personal unrestricted use. The annotations have a different less strict license and can be used also for commercial applications. Reference: http://dx.doi.org/10.18653/v1/P18-1208
+
+Example
+^^^^^^^
+
+:file:`96337-Audio-WAV/84176.wav`
+
+.. image:: ./cmu-mosei/cmu-mosei-1.2.4-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./cmu-mosei/96337-Audio-WAV/84176.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>dev</p></td>
+        <td><p>filewise</p></td>
+        <td><p></p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>cM1Zuji24dI-Audio-WAV/188343.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>4HAC00EAdno-Audio-WAV/VAXhC2U9-2A.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>KPeos6f4HuQ-Audio-WAV/AxNy9TeTLq8.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>mmg_eTDHjkk-Audio-WAV/EmmuWoCUgXs.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>HObh42PhOfw-Audio-WAV/icbUzboLcDQ.wav</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">300 rows x 0 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion</p></td>
+        <td><p>segmented</p></td>
+        <td><p>happiness, sadness, anger, fear, disgust, surprise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>happiness</p></th>
+        <th class="head"><p>sadness</p></th>
+        <th class="head"><p>anger</p></th>
+        <th class="head"><p>fear</p></th>
+        <th class="head"><p>disgust</p></th>
+        <th class="head"><p>surprise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>9zBj8VkRBpE-Audio-WAV/--qXJuDtHPw.wav</p></td>
+        <td><p>0 days 00:00:23.199000</p></td>
+        <td><p>0 days 00:00:30.325000</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:22.753000</p></td>
+        <td><p>0 days 00:01:40.555000</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:59.919000</p></td>
+        <td><p>0 days 00:02:05.299000</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:04.840000</p></td>
+        <td><p>0 days 00:00:14.052000</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.33333334</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:13.211000</p></td>
+        <td><p>0 days 00:00:27.521000</p></td>
+        <td><p>0.33333334</p></td>
+        <td><p>0.33333334</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        <td><p>0.0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">23259 rows x 6 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.presence</p></td>
+        <td><p>segmented</p></td>
+        <td><p>happiness, sadness, anger, fear, disgust, surprise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>happiness</p></th>
+        <th class="head"><p>sadness</p></th>
+        <th class="head"><p>anger</p></th>
+        <th class="head"><p>fear</p></th>
+        <th class="head"><p>disgust</p></th>
+        <th class="head"><p>surprise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>9zBj8VkRBpE-Audio-WAV/--qXJuDtHPw.wav</p></td>
+        <td><p>0 days 00:00:23.199000</p></td>
+        <td><p>0 days 00:00:30.325000</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:22.753000</p></td>
+        <td><p>0 days 00:01:40.555000</p></td>
+        <td><p>True</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:59.919000</p></td>
+        <td><p>0 days 00:02:05.299000</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:04.840000</p></td>
+        <td><p>0 days 00:00:14.052000</p></td>
+        <td><p>True</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:13.211000</p></td>
+        <td><p>0 days 00:00:27.521000</p></td>
+        <td><p>True</p></td>
+        <td><p>True</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        <td><p>False</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">23259 rows x 6 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>sentiment</p></td>
+        <td><p>segmented</p></td>
+        <td><p>sentiment, sentiment.binarized, sentiment.binary, sentiment.binary.old</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>sentiment</p></th>
+        <th class="head"><p>sentiment.binarized</p></th>
+        <th class="head"><p>sentiment.binary</p></th>
+        <th class="head"><p>sentiment.binary.old</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>9zBj8VkRBpE-Audio-WAV/--qXJuDtHPw.wav</p></td>
+        <td><p>0 days 00:00:23.199000</p></td>
+        <td><p>0 days 00:00:30.325000</p></td>
+        <td><p>1.0</p></td>
+        <td><p>weakly positive</p></td>
+        <td><p>positive</p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:22.753000</p></td>
+        <td><p>0 days 00:01:40.555000</p></td>
+        <td><p>1.0</p></td>
+        <td><p>weakly positive</p></td>
+        <td><p>positive</p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:59.919000</p></td>
+        <td><p>0 days 00:02:05.299000</p></td>
+        <td><p>0.6666667</p></td>
+        <td><p>weakly positive</p></td>
+        <td><p>positive</p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:04.840000</p></td>
+        <td><p>0 days 00:00:14.052000</p></td>
+        <td><p>0.0</p></td>
+        <td><p>neutral</p></td>
+        <td><p></p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:13.211000</p></td>
+        <td><p>0 days 00:00:27.521000</p></td>
+        <td><p>0.0</p></td>
+        <td><p>neutral</p></td>
+        <td><p></p></td>
+        <td><p>non-negative</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">23259 rows x 4 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>test</p></td>
+        <td><p>filewise</p></td>
+        <td><p></p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>8wdxczYf1jI-Audio-WAV/286943.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>QEG_hkJsaYc-Audio-WAV/126872.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>100232-Audio-WAV/qgC8_emxSIU.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>JATMzuV6sUE-Audio-WAV/kld9r0iFkWM.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>-egA8-b7-3M-Audio-WAV/rC29Qub0U7A.wav</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">676 rows x 0 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>train</p></td>
+        <td><p>filewise</p></td>
+        <td><p></p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>XzVapdEr_GY-Audio-WAV/hh04W3xXa5s.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>GdFP_p4eQX0-Audio-WAV/GdFP_p4eQX0.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>87MsiC3E2-w-Audio-WAV/4iG0ffmnCOw.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>75892-Audio-WAV/81406.wav</p></td>
+        </tr>
+                <tr>
+        <td><p>4HAC00EAdno-Audio-WAV/qyJiDgtj6YE.wav</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2249 rows x 0 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>transcription</p></td>
+        <td><p>segmented</p></td>
+        <td><p>transcription</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>start</p></th>
+        <th class="head"><p>end</p></th>
+        <th class="head"><p>transcription</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>9zBj8VkRBpE-Audio-WAV/--qXJuDtHPw.wav</p></td>
+        <td><p>0 days 00:00:23.199000</p></td>
+        <td><p>0 days 00:00:30.325000</p></td>
+        <td><p>i see that a writer is somebody who has an incredible command of mechanics of the english language</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:22.753000</p></td>
+        <td><p>0 days 00:01:40.555000</p></td>
+        <td><p>key is part of the people that we use to solve those issues whether it's stretch or outdoor resis...</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:01:59.919000</p></td>
+        <td><p>0 days 00:02:05.299000</p></td>
+        <td><p>that we do they've been able to find solutions or at least bring some answers to the table</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:04.840000</p></td>
+        <td><p>0 days 00:00:14.052000</p></td>
+        <td><p>key polymer brings a technical aspect to our operation that we don't have internally</p></td>
+        </tr>
+                <tr>
+        <td><p>qFsGMA75-oQ-Audio-WAV/-3g5yACwYnA.wav</p></td>
+        <td><p>0 days 00:00:13.211000</p></td>
+        <td><p>0 days 00:00:27.521000</p></td>
+        <td><p>we're a huge user of adhesives for our operation called flocking and we don't have the technical ...</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">23259 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Min", "Max", "Labels"
+    "emotion.intensity", "float", "0", "3", ""
+    "emotion.presence", "bool", "", "", ""
+    "sentiment", "float", "-3", "3", ""
+    "sentiment.binarized", "str", "", "", "highly negative, highly positive, negative, neutral, positive, weakly negative, weakly positive"
+    "sentiment.binary", "str", "", "", "negative, positive"
+    "sentiment.binary.old", "str", "", "", "negative, non-negative"
+    "transcription", "str", "", "", ""

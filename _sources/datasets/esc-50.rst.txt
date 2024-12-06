@@ -1,0 +1,142 @@
+.. _datasets-esc-50:
+
+esc-50
+------
+
+Created by K. J. Piczak
+
+============= ======================
+version       1.0.1
+license       `CC-BY-NC-3.0 <https://creativecommons.org/licenses/by-nc/3.0/>`__
+source        https://github.com/karolpiczak/ESC-50
+usage         research
+languages     
+format        wav
+channel       1
+sampling rate 44100
+bit depth     16
+duration      0 days 02:46:40
+files         2000, duration distribution: each file is 5.0 s
+repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/esc-50>`__
+published     2024-11-27 by hwierstorf
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The ESC-50 dataset is a labeled collection of 2000 environmental audio recordings suitable for benchmarking methods of environmental sound classification. The dataset consists of 5-second-long recordings organized into 50 semantical classes (with 40 examples per class) loosely arranged into 5 major categories.
+
+Example
+^^^^^^^
+
+:file:`audio/2-188822-D-40.wav`
+
+.. image:: ./esc-50/esc-50-1.0.1-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./esc-50/audio/2-188822-D-40.wav"></audio></p>
+
+Tables
+^^^^^^
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>category, clip_id, esc10, fold, major, take</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>category</p></th>
+        <th class="head"><p>clip_id</p></th>
+        <th class="head"><p>esc10</p></th>
+        <th class="head"><p>fold</p></th>
+        <th class="head"><p>major</p></th>
+        <th class="head"><p>take</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1-100032-A-0.wav</p></td>
+        <td><p>dog</p></td>
+        <td><p>100032</p></td>
+        <td><p>True</p></td>
+        <td><p>1</p></td>
+        <td><p>animals</p></td>
+        <td><p>A</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1-100038-A-14.wav</p></td>
+        <td><p>chirping_birds</p></td>
+        <td><p>100038</p></td>
+        <td><p>False</p></td>
+        <td><p>1</p></td>
+        <td><p>natural</p></td>
+        <td><p>A</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1-100210-A-36.wav</p></td>
+        <td><p>vacuum_cleaner</p></td>
+        <td><p>100210</p></td>
+        <td><p>False</p></td>
+        <td><p>1</p></td>
+        <td><p>interior</p></td>
+        <td><p>A</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1-100210-B-36.wav</p></td>
+        <td><p>vacuum_cleaner</p></td>
+        <td><p>100210</p></td>
+        <td><p>False</p></td>
+        <td><p>1</p></td>
+        <td><p>interior</p></td>
+        <td><p>B</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1-101296-A-19.wav</p></td>
+        <td><p>thunderstorm</p></td>
+        <td><p>101296</p></td>
+        <td><p>False</p></td>
+        <td><p>1</p></td>
+        <td><p>natural</p></td>
+        <td><p>A</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2000 rows x 6 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels"
+    "category", "str", "airplane, breathing, brushing_teeth, can_opening, car_horn, cat, chainsaw, [...], snoring, thunderstorm, toilet_flush, train, vacuum_cleaner, washing_machine, water_drops, wind"
+    "clip_id", "str", ""
+    "esc10", "bool", ""
+    "fold", "int", "1, 2, 3, 4, 5"
+    "major", "str", "animals, exterior, human, interior, natural"
+    "take", "str", "A, B, C, D, E, F, G, H"

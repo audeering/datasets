@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>clac &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cmu-mosei" href="cmu-mosei.html" />
+    <link rel="prev" title="air" href="air.html" />
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">clac</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>clac</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="clac">
+<span id="datasets-clac"></span><h1>clac<a class="headerlink" href="#clac" title="Permalink to this heading">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>1.1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>source</p></td>
+<td><p><a class="reference external" href="https://groups.csail.mit.edu/sls/downloads/clac/index.cgi">https://groups.csail.mit.edu/sls/downloads/clac/index.cgi</a></p></td>
+</tr>
+<tr class="row-even"><td><p>usage</p></td>
+<td><p>commercial</p></td>
+</tr>
+<tr class="row-odd"><td><p>languages</p></td>
+<td><p>eng</p></td>
+</tr>
+<tr class="row-even"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-odd"><td><p>channel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>sampling rate</p></td>
+<td><p>8000, 16000, 44100, 48000</p></td>
+</tr>
+<tr class="row-odd"><td><p>bit depth</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
+<td><p>4 days 08:45:53.120362812</p></td>
+</tr>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>18609, duration distribution: 3.2 s <img alt="clac-1.1.0-file-duration-distribution" src="../_images/clac-1.1.0-file-duration-distribution.png" /> 183.7 s</p></td>
+</tr>
+<tr class="row-even"><td><p>segments</p></td>
+<td><p>25214, duration distribution: 0.8 s <img alt="clac-1.1.0-segment-duration-distribution" src="../_images/clac-1.1.0-segment-duration-distribution.png" /> 7.0 s</p></td>
+</tr>
+<tr class="row-odd"><td><p>repository</p></td>
+<td><p><a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/clac">audb-public</a></p></td>
+</tr>
+<tr class="row-even"><td><p>published</p></td>
+<td><p>2024-11-27 by hwierstorf</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>The Crowdsourced Language Assessment Corpus (CLAC) consists of audio recordings and automatically-generated transcripts from 1,832 speakers for several speech and language tasks, as well as metadata for each of the speakers. The speaker metadata contains information about the age, gender, years of eduction, residence of each speaker and whether they had health-related symptoms during the recordings.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">audio/cookie_theft/spk1383.wav</span></code></p>
+<img alt="../_images/clac-1.1.0-player-waveform.png" src="../_images/clac-1.1.0-player-waveform.png" />
+<p><audio controls src="./clac/audio/cookie_theft/spk1383.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>age.dev</p></td>
+    <td><p>segmented</p></td>
+    <td><p>speaker</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>start</p></th>
+    <th class="head"><p>end</p></th>
+    <th class="head"><p>speaker</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audio/grandfather/spk1537.wav</p></td>
+    <td><p>0 days 00:00:01.280000</p></td>
+    <td><p>0 days 00:00:03.740000</p></td>
+    <td><p>1537</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk1537.wav</p></td>
+    <td><p>0 days 00:00:04.140000</p></td>
+    <td><p>0 days 00:00:09.080000</p></td>
+    <td><p>1537</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk1537.wav</p></td>
+    <td><p>0 days 00:00:09.720000</p></td>
+    <td><p>0 days 00:00:12.460000</p></td>
+    <td><p>1537</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk1537.wav</p></td>
+    <td><p>0 days 00:00:12.980000</p></td>
+    <td><p>0 days 00:00:15.400000</p></td>
+    <td><p>1537</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk1537.wav</p></td>
+    <td><p>0 days 00:00:16.100000</p></td>
+    <td><p>0 days 00:00:17.180000</p></td>
+    <td><p>1537</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">2605 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>age.test</p></td>
+    <td><p>segmented</p></td>
+    <td><p>speaker</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>start</p></th>
+    <th class="head"><p>end</p></th>
+    <th class="head"><p>speaker</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audio/grandfather/spk809.wav</p></td>
+    <td><p>0 days 00:00:01.760000</p></td>
+    <td><p>0 days 00:00:07.720000</p></td>
+    <td><p>809</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk809.wav</p></td>
+    <td><p>0 days 00:00:08.160000</p></td>
+    <td><p>0 days 00:00:11.540000</p></td>
+    <td><p>809</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk809.wav</p></td>
+    <td><p>0 days 00:00:12.200000</p></td>
+    <td><p>0 days 00:00:15.020000</p></td>
+    <td><p>809</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk809.wav</p></td>
+    <td><p>0 days 00:00:16.460000</p></td>
+    <td><p>0 days 00:00:18.280000</p></td>
+    <td><p>809</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk809.wav</p></td>
+    <td><p>0 days 00:00:19.100000</p></td>
+    <td><p>0 days 00:00:21.340000</p></td>
+    <td><p>809</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">2510 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>age.train</p></td>
+    <td><p>segmented</p></td>
+    <td><p>speaker</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>start</p></th>
+    <th class="head"><p>end</p></th>
+    <th class="head"><p>speaker</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audio/grandfather/spk386.wav</p></td>
+    <td><p>0 days 00:00:00.960000</p></td>
+    <td><p>0 days 00:00:03.140000</p></td>
+    <td><p>386</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk386.wav</p></td>
+    <td><p>0 days 00:00:04.060000</p></td>
+    <td><p>0 days 00:00:08.460000</p></td>
+    <td><p>386</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk386.wav</p></td>
+    <td><p>0 days 00:00:09.200000</p></td>
+    <td><p>0 days 00:00:11.680000</p></td>
+    <td><p>386</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk386.wav</p></td>
+    <td><p>0 days 00:00:12.200000</p></td>
+    <td><p>0 days 00:00:14.140000</p></td>
+    <td><p>386</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/grandfather/spk386.wav</p></td>
+    <td><p>0 days 00:00:14.840000</p></td>
+    <td><p>0 days 00:00:16.620000</p></td>
+    <td><p>386</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">20099 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>files</p></td>
+    <td><p>filewise</p></td>
+    <td><p>task-name, transcript, speaker</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>task-name</p></th>
+    <th class="head"><p>transcript</p></th>
+    <th class="head"><p>speaker</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audio/counting_1_to_20/spk386.wav</p></td>
+    <td><p>counting_1_to_20</p></td>
+    <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+    <td><p>386</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/counting_1_to_20/spk107.wav</p></td>
+    <td><p>counting_1_to_20</p></td>
+    <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+    <td><p>107</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/counting_1_to_20/spk1537.wav</p></td>
+    <td><p>counting_1_to_20</p></td>
+    <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+    <td><p>1537</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/counting_1_to_20/spk727.wav</p></td>
+    <td><p>counting_1_to_20</p></td>
+    <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+    <td><p>727</p></td>
+    </tr>
+            <tr>
+    <td><p>audio/counting_1_to_20/spk809.wav</p></td>
+    <td><p>counting_1_to_20</p></td>
+    <td><p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p></td>
+    <td><p>809</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">18609 rows x 3 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>speaker-metadata</p></td>
+    <td><p>misc</p></td>
+    <td><p>age, gender, country, region, city, education(years), symptoms</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>speaker</p></th>
+    <th class="head"><p>age</p></th>
+    <th class="head"><p>gender</p></th>
+    <th class="head"><p>country</p></th>
+    <th class="head"><p>region</p></th>
+    <th class="head"><p>city</p></th>
+    <th class="head"><p>education(years)</p></th>
+    <th class="head"><p>symptoms</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>1</p></td>
+    <td><p>26</p></td>
+    <td><p>male</p></td>
+    <td><p>United States (US)</p></td>
+    <td><p>Maryland (MD)</p></td>
+    <td><p>Waldorf</p></td>
+    <td><p></p></td>
+    <td><p>False</p></td>
+    </tr>
+            <tr>
+    <td><p>2</p></td>
+    <td><p>32</p></td>
+    <td><p>male</p></td>
+    <td><p>United States (US)</p></td>
+    <td><p>North Carolina (NC)</p></td>
+    <td><p>Durham</p></td>
+    <td><p>16</p></td>
+    <td><p>False</p></td>
+    </tr>
+            <tr>
+    <td><p>3</p></td>
+    <td><p>44</p></td>
+    <td><p>male</p></td>
+    <td><p>United States (US)</p></td>
+    <td><p>California (CA)</p></td>
+    <td><p>North Hills</p></td>
+    <td><p>16</p></td>
+    <td><p>False</p></td>
+    </tr>
+            <tr>
+    <td><p>4</p></td>
+    <td><p>59</p></td>
+    <td><p>female</p></td>
+    <td><p>United States (US)</p></td>
+    <td><p>None (None)</p></td>
+    <td><p></p></td>
+    <td><p>16</p></td>
+    <td><p>False</p></td>
+    </tr>
+            <tr>
+    <td><p>5</p></td>
+    <td><p>22</p></td>
+    <td><p>male</p></td>
+    <td><p>United States (US)</p></td>
+    <td><p>Oregon (OR)</p></td>
+    <td><p>Eugene</p></td>
+    <td><p>15</p></td>
+    <td><p>False</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">1832 rows x 7 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Min</p></th>
+<th class="head"><p>Max</p></th>
+<th class="head"><p>Labels</p></th>
+<th class="head"><p>Mappings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>age</p></td>
+<td><p>int</p></td>
+<td><p>0</p></td>
+<td><p>100</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>city</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>country</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>Bangladesh (BD), Hong Kong (HK), India (IN), Italy (IT), Mexico (MX), None (None), Pakistan (PK), Philippines (PH), Romania (RO), Switzerland (CH), United Kingdom (GB), United States (US), Venezuela (VE)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>education(years)</p></td>
+<td><p>int</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>gender</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>female, male, other</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>region</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>speaker</p></td>
+<td><p>int</p></td>
+<td></td>
+<td></td>
+<td><p>1, 2, 3, 4, 5, 6, 7, […], 1825, 1826, 1827, 1828, 1829, 1830, 1831, 1832</p></td>
+<td><p>age, city, country, education(years), gender, region, symptoms</p></td>
+</tr>
+<tr class="row-odd"><td><p>symptoms</p></td>
+<td><p>bool</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>task-name</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td><p>cookie_theft, counting_1_to_20, days_of_the_week, grandfather, max_phonation, picnic, rainbow, repeat_5_times, repeat_5_times_artillery, repeat_5_times_catastrophe, repeat_5_times_impossibility, smr</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>transcript</p></td>
+<td><p>str</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cmu-mosei.html" class="btn btn-neutral float-right" title="cmu-mosei" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="air.html" class="btn btn-neutral float-left" title="air" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
