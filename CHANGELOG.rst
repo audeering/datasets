@@ -7,6 +7,13 @@ The format is based on `Keep a Changelog`_,
 and this project adheres to `Semantic Versioning`_.
 
 
+Version 1.1.0 (2024-12-06)
+--------------------------
+
+* Changed: switched to ``audb-public`` repository on S3
+* Changed: use ``audbcards`` package to build the HTML pages
+
+
 Version 1.0.2 (2024-01-26)
 --------------------------
 
