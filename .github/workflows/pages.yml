@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.10'
 
     # Remove apt repos that are known to break from time to time
     # See https://github.com/actions/virtual-environments/issues/323

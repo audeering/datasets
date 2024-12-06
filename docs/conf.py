@@ -1,6 +1,5 @@
+import audb
 import audeer
-
-import docs.datacard
 
 
 # Project -----------------------------------------------------------------
@@ -14,6 +13,9 @@ title = project
 master_doc = 'index'
 source_suffix = '.rst'
 exclude_patterns = ['build', 'Thumbs.db', '.DS_Store']
+extensions = [
+    "audbcards.sphinx",
+]
 pygments_style = None
 linkcheck_ignore = [
     './datasets/emodb.html',
@@ -36,13 +38,15 @@ html_context = {
 }
 html_title = title
 
-
-# Create data cards for each dataset---------------------------------------
-#
-# Fetch a list of all available datasets
-# and create a data card for each if them
-# as part ofg the HTML pages.
-#
-# For configuration options
-# look at the header of datacard.py
-docs.datacard.run()
+audbcards_datasets = [
+    (
+        "datasets",  # folder name
+        "Datasets",  # datasets overview page header
+        audb.Repository(
+            "data-public",
+            "https://audeering.jfrog.io/artifactory",
+            "artifactory",
+        ),
+        True,  # don't show audio examples
+    ),
+]
