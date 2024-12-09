@@ -1,5 +1,5 @@
 audb >=1.10.2
-audbcards >= 0.3.2
+audbcards >= 0.3.4
 audplot
 sphinx
 sphinx-audeering-theme >=1.2.1
