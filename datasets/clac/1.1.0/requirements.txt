@@ -1,0 +1,11 @@
+audb==1.4.1
+audeer==1.19.0
+audformat==0.16.0
+auvad==0.7.1
+matplotlib==3.6.3
+numpy==1.24.1
+pandas==1.5.2
+seaborn==0.13.0
+tqdm==4.64.1
+scipy
+scikit-learn

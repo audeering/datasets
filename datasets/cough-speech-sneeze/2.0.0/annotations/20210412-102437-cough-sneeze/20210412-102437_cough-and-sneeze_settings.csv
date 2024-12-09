@@ -1,0 +1,30 @@
+Dataset,
+name,Cough and Sneeze
+description,":alarm_clock: :hourglass_flowing_sand: Please book your time in **Timebutler** under **P devAIce (UPP)**  --> _Data Annotation_
+
+----------
+
+Wir haben ein paar Daten welche husten und niesen von Personen beinhalten. Leider scheinen sich hier teilweise auch andere Daten untergemischt zu haben. Es wäre toll, wenn ihr uns helfen würdet diese zu sortieren. Die Regeln dazu sind einfach:
+Wenn ein Sprecher niest (sneeze) oder hustet (cough) dann markiert ihr diese entsprechend. Wichtig dabei ist, dass es sich nur um diese beiden Ereignisse handelt und vor und nach dem Ereignis nicht zu viel Stille oder andere Geräusche sind. Ist etwas Hintergrund (Sprache, Musik usw) enthalten, dann ist das okay. Das Ereignis soll aber doch deutlich im Vordergrund stehen. Alle anderen Audiodaten, die nicht in diese beiden Kategorien passen markiert ihr einfach als ""andere""."
+additional_description,
+block_size,200
+owner,iHEARu-Play Team
+percentage_for_consistency_questions,0
+publication_groups,[{'name': 'All_Annotators'}]
+,
+Task 1,
+block_type,alphabetical
+target_num_annotations,1
+target_num_trusted_annotations,0
+,
+Subtask 1 of Task 1,
+text,The audio sample contains...
+further_explanation,
+type,discrete-single-label
+forbid_mobile_devices,True
+choices,"coughing:
+sneezing:
+other sounds:"
+control_choices,None
+label,cough_sneeze
+,

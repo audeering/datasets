@@ -1,0 +1,1 @@
+git+https://github.com/audeering/audb@86a32e7a3e05962723f7c6e3f7fd1bc4ee428e84#egg=audb

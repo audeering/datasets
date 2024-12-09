@@ -1,0 +1,9 @@
+pandas
+matplotlib
+seaborn
+scipy
+scikit-learn
+audb
+audeer
+audformat
+

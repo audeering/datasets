@@ -1,0 +1,4 @@
+username,user_id,year_of_birth,sex,native_language,english_proficiency,german_proficiency,other_languages,country_of_residence,level_of_education
+Rater009,11,,,,,,,,
+Rater010,12,1989,Female,Russian,C1: advanced,C1: advanced,French, Germany,Bachelor or equivalent
+Rater074,174,----,Male,German,C1: advanced,C2: proficiency,English, Germany,Prefer not to say

@@ -1,0 +1,5 @@
+audb
+audeer
+audformat
+beautifulsoup4
+pandas

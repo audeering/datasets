@@ -1,0 +1,7 @@
+audb
+audformat
+pandas
+
+numpy
+scipy
+scikit-learn

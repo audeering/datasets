@@ -1,0 +1,4 @@
+audeer
+pandas
+audformat
+audb

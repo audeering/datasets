@@ -1,0 +1,5 @@
+.venv/
+nemo.zip
+download/
+build/
+.ruff_cache/
