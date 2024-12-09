@@ -11,11 +11,11 @@ Use the ``audb.load()``
 command to load the audio files
 and annotations of a dataset.
 The following example
-loads version 1.3.0 of emodb_:
+loads version 1.4.1 of emodb_:
 
 .. code-block:: python
 
-    db = audb.load('emodb', version='1.3.0')
+    db = audb.load("emodb", version="1.4.1")
 
 See also the `audb quickstart guide`_.
 
