@@ -1,0 +1,32 @@
+.. _{{ path }}-{{ name }}:
+
+{{ name }}
+{% for n in range(name|length) %}-{% endfor %}
+
+{% if author is not none %}
+
+Created by {{ author }}
+{% endif %}
+
+============= ======================
+version       {{ version }}
+{% if license_link is not none %}
+license       `{{ license }} <{{ license_link }}>`__
+{% else %}
+license       {{ license }}
+{% endif %}
+usage         {{ usage }}
+{% if languages is defined %}
+languages     {{ languages|join(', ') }}
+{% endif %}
+format        {{ formats|join(', ') }}
+channel       {{ channels|join(', ') }}
+sampling rate {{ sampling_rates|join(', ') }}
+bit depth     {{ bit_depths|join(', ') }}
+duration      {{ duration }}
+files         {{ files }}, duration distribution: {{ file_duration_distribution }}
+{% if segments != "0" %}
+segments      {{ segments }}, duration distribution: {{ segment_duration_distribution }}
+{% endif %}
+repository    {{ repository }}
+============= ======================

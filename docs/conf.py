@@ -33,6 +33,7 @@ html_theme_options = {
     "display_version": True,
     "logo_only": False,
     "footer_links": False,
+    "wide_pages": ["datasets"],
 }
 html_context = {
     "display_github": True,
@@ -47,3 +48,4 @@ audbcards_datasets = [
         True,  # don't show audio examples
     ),
 ]
+audbcards_templates = "_templates"
