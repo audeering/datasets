@@ -7,6 +7,17 @@ The format is based on `Keep a Changelog`_,
 and this project adheres to `Semantic Versioning`_.
 
 
+Version 1.1.1 (2024-12-09)
+--------------------------
+
+* Added: source code for publishing datasets
+  under the ``datasets/`` folder
+* Fixed: removed ``source``,
+  ``repository``,
+  and ``published``
+  entries from datacard header table
+
+
 Version 1.1.0 (2024-12-06)
 --------------------------
 
