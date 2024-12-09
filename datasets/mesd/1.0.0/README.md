@@ -1,0 +1,2 @@
+- the audiofiles have to be downloaded as a zip file from https://data.mendeley.com/datasets/cy34mh68j9/5
+- the zip file needs to be unpacked in the Download directory

@@ -1,0 +1,2 @@
+Dataset,Label,Published,First annotation,Latest annotation,Segments presentation,Number of segments,Duration of all segments[h],Number of annotators,Number of annotations needed,Current number of annotations,Annotations finished[%],Timetracking annotations[h]
+Cough and Sneeze,cough_sneeze,2021-04-08,2021-04-08 11:12:00,2021-04-11 02:12:53,alphabetical,3732,1.89,3,3732,3732,100.0,6.96

@@ -1,0 +1,6 @@
+audb
+audformat
+pandas
+audeer
+numpy
+openpyxl
