@@ -34,6 +34,10 @@
     <link rel="next" title="air" href="datasets/air.html" />
     <link rel="prev" title="datasets" href="index.html" />
     
+      
+        <link rel="stylesheet" href="_static/css/audeering-wide.css" type="text/css" />
+      
+    
   
 
   
@@ -65,7 +69,7 @@
             
             
               <div class="version">
-                v1.1.0
+                v1.1.1
               </div>
             
           
@@ -100,16 +104,20 @@
 <li class="toctree-l2"><a class="reference internal" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/crema-d.html">crema-d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/eesc.html">eesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/emodb.html">emodb</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/emozionalmente.html">emozionalmente</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/esc-50.html">esc-50</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/expresso.html">expresso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/fsdnoisy18k.html">fsdnoisy18k</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/kannada.html">kannada</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/ljspeech.html">ljspeech</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/mesd.html">mesd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/micirp.html">micirp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/nemo.html">nemo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/openair.html">openair</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/quechua.html">quechua</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/ravdess.html">ravdess</a></li>
@@ -164,10 +172,10 @@
             
   <div class="section" id="datasets">
 <span id="id1"></span><h1>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">¶</a></h1>
-<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Dec 06, 2024
+<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Dec 09, 2024
 in the
 repository
-<a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com">audb-public</a>.
+<strong>audb-public</strong>.
 For each dataset, the latest version is shown.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -234,17 +242,29 @@ For each dataset, the latest version is shown.</p>
 <td><p>1.0.0</p></td>
 <td><p>speaker:], language, normalized-transcription, transcription</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="datasets/emodb.html">emodb</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/eesc.html">eesc</a></p></td>
+<td><p>The establishment of the Estonian Emotional Speech Corpus (EESC) began in 2006 within the framework of the National Programme for Estonian Language…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/3.0/deed.en">CC-BY-3.0</a></p></td>
+<td><p>1.0.1</p></td>
+<td><p>emotion: [anger, happiness, neutral, sadness], speaker: [gender, language], emotion.agreement, gender, language, text-matches-emotion, transcription</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/emodb.html">emodb</a></p></td>
 <td><p>Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research proje…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
 <td><p>1.4.1</p></td>
 <td><p>emotion: [anger, boredom, disgust, fear, happiness, sadness, neutral], speaker: [age, gender, language], age, confidence, gender, language, transcription</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/emouerj.html">emouerj</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/emouerj.html">emouerj</a></p></td>
 <td><p>emoUERJ contains recordings of 10 portuguese sentences pronounced by 8 speakers in 4 emotions: happiness,anger,sadness,neutral.</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>emotion: [happiness, anger, sadness, neutral], speaker: [gender], gender, take</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/emozionalmente.html">emozionalmente</a></p></td>
+<td><p>Emozionalmente is an extensive, crowdsourced Italian emotional speech corpus. The dataset consists of 6902 labeled samples acted out by 431 amateur…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>emotion: [anger, disgust, fear, happiness, neutral, no_agreement, sadness, surprise], speaker: [age, gender, mother_tongue], age, emotion.agreement, gender, mother_tongue, transcription, votes</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="datasets/esc-50.html">esc-50</a></p></td>
 <td><p>The ESC-50 dataset is a labeled collection of 2000 environmental audio recordings suitable for benchmarking methods of environmental sound classifi…</p></td>
@@ -270,29 +290,41 @@ For each dataset, the latest version is shown.</p>
 <td><p>1.0.0</p></td>
 <td><p>room, x, y</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="datasets/ljspeech.html">ljspeech</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/kannada.html">kannada</a></p></td>
+<td><p>This database contains six different sentences, pronounced by thirteen people (four male and nine female) in six emotions (anger, sadness, surprise…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
+<td><p>1.0.1</p></td>
+<td><p>emotion: [anger, sadness, surprise, happiness, fear, neutral], speaker: [gender, age], age, gender, sentence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/ljspeech.html">ljspeech</a></p></td>
 <td><p>LJSpeech consists of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each c…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>speaker: [gender], gender, normalized-transcription, transcription</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/mesd.html">mesd</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/mesd.html">mesd</a></p></td>
 <td><p>MESD (Mexican Emotional Speech Database) contains single-word utterances for different emotions like anger, disgust, fear, happiness, neutral, and …</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
 <td><p>1.0.1</p></td>
 <td><p>emotion: [anger, disgust, fear, happiness, neutral, sadness], gender, word, word_corpus</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="datasets/micirp.html">micirp</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/micirp.html">micirp</a></p></td>
 <td><p>The Microphone Impulse Response Project (MicIRP) contains impulse response data for vintage microphones. The impulse response files were created us…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>manufacturer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/musan.html">musan</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/musan.html">musan</a></p></td>
 <td><p>The goal of this corpus is to provide data for music/speech discrimination, speech/nonspeech detection, and voice activity detection. The corpus is…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>artist, background_noise, composer, gender, genre, language, vocals</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/nemo.html">nemo</a></p></td>
+<td><p>NEMO is a polish dataset with emotional speech. It contains over 3 hours of emotional speech in 6 categories: anger, fear, happiness, sadness, surp…</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</a></p></td>
+<td><p>1.0.1</p></td>
+<td><p>emotion: [anger, sadness, surprise, happiness, fear, neutral], speaker: [gender, age], age, gender, normalized_text, raw_text, sentence</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="datasets/openair.html">openair</a></p></td>
 <td><p>Impulse Responses (IR) and Reverberation Time (RT60) for different rooms. RT is given in seconds at 500Hz. Openair also has BRIRs and RT60s for 31….</p></td>
@@ -377,7 +409,7 @@ For each dataset, the latest version is shown.</p>
         
         
         
-          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/09 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>

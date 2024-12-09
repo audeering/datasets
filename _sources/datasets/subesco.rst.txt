@@ -10,7 +10,6 @@ Created by Sadia Sultana
 ============= ======================
 version       1.0.0
 license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
-source        https://zenodo.org/records/4526477
 usage         commercial
 languages     ben
 format        wav
@@ -19,8 +18,6 @@ sampling rate 44100, 48000
 bit depth     16
 duration      0 days 07:49:55.467746030
 files         7000, duration distribution: 2.8 s |subesco-1.0.0-file-duration-distribution| 6.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/subesco>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

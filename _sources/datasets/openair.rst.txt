@@ -10,7 +10,6 @@ Created by joseph.rees-jones@york.ac.uk,damian.murphy@york.ac.uk
 ============= ======================
 version       1.0.0
 license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
-source        https://www.openair.hosted.york.ac.uk/?page_id=36
 usage         commercial
 languages     
 format        wav
@@ -19,8 +18,6 @@ sampling rate 44100, 48000, 96000
 bit depth     16, 24, 32
 duration      0 days 00:41:02.663684169
 files         341, duration distribution: 1.0 s |openair-1.0.0-file-duration-distribution| 23.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/openair>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

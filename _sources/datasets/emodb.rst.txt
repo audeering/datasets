@@ -10,7 +10,6 @@ Created by Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter Sendlmeier, B
 ============= ======================
 version       1.4.1
 license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
-source        http://emodb.bilderbar.info/download/download.zip
 usage         unrestricted
 languages     deu
 format        wav
@@ -19,8 +18,6 @@ sampling rate 16000
 bit depth     16
 duration      0 days 00:24:47.092187500
 files         535, duration distribution: 1.2 s |emodb-1.4.1-file-duration-distribution| 9.0 s
-repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/emodb>`__
-published     2023-04-05 by audeering-unittest
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

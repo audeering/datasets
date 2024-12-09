@@ -8,7 +8,6 @@ Created by K. J. Piczak
 ============= ======================
 version       1.0.1
 license       `CC-BY-NC-3.0 <https://creativecommons.org/licenses/by-nc/3.0/>`__
-source        https://github.com/karolpiczak/ESC-50
 usage         research
 languages     
 format        wav
@@ -17,8 +16,6 @@ sampling rate 44100
 bit depth     16
 duration      0 days 02:46:40
 files         2000, duration distribution: each file is 5.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/esc-50>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -39,6 +36,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

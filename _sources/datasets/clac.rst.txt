@@ -9,7 +9,6 @@ clac
 ============= ======================
 version       1.1.0
 license       `CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`__
-source        https://groups.csail.mit.edu/sls/downloads/clac/index.cgi
 usage         commercial
 languages     eng
 format        wav
@@ -19,8 +18,6 @@ bit depth     16
 duration      4 days 08:45:53.120362812
 files         18609, duration distribution: 3.2 s |clac-1.1.0-file-duration-distribution| 183.7 s
 segments      25214, duration distribution: 0.8 s |clac-1.1.0-segment-duration-distribution| 7.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/clac>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

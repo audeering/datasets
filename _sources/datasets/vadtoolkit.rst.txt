@@ -11,7 +11,6 @@ Created by Kim Jaeseok
 ============= ======================
 version       1.1.0
 license       `GPLv3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`__
-source        https://github.com/jtkim-kaist/VAD
 usage         commercial
 languages     kor
 format        wav
@@ -21,8 +20,6 @@ bit depth     16, 32
 duration      0 days 02:00:09.703062500
 files         4, duration distribution: 1801.5 s |vadtoolkit-1.1.0-file-duration-distribution| 1804.0 s
 segments      588, duration distribution: 0.0 s |vadtoolkit-1.1.0-segment-duration-distribution| 51.1 s
-repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/vadtoolkit>`__
-published     2024-01-02 by audeering
 ============= ======================
 
 Description
@@ -32,6 +29,8 @@ VAD Toolkit: A Database for Voice Activity Detection At each environment, conver
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

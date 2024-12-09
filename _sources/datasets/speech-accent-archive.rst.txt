@@ -11,7 +11,6 @@ Created by Rachael Tatman, Steven H. Weinberger, et al.
 ============= ======================
 version       2.2.0
 license       `CC-BY-NC-SA-4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__
-source        https://www.kaggle.com/rtatman/speech-accent-archive
 usage         research
 languages     eng
 format        wav
@@ -21,8 +20,6 @@ bit depth     16
 duration      0 days 16:29:32.808937500
 files         2138, duration distribution: 15.8 s |speech-accent-archive-2.2.0-file-duration-distribution| 106.6 s
 segments      17688, duration distribution: 0.8 s |speech-accent-archive-2.2.0-segment-duration-distribution| 7.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/speech-accent-archive>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -43,6 +40,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

@@ -8,7 +8,6 @@ Created by Rebecca Stewart, Mark Sandler
 ============= ======================
 version       1.0.0
 license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
-source        http://isophonics.net/content/room-impulse-response-data-set
 usage         research
 languages     
 format        wav
@@ -17,8 +16,6 @@ sampling rate 96000
 bit depth     24
 duration      0 days 00:15:36
 files         468, duration distribution: each file is 2.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ir-c4dm>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -39,6 +36,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

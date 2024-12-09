@@ -10,7 +10,6 @@ Created by Stewart Tavener (Xaudia.com)
 ============= ======================
 version       1.0.0
 license       `CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`__
-source        http://micirp.blogspot.com/
 usage         commercial
 languages     
 format        wav
@@ -19,8 +18,6 @@ sampling rate 44100, 48000
 bit depth     24
 duration      0 days 00:00:27.341591837
 files         66, duration distribution: 0.3 s |micirp-1.0.0-file-duration-distribution| 0.5 s
-repository    `data-public <https://audeering.jfrog.io/artifactory/webapp/#/artifacts/browse/tree/General/data-public/micirp>`__
-published     2023-12-21 by audeering
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

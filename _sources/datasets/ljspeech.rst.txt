@@ -10,7 +10,6 @@ Created by Keith Ito and Linda Johnson
 ============= ======================
 version       1.0.0
 license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
-source        https://keithito.com/LJ-Speech-Dataset
 usage         unrestricted
 languages     eng
 format        wav
@@ -19,8 +18,6 @@ sampling rate 22050
 bit depth     16
 duration      0 days 23:55:17.076281179
 files         13100, duration distribution: 1.1 s |ljspeech-1.0.0-file-duration-distribution| 10.1 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ljspeech>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

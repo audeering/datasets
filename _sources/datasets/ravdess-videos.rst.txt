@@ -8,7 +8,6 @@ ravdess-videos
 ============= ======================
 version       1.0.3
 license       `CC-BY-NC-SA-4.0 <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>`__
-source        https://doi.org/10.5281/zenodo.1188975
 usage         research
 languages     English
 format        mp4
@@ -17,8 +16,6 @@ sampling rate 48000
 bit depth     
 duration      0 days 05:34:26.009000
 files         4904, duration distribution: 2.9 s |ravdess-videos-1.0.3-file-duration-distribution| 6.4 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ravdess-videos>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -39,6 +36,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

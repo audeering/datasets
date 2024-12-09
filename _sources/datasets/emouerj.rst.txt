@@ -10,7 +10,6 @@ Created by Rodrigo Gregory Bastos Germano, Michel Pompeu Tcheou, Felipe da Rocha
 ============= ======================
 version       1.0.0
 license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
-source        https://zenodo.org/records/5427549
 usage         commercial
 languages     por
 format        wav
@@ -19,8 +18,6 @@ sampling rate 44100
 bit depth     16
 duration      0 days 00:18:54.000544218
 files         377, duration distribution: 1.2 s |emouerj-1.0.0-file-duration-distribution| 7.1 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/emouerj>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

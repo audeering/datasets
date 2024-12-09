@@ -5,7 +5,7 @@ Datasets
 Datasets available with audb_ as of |today|
 in the
 repository
-`audb-public <s3.dualstack.eu-north-1.amazonaws.com>`__.
+**audb-public**.
 For each dataset, the latest version is shown.
 
 .. csv-table::
@@ -28,16 +28,20 @@ For each dataset, the latest version is shown.
     datasets/cough-speech-sneeze
     datasets/crema-d
     datasets/css10
+    datasets/eesc
     datasets/emodb
     datasets/emouerj
+    datasets/emozionalmente
     datasets/esc-50
     datasets/expresso
     datasets/fsdnoisy18k
     datasets/ir-c4dm
+    datasets/kannada
     datasets/ljspeech
     datasets/mesd
     datasets/micirp
     datasets/musan
+    datasets/nemo
     datasets/openair
     datasets/quechua
     datasets/ravdess

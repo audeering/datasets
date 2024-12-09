@@ -1,0 +1,679 @@
+.. |emozionalmente-1.0.0-file-duration-distribution| image:: ./emozionalmente/emozionalmente-1.0.0-file-duration-distribution.png
+
+.. _datasets-emozionalmente:
+
+emozionalmente
+--------------
+
+Created by Fabio Catania
+
+============= ======================
+version       1.0.0
+license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
+usage         commercial
+languages     ita
+format        wav
+channel       1
+sampling rate 16000, 44100
+bit depth     16
+duration      0 days 06:18:17.953674178
+files         6902, duration distribution: 0.8 s |emozionalmente-1.0.0-file-duration-distribution| 13.9 s
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+Emozionalmente is an extensive, crowdsourced Italian emotional speech corpus. The dataset consists of 6902 labeled samples acted out by 431 amateur actors while verbalizing 18 different sentences expressing the Big Six emotions (anger, disgust, fear, joy, sadness, surprise) plus neutrality. Labels represent the emotional communicative intention of the actors (i.e., the seven emotional states). Recordings were generally obtained with non-professional equipment. They are .wav files, mono-channel, and have a sample size of 16 bits and a sample rate of 16000 Hz. Each audio recording lasts 3.81 seconds (SD = 0.99 seconds). The emotional content of the clips were validated by asking 829 humans (5 evaluations per audio) to guess the emotion contained in each recording. Humans obtained a general accuracy of 66%. 
+
+Example
+^^^^^^^
+
+:file:`audio/1616256756877.wav`
+
+.. image:: ./emozionalmente/emozionalmente-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./emozionalmente/audio/1616256756877.wav"></audio></p>
+
+Tables
+^^^^^^
+
+Click on a row to toggle a preview.
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.dev.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1614951631538.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613994293936.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613562322650.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614266094803.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1615229375102.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1686 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.dev.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.agreement</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.agreement</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1614951631538.wav</p></td>
+        <td><p>no_agreement</p></td>
+        <td><p>0.4</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613994293936.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613562322650.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614266094803.wav</p></td>
+        <td><p>no_agreement</p></td>
+        <td><p>0.4</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1615229375102.wav</p></td>
+        <td><p>surprise</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1686 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.dev.votes</p></td>
+        <td><p>filewise</p></td>
+        <td><p>anger, disgust, fear, happiness, neutral, sadness, surprise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>anger</p></th>
+        <th class="head"><p>disgust</p></th>
+        <th class="head"><p>fear</p></th>
+        <th class="head"><p>happiness</p></th>
+        <th class="head"><p>neutral</p></th>
+        <th class="head"><p>sadness</p></th>
+        <th class="head"><p>surprise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1614951631538.wav</p></td>
+        <td><p>2</p></td>
+        <td><p>2</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613994293936.wav</p></td>
+        <td><p>5</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613562322650.wav</p></td>
+        <td><p>5</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614266094803.wav</p></td>
+        <td><p>2</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1615229375102.wav</p></td>
+        <td><p>2</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1686 rows x 7 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.test.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1617135480050.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613586149044.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1617135448748.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1616505237674.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614359087222.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1228 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.test.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.agreement</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.agreement</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1617135480050.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.4</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613586149044.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.8</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1617135448748.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1616505237674.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614359087222.wav</p></td>
+        <td><p>surprise</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1228 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.test.votes</p></td>
+        <td><p>filewise</p></td>
+        <td><p>anger, disgust, fear, happiness, neutral, sadness, surprise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>anger</p></th>
+        <th class="head"><p>disgust</p></th>
+        <th class="head"><p>fear</p></th>
+        <th class="head"><p>happiness</p></th>
+        <th class="head"><p>neutral</p></th>
+        <th class="head"><p>sadness</p></th>
+        <th class="head"><p>surprise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1617135480050.wav</p></td>
+        <td><p>2</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613586149044.wav</p></td>
+        <td><p>4</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1617135448748.wav</p></td>
+        <td><p>5</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1616505237674.wav</p></td>
+        <td><p>3</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614359087222.wav</p></td>
+        <td><p>2</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1228 rows x 7 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.train.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1613671614352.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613658275427.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613324357435.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614274086698.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1612982146424.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">3988 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.train.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.agreement</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.agreement</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1613671614352.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.4</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613658275427.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.8</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613324357435.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.8</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614274086698.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1612982146424.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">3988 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.train.votes</p></td>
+        <td><p>filewise</p></td>
+        <td><p>anger, disgust, fear, happiness, neutral, sadness, surprise</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>anger</p></th>
+        <th class="head"><p>disgust</p></th>
+        <th class="head"><p>fear</p></th>
+        <th class="head"><p>happiness</p></th>
+        <th class="head"><p>neutral</p></th>
+        <th class="head"><p>sadness</p></th>
+        <th class="head"><p>surprise</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1613671614352.wav</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>2</p></td>
+        <td><p>1</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613658275427.wav</p></td>
+        <td><p>4</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613324357435.wav</p></td>
+        <td><p>4</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1614274086698.wav</p></td>
+        <td><p>3</p></td>
+        <td><p>1</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1612982146424.wav</p></td>
+        <td><p>3</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        <td><p>2</p></td>
+        <td><p>0</p></td>
+        <td><p>0</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">3988 rows x 7 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>speaker, transcription</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>transcription</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audio/1614951631538.wav</p></td>
+        <td><p>d4bbc5043503b9aed309ede00854ee48937684b57a1cc030ee5f42986fbfed7c</p></td>
+        <td><p>s0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613671614352.wav</p></td>
+        <td><p>b830cbf6e79aeeeec1fbf2ef3be741628ffc574c9b15f30634b8e8cc56bd17b9</p></td>
+        <td><p>s1</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613994293936.wav</p></td>
+        <td><p>acdd987f9c1700b25898d3bd30c201df5ad4f34b3ca5ebeb7a8f02d240eeb864</p></td>
+        <td><p>s2</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1617135480050.wav</p></td>
+        <td><p>28043d2516f2d956b81ce66cc01fbd427ac54ff1eb3a07dae906e9be50a92024</p></td>
+        <td><p>s0</p></td>
+        </tr>
+                <tr>
+        <td><p>audio/1613658275427.wav</p></td>
+        <td><p>5b8476bb94a4a1a17df32b417ec035029f48e4487c9055203fb02353eccd46a1</p></td>
+        <td><p>s3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">6902 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>age, gender, mother_tongue</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>age</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>mother_tongue</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>f04bb0e6361c05acba4d5185a2d372177bdb77898c1a213f5dfe5c1d60331ea1</p></td>
+        <td><p>30</p></td>
+        <td><p>female</p></td>
+        <td><p>italian</p></td>
+        </tr>
+                <tr>
+        <td><p>b395b3d82da20e930e20220a5ab4de9adb9a12aaa7cecf17fc09d3a95b3edcb6</p></td>
+        <td><p>26</p></td>
+        <td><p>male</p></td>
+        <td><p>italian</p></td>
+        </tr>
+                <tr>
+        <td><p>69a6f8fa8a7d2e7338bddab3f872ba3532c914f62ebfebe9e11b88be24209fee</p></td>
+        <td><p>26</p></td>
+        <td><p>female</p></td>
+        <td><p>italian</p></td>
+        </tr>
+                <tr>
+        <td><p>5b1d678a1b4936c172e8c239785f89a2693f7603890c413fffc9e8629243cd77</p></td>
+        <td><p>54</p></td>
+        <td><p>female</p></td>
+        <td><p>italian</p></td>
+        </tr>
+                <tr>
+        <td><p>1718aa7e2d0821e3ade5783b4e045ab5930ec22054a0fe5e80146dfce17fae3d</p></td>
+        <td><p>11</p></td>
+        <td><p>female</p></td>
+        <td><p>italian</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">431 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Min", "Max", "Labels", "Mappings"
+    "age", "int", "0", "", "", ""
+    "emotion", "str", "", "", "anger, disgust, fear, happiness, neutral, no_agreement, sadness, surprise", "original"
+    "emotion.agreement", "float", "0", "1", "", ""
+    "gender", "str", "", "", "female, male, other", ""
+    "mother_tongue", "str", "", "", "italian", ""
+    "speaker", "str", "", "", "00a0efc0faaeb5a288481a25b5d0b7d4c0b070120c6d61be6ef7b255fcdfd17f, 00cb13bcf2382ca6eea64f955fc100530bb625a8e646ca83a2c207fd1d460dcd, 01de3a316dafa26a6e15d40720bc94e0706da6e0831274ea04dc25bccf87de9b, 026c4643a1d88e86eb050ba36c1b9de370ec06a34d58152fba030b80c1f7f573, 032bd54539dc739de8c4d77eda2bee1f933a6dd243e4447977b6b39b4d4f83bb, 03f34507d21d41467491672837afd7a5bcfb46357a300202d48c6437f359d5c8, 0518bb1812bd73aeb1a16e59f6205fca9f97ad2975fbe1a5ce10ef9389de091e, [...], fdc94cca304ff508ca4791c1c56f307e4a9d2b5377e9cf1174a4182d7e664385, fe5a73de495ae5b09dcc4b895077ddc389ca689a95096dfcfe5814e7256fe794, fe9d679c7c9b995f2e68dae1261d951212cf92bde2ed7db234633f73dc447b30, fed370a920999e1f0e9ec1aa991e6d2be1b5c96f4268b9995329ee996de953f6, ff169b904af82953988d069875f82df46ae385e13949de9f8dba7503a76a3eca, ff1d25f750dcd0053c95aa615cafabb23e8dcf92e119155c1be68ac54a38f358, ff52b456027ce6b6692e375839d865ca9c1b2b73bbe096317f029e8872f36ab2, ffceba26ef879ad0650c42becbe7f1a7ff301cc763a92611d71a56dfb386aca4", "age, gender, mother_tongue"
+    "transcription", "str", "", "", "s0, s1, s10, s11, s12, s13, s14, [...], s2, s3, s4, s5, s6, s7, s8, s9", "✓"
+    "votes", "int", "0", "", "", ""

@@ -11,7 +11,6 @@ Created by AmirAli Bagher Zadeh, Paul Pu Liang, Soujanya Poria, Erik Cambria, Lo
 ============= ======================
 version       1.2.4
 license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
-source        https://github.com/A2Zadeh/CMU-MultimodalSDK
 usage         research
 languages     English
 format        wav
@@ -21,8 +20,6 @@ bit depth     16
 duration      4 days 19:40:44.218500001
 files         3293, duration distribution: 6.0 s |cmu-mosei-1.2.4-file-duration-distribution| 1160.2 s
 segments      23259, duration distribution: 0.1 s |cmu-mosei-1.2.4-segment-duration-distribution| 109.4 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/cmu-mosei>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -43,6 +40,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

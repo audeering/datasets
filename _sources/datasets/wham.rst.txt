@@ -10,7 +10,6 @@ Created by Gordon Wichern, Joe Antognini, Michael Flynn, Licheng Richard Zhu, Em
 ============= ======================
 version       1.0.0
 license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
-source        http://wham.whisper.ai
 usage         research
 languages     
 format        wav
@@ -19,8 +18,6 @@ sampling rate 16000
 bit depth     32
 duration      3 days 09:41:18.774249999
 files         28000, duration distribution: 3.4 s |wham-1.0.0-file-duration-distribution| 47.7 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/wham>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

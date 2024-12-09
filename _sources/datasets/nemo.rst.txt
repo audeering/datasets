@@ -1,0 +1,258 @@
+.. |nemo-1.0.1-file-duration-distribution| image:: ./nemo/nemo-1.0.1-file-duration-distribution.png
+
+.. _datasets-nemo:
+
+nemo
+----
+
+Created by Christop, Iwona
+
+============= ======================
+version       1.0.1
+license       `CC-BY-NC-SA-4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__
+usage         research
+languages     pol
+format        wav
+channel       1
+sampling rate 24000
+bit depth     16
+duration      0 days 03:04:21.341333333
+files         4481, duration distribution: 0.9 s |nemo-1.0.1-file-duration-distribution| 5.7 s
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+NEMO is a polish dataset with emotional speech. It contains over 3 hours of emotional speech in 6 categories: anger, fear, happiness, sadness, surprise and neutral. The audios were created by nine speakers.
+
+Example
+^^^^^^^
+
+:file:`audios/KS0_surprised_26.wav`
+
+.. image:: ./nemo/nemo-1.0.1-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./nemo/audios/KS0_surprised_26.wav"></audio></p>
+
+Tables
+^^^^^^
+
+Click on a row to toggle a preview.
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.test.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/WR0_surprised_64.wav</p></td>
+        <td><p>surprise</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/EB0_neutral_13.wav</p></td>
+        <td><p>neutral</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/WR0_surprised_70.wav</p></td>
+        <td><p>surprise</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/KS0_surprised_10.wav</p></td>
+        <td><p>surprise</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/MP0_sadness_79.wav</p></td>
+        <td><p>sadness</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">4481 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>speaker, sentence</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>sentence</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/WR0_surprised_64.wav</p></td>
+        <td><p>WR0</p></td>
+        <td><p>64</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/EB0_neutral_13.wav</p></td>
+        <td><p>EB0</p></td>
+        <td><p>13</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/WR0_surprised_70.wav</p></td>
+        <td><p>WR0</p></td>
+        <td><p>70</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/KS0_surprised_10.wav</p></td>
+        <td><p>KS0</p></td>
+        <td><p>10</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/MP0_sadness_79.wav</p></td>
+        <td><p>MP0</p></td>
+        <td><p>79</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">4481 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>sentence</p></td>
+        <td><p>misc</p></td>
+        <td><p>raw_text, normalized_text</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>sentence</p></th>
+        <th class="head"><p>raw_text</p></th>
+        <th class="head"><p>normalized_text</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>64</p></td>
+        <td><p>Ucho wykrywa dźwięki o różnej częstotliwości.</p></td>
+        <td><p>ucho wykrywa dźwięki o różnej częstotliwości</p></td>
+        </tr>
+                <tr>
+        <td><p>13</p></td>
+        <td><p>Interesuje mnie historia Polski.</p></td>
+        <td><p>interesuje mnie historia polski</p></td>
+        </tr>
+                <tr>
+        <td><p>70</p></td>
+        <td><p>Człowiek zaczyna umierać już w momencie narodzin.</p></td>
+        <td><p>człowiek zaczyna umierać już w momencie narodzin</p></td>
+        </tr>
+                <tr>
+        <td><p>10</p></td>
+        <td><p>Kupiłem nową szafę do sypialni.</p></td>
+        <td><p>kupiłem nową szafę do sypialni</p></td>
+        </tr>
+                <tr>
+        <td><p>79</p></td>
+        <td><p>Mleko jest źródłem wapnia i innych składników odżywczych.</p></td>
+        <td><p>mleko jest źródłem wapnia i innych składników odżywczych</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">90 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>gender, age</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>age</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>WR0</p></td>
+        <td><p>male</p></td>
+        <td><p>23</p></td>
+        </tr>
+                <tr>
+        <td><p>EB0</p></td>
+        <td><p>female</p></td>
+        <td><p>27</p></td>
+        </tr>
+                <tr>
+        <td><p>KS0</p></td>
+        <td><p>male</p></td>
+        <td><p>23</p></td>
+        </tr>
+                <tr>
+        <td><p>MP0</p></td>
+        <td><p>male</p></td>
+        <td><p>24</p></td>
+        </tr>
+                <tr>
+        <td><p>KD0</p></td>
+        <td><p>female</p></td>
+        <td><p>28</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">9 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "age", "int", "", ""
+    "emotion", "str", "anger, fear, happiness, neutral, sadness, surprise", ""
+    "gender", "str", "female, male", ""
+    "normalized_text", "str", "aby upiec ciasto muszę kupić mączkę, bastion był kiedyś ważnym elementem obrony miasta, baza wojskowa jest strategicznym punktem dla armii, chcę przeczytać ten artykuł jeszcze raz, chodzę do szkoły prawie codziennie, chodźmy w tango, chorał gregoriański jest wykonywany podczas uroczystych nabożeństw, [...], woda w basenie jest bardzo ciepła, zamek w malborku jest jednym z najpiękniejszych w polsce, zawsze stawiam przed rzeczownikami właściwy rodzajnik, zima to czas jeżdżenia na sankach, zupa pomidorowa to moje ulubione danie, żołwica to dawne określenie na siostrę męża, życie jest pełne niespodzianek, „ród smoka” to serial telewizyjny", ""
+    "raw_text", "str", "Aby upiec ciasto, muszę kupić mączkę., Bastion był kiedyś ważnym elementem obrony miasta., Baza wojskowa jest strategicznym punktem dla armii., Chcę przeczytać ten artykuł jeszcze raz., Chodzę do szkoły prawie codziennie., Chodźmy w tango., Chorał gregoriański jest wykonywany podczas uroczystych nabożeństw., [...], Woda w basenie jest bardzo ciepła., Zamek w Malborku jest jednym z najpiękniejszych w Polsce., Zawsze stawiam przed rzeczownikami właściwy rodzajnik., Zima to czas jeżdżenia na sankach., Zupa pomidorowa to moje ulubione danie., Życie jest pełne niespodzianek., „Ród smoka” to serial telewizyjny., „Żołwica” to dawne określenie na siostrę męża.", ""
+    "sentence", "int", "1, 2, 3, 4, 5, 6, 7, [...], 83, 84, 85, 86, 87, 88, 89, 90", "normalized_text, raw_text"
+    "speaker", "object", "EB0, IC0, KD0, KS0, MK0, MP0, SM0, TP0, WR0", "age, gender"

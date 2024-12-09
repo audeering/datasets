@@ -1,0 +1,250 @@
+.. |kannada-1.0.1-file-duration-distribution| image:: ./kannada/kannada-1.0.1-file-duration-distribution.png
+
+.. _datasets-kannada:
+
+kannada
+-------
+
+Created by Vishakha Agrawal
+
+============= ======================
+version       1.0.1
+license       `CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/>`__
+usage         commercial
+languages     kan
+format        wav
+channel       1, 2
+sampling rate 16000, 44100, 48000
+bit depth     16
+duration      0 days 00:30:08.516961026
+files         468, duration distribution: 1.5 s |kannada-1.0.1-file-duration-distribution| 7.2 s
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+This database contains six different sentences, pronounced by thirteen people (four male and nine female) in six emotions (anger, sadness, surprise, happiness, fear, neutral).
+
+Example
+^^^^^^^
+
+:file:`audios/09-05-01.wav`
+
+.. image:: ./kannada/kannada-1.0.1-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./kannada/audios/09-05-01.wav"></audio></p>
+
+Tables
+^^^^^^
+
+Click on a row to toggle a preview.
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.test.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/09-02-03.wav</p></td>
+        <td><p>sadness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/07-04-06.wav</p></td>
+        <td><p>happiness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/13-06-01.wav</p></td>
+        <td><p>neutral</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/09-05-05.wav</p></td>
+        <td><p>fear</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/13-01-05.wav</p></td>
+        <td><p>anger</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">144 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.train.desired</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/05-03-01.wav</p></td>
+        <td><p>surprise</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/11-04-06.wav</p></td>
+        <td><p>happiness</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/06-05-06.wav</p></td>
+        <td><p>fear</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/03-06-05.wav</p></td>
+        <td><p>neutral</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/11-03-03.wav</p></td>
+        <td><p>surprise</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">324 rows x 1 column</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>speaker, sentence</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>sentence</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/05-03-01.wav</p></td>
+        <td><p>5</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/11-04-06.wav</p></td>
+        <td><p>11</p></td>
+        <td><p>6</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/06-05-06.wav</p></td>
+        <td><p>6</p></td>
+        <td><p>6</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/09-02-03.wav</p></td>
+        <td><p>9</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/03-06-05.wav</p></td>
+        <td><p>3</p></td>
+        <td><p>5</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">468 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>gender, age</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>age</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>5</p></td>
+        <td><p>female</p></td>
+        <td><p>48</p></td>
+        </tr>
+                <tr>
+        <td><p>11</p></td>
+        <td><p>female</p></td>
+        <td><p>12</p></td>
+        </tr>
+                <tr>
+        <td><p>6</p></td>
+        <td><p>male</p></td>
+        <td><p>20</p></td>
+        </tr>
+                <tr>
+        <td><p>9</p></td>
+        <td><p>female</p></td>
+        <td><p>21</p></td>
+        </tr>
+                <tr>
+        <td><p>3</p></td>
+        <td><p>female</p></td>
+        <td><p>21</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">13 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels", "Mappings"
+    "age", "int", "12, 17, 20, 21, 26, 45, 47, 48", ""
+    "emotion", "str", "anger, fear, happiness, neutral, sadness, surprise", ""
+    "gender", "str", "female, male", ""
+    "sentence", "int", "1, 2, 3, 4, 5, 6", ""
+    "speaker", "int", "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13", "age, gender"

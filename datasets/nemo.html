@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nemo &mdash; datasets</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/audeering.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table-preview.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="openair" href="openair.html" />
+    <link rel="prev" title="musan" href="musan.html" />
+    
+      
+    
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          <a href="../index.html">
+          
+            <img src="../_static/images/audeering.png" class="logo" alt="audEERING"/>
+          
+          
+            <span> datasets</span>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cochlscene.html">cochlscene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eesc.html">eesc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emozionalmente.html">emozionalmente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kannada.html">kannada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ljspeech.html">ljspeech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nemo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemes">Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ravdess-videos.html">ravdess-videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="speech-accent-archive.html">speech-accent-archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subesco.html">subesco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urbansound8k.html">urbansound8k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vadtoolkit.html">vadtoolkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wham.html">wham</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">datasets</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+      <li>nemo</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/audeering/datasets/" class="fa fa-github"> GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nemo">
+<span id="datasets-nemo"></span><h1>nemo<a class="headerlink" href="#nemo" title="Permalink to this heading">¶</a></h1>
+<p>Created by Christop, Iwona</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>version</p></td>
+<td><p>1.0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>license</p></td>
+<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>usage</p></td>
+<td><p>research</p></td>
+</tr>
+<tr class="row-even"><td><p>languages</p></td>
+<td><p>pol</p></td>
+</tr>
+<tr class="row-odd"><td><p>format</p></td>
+<td><p>wav</p></td>
+</tr>
+<tr class="row-even"><td><p>channel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sampling rate</p></td>
+<td><p>24000</p></td>
+</tr>
+<tr class="row-even"><td><p>bit depth</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p>duration</p></td>
+<td><p>0 days 03:04:21.341333333</p></td>
+</tr>
+<tr class="row-even"><td><p>files</p></td>
+<td><p>4481, duration distribution: 0.9 s <img alt="nemo-1.0.1-file-duration-distribution" src="../_images/nemo-1.0.1-file-duration-distribution.png" /> 5.7 s</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>NEMO is a polish dataset with emotional speech. It contains over 3 hours of emotional speech in 6 categories: anger, fear, happiness, sadness, surprise and neutral. The audios were created by nine speakers.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">audios/KS0_surprised_26.wav</span></code></p>
+<img alt="../_images/nemo-1.0.1-player-waveform.png" src="../_images/nemo-1.0.1-player-waveform.png" />
+<p><audio controls src="./nemo/audios/KS0_surprised_26.wav"></audio></p></div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<p>Click on a row to toggle a preview.</p>
+<table class="clickable docutils align-default">
+    <thead>
+<tr class="row-odd grid header">
+    <th class="head"><p>ID</p></th>
+    <th class="head"><p>Type</p></th>
+    <th class="head"><p>Columns</p></th>
+    </tr>
+</thead>
+    <tbody>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>emotion.categories.test.gold_standard</p></td>
+    <td><p>filewise</p></td>
+    <td><p>emotion</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>emotion</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/WR0_surprised_64.wav</p></td>
+    <td><p>surprise</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/EB0_neutral_13.wav</p></td>
+    <td><p>neutral</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/WR0_surprised_70.wav</p></td>
+    <td><p>surprise</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/KS0_surprised_10.wav</p></td>
+    <td><p>surprise</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/MP0_sadness_79.wav</p></td>
+    <td><p>sadness</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4481 rows x 1 column</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>files</p></td>
+    <td><p>filewise</p></td>
+    <td><p>speaker, sentence</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>file</p></th>
+    <th class="head"><p>speaker</p></th>
+    <th class="head"><p>sentence</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>audios/WR0_surprised_64.wav</p></td>
+    <td><p>WR0</p></td>
+    <td><p>64</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/EB0_neutral_13.wav</p></td>
+    <td><p>EB0</p></td>
+    <td><p>13</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/WR0_surprised_70.wav</p></td>
+    <td><p>WR0</p></td>
+    <td><p>70</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/KS0_surprised_10.wav</p></td>
+    <td><p>KS0</p></td>
+    <td><p>10</p></td>
+    </tr>
+            <tr>
+    <td><p>audios/MP0_sadness_79.wav</p></td>
+    <td><p>MP0</p></td>
+    <td><p>79</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">4481 rows x 2 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-even clickable grid">
+    <td><p>sentence</p></td>
+    <td><p>misc</p></td>
+    <td><p>raw_text, normalized_text</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>sentence</p></th>
+    <th class="head"><p>raw_text</p></th>
+    <th class="head"><p>normalized_text</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>64</p></td>
+    <td><p>Ucho wykrywa dźwięki o różnej częstotliwości.</p></td>
+    <td><p>ucho wykrywa dźwięki o różnej częstotliwości</p></td>
+    </tr>
+            <tr>
+    <td><p>13</p></td>
+    <td><p>Interesuje mnie historia Polski.</p></td>
+    <td><p>interesuje mnie historia polski</p></td>
+    </tr>
+            <tr>
+    <td><p>70</p></td>
+    <td><p>Człowiek zaczyna umierać już w momencie narodzin.</p></td>
+    <td><p>człowiek zaczyna umierać już w momencie narodzin</p></td>
+    </tr>
+            <tr>
+    <td><p>10</p></td>
+    <td><p>Kupiłem nową szafę do sypialni.</p></td>
+    <td><p>kupiłem nową szafę do sypialni</p></td>
+    </tr>
+            <tr>
+    <td><p>79</p></td>
+    <td><p>Mleko jest źródłem wapnia i innych składników odżywczych.</p></td>
+    <td><p>mleko jest źródłem wapnia i innych składników odżywczych</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">90 rows x 2 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+            <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+    <td><p>speaker</p></td>
+    <td><p>misc</p></td>
+    <td><p>gender, age</p></td>
+    <td class="expanded-row-content hide-row">
+
+
+<table class="docutils field-list align-default preview">
+<thead>
+<tr>
+    <th class="head"><p>speaker</p></th>
+    <th class="head"><p>gender</p></th>
+    <th class="head"><p>age</p></th>
+    </tr>
+</thead>
+<tbody>
+                <tr>
+    <td><p>WR0</p></td>
+    <td><p>male</p></td>
+    <td><p>23</p></td>
+    </tr>
+            <tr>
+    <td><p>EB0</p></td>
+    <td><p>female</p></td>
+    <td><p>27</p></td>
+    </tr>
+            <tr>
+    <td><p>KS0</p></td>
+    <td><p>male</p></td>
+    <td><p>23</p></td>
+    </tr>
+            <tr>
+    <td><p>MP0</p></td>
+    <td><p>male</p></td>
+    <td><p>24</p></td>
+    </tr>
+            <tr>
+    <td><p>KD0</p></td>
+    <td><p>female</p></td>
+    <td><p>28</p></td>
+    </tr>
+        <tr><td><p class="table-statistic">9 rows x 2 columns</p></td></tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+        </tbody>
+</table></div>
+<div class="section" id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Dtype</p></th>
+<th class="head"><p>Labels</p></th>
+<th class="head"><p>Mappings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>age</p></td>
+<td><p>int</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>emotion</p></td>
+<td><p>str</p></td>
+<td><p>anger, fear, happiness, neutral, sadness, surprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>gender</p></td>
+<td><p>str</p></td>
+<td><p>female, male</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>normalized_text</p></td>
+<td><p>str</p></td>
+<td><p>aby upiec ciasto muszę kupić mączkę, bastion był kiedyś ważnym elementem obrony miasta, baza wojskowa jest strategicznym punktem dla armii, chcę przeczytać ten artykuł jeszcze raz, chodzę do szkoły prawie codziennie, chodźmy w tango, chorał gregoriański jest wykonywany podczas uroczystych nabożeństw, […], woda w basenie jest bardzo ciepła, zamek w malborku jest jednym z najpiękniejszych w polsce, zawsze stawiam przed rzeczownikami właściwy rodzajnik, zima to czas jeżdżenia na sankach, zupa pomidorowa to moje ulubione danie, żołwica to dawne określenie na siostrę męża, życie jest pełne niespodzianek, „ród smoka” to serial telewizyjny</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>raw_text</p></td>
+<td><p>str</p></td>
+<td><p>Aby upiec ciasto, muszę kupić mączkę., Bastion był kiedyś ważnym elementem obrony miasta., Baza wojskowa jest strategicznym punktem dla armii., Chcę przeczytać ten artykuł jeszcze raz., Chodzę do szkoły prawie codziennie., Chodźmy w tango., Chorał gregoriański jest wykonywany podczas uroczystych nabożeństw., […], Woda w basenie jest bardzo ciepła., Zamek w Malborku jest jednym z najpiękniejszych w Polsce., Zawsze stawiam przed rzeczownikami właściwy rodzajnik., Zima to czas jeżdżenia na sankach., Zupa pomidorowa to moje ulubione danie., Życie jest pełne niespodzianek., „Ród smoka” to serial telewizyjny., „Żołwica” to dawne określenie na siostrę męża.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sentence</p></td>
+<td><p>int</p></td>
+<td><p>1, 2, 3, 4, 5, 6, 7, […], 83, 84, 85, 86, 87, 88, 89, 90</p></td>
+<td><p>normalized_text, raw_text</p></td>
+</tr>
+<tr class="row-even"><td><p>speaker</p></td>
+<td><p>object</p></td>
+<td><p>EB0, IC0, KD0, KS0, MK0, MP0, SM0, TP0, WR0</p></td>
+<td><p>age, gender</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="openair.html" class="btn btn-neutral float-right" title="openair" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="musan.html" class="btn btn-neutral float-left" title="musan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div>
+    <p>
+        
+        
+        
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/09 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+        
+    </p>
+  </div>
+
+  <div role="contentinfo">
+    <p>
+        
+      &copy; audEERING GmbH
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/table-preview.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

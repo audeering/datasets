@@ -10,7 +10,6 @@ Created by Eduardo Fonseca, Mercedes Collado, Manoj Plakal, Daniel P. W. Ellis, 
 ============= ======================
 version       1.0.0
 license       `CC-BY-3.0 <https://creativecommons.org/licenses/by/3.0/>`__
-source        http://www.eduardofonseca.net/FSDnoisy18k/
 usage         unrestricted
 languages     
 format        wav
@@ -19,8 +18,6 @@ sampling rate 44100
 bit depth     16
 duration      1 days 18:29:50.962131518
 files         18532, duration distribution: 0.3 s |fsdnoisy18k-1.0.0-file-duration-distribution| 30.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/fsdnoisy18k>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

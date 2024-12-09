@@ -32,7 +32,9 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="mesd" href="mesd.html" />
-    <link rel="prev" title="ir-c4dm" href="ir-c4dm.html" />
+    <link rel="prev" title="kannada" href="kannada.html" />
+    
+      
     
   
 
@@ -65,7 +67,7 @@
             
             
               <div class="version">
-                v1.1.0
+                v1.1.1
               </div>
             
           
@@ -100,12 +102,15 @@
 <li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eesc.html">eesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emodb.html">emodb</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emouerj.html">emouerj</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emozionalmente.html">emozionalmente</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc-50.html">esc-50</a></li>
 <li class="toctree-l2"><a class="reference internal" href="expresso.html">expresso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fsdnoisy18k.html">fsdnoisy18k</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ir-c4dm.html">ir-c4dm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kannada.html">kannada</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ljspeech</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
@@ -116,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="mesd.html">mesd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="micirp.html">micirp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="musan.html">musan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nemo.html">nemo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openair.html">openair</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quechua.html">quechua</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ravdess.html">ravdess</a></li>
@@ -174,8 +180,8 @@
 <p>Created by Keith Ito and Linda Johnson</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>version</p></td>
@@ -184,38 +190,29 @@
 <tr class="row-even"><td><p>license</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>source</p></td>
-<td><p><a class="reference external" href="https://keithito.com/LJ-Speech-Dataset">https://keithito.com/LJ-Speech-Dataset</a></p></td>
-</tr>
-<tr class="row-even"><td><p>usage</p></td>
+<tr class="row-odd"><td><p>usage</p></td>
 <td><p>unrestricted</p></td>
 </tr>
-<tr class="row-odd"><td><p>languages</p></td>
+<tr class="row-even"><td><p>languages</p></td>
 <td><p>eng</p></td>
 </tr>
-<tr class="row-even"><td><p>format</p></td>
+<tr class="row-odd"><td><p>format</p></td>
 <td><p>wav</p></td>
 </tr>
-<tr class="row-odd"><td><p>channel</p></td>
+<tr class="row-even"><td><p>channel</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-even"><td><p>sampling rate</p></td>
+<tr class="row-odd"><td><p>sampling rate</p></td>
 <td><p>22050</p></td>
 </tr>
-<tr class="row-odd"><td><p>bit depth</p></td>
+<tr class="row-even"><td><p>bit depth</p></td>
 <td><p>16</p></td>
 </tr>
-<tr class="row-even"><td><p>duration</p></td>
+<tr class="row-odd"><td><p>duration</p></td>
 <td><p>0 days 23:55:17.076281179</p></td>
 </tr>
-<tr class="row-odd"><td><p>files</p></td>
+<tr class="row-even"><td><p>files</p></td>
 <td><p>13100, duration distribution: 1.1 s <img alt="ljspeech-1.0.0-file-duration-distribution" src="../_images/ljspeech-1.0.0-file-duration-distribution.png" /> 10.1 s</p></td>
-</tr>
-<tr class="row-even"><td><p>repository</p></td>
-<td><p><a class="reference external" href="s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/ljspeech">audb-public</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>published</p></td>
-<td><p>2024-11-27 by hwierstorf</p></td>
 </tr>
 </tbody>
 </table>
@@ -230,6 +227,7 @@
 <p><audio controls src="./ljspeech/wavs/LJ002-0146.wav"></audio></p></div>
 <div class="section" id="tables">
 <h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<p>Click on a row to toggle a preview.</p>
 <table class="clickable docutils align-default">
     <thead>
 <tr class="row-odd grid header">
@@ -374,7 +372,7 @@
         <a href="mesd.html" class="btn btn-neutral float-right" title="mesd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ir-c4dm.html" class="btn btn-neutral float-left" title="ir-c4dm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="kannada.html" class="btn btn-neutral float-left" title="kannada" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -386,7 +384,7 @@
         
         
         
-          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/06 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/09 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>

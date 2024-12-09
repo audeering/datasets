@@ -8,7 +8,6 @@ Created by Il-Young Jeong, Jeongsoo Park
 ============= ======================
 version       1.0.0
 license       `CC-BY-SA-3.0 <https://creativecommons.org/licenses/by-sa/3.0/>`__
-source        https://zenodo.org/record/7080122/
 usage         unrestricted
 languages     
 format        wav
@@ -17,8 +16,6 @@ sampling rate 44100
 bit depth     16
 duration      8 days 19:25:50
 files         76115, duration distribution: each file is 10.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/cochlscene>`__
-published     2024-12-04 by hwierstorf
 ============= ======================
 
 Description
@@ -39,6 +36,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

@@ -1,0 +1,207 @@
+.. |eesc-1.0.1-file-duration-distribution| image:: ./eesc/eesc-1.0.1-file-duration-distribution.png
+
+.. _datasets-eesc:
+
+eesc
+----
+
+Created by Rene Altrov, Hille Pajupuu (Institute of the Estonian Language)
+
+============= ======================
+version       1.0.1
+license       `CC-BY-3.0 <https://creativecommons.org/licenses/by/3.0/deed.en>`__
+usage         commercial
+languages     est
+format        wav
+channel       1
+sampling rate 44100
+bit depth     16
+duration      0 days 00:51:02.165464853
+files         918, duration distribution: 0.5 s |eesc-1.0.1-file-duration-distribution| 14.0 s
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The establishment of the Estonian Emotional Speech Corpus (EESC) began in 2006 within the framework of the National Programme for Estonian Language Technology at the Institute of the Estonian Language. The corpus contains 1,234 Estonian sentences that express anger, joy and sadness, or are neutral. Two female speakers were chosen to read the sentences, and were instructed: Read the text so that you render its mood. The text passages chosen were journalistic texts, unanimously recognised by readers in a special test, to contain the emotions of joy, anger or sadness. Listening test subjects heard isolated sentences without seeing the text and then had to decide which emotion the sentences contained. The available choices were the three emotions: sadness, anger, or joy, or neutral speech. At least 30 Estonians listened to each sentence. In 908 sentences more than 50% of listeners identified one and the same emotion, or neutrality. Additionally, another test was performed where 14 other subjects had to decide on the emotion or neutrality of each sentence by reading the text (and not listening to the audio). Emotions determined by listening or reading only did not always coincide. Note that the dataset files, transcription, and gold standard emotion labels are available under a CC-BY-3.0 license, but the additional labels of speaker information, emotion agreement, and whether the text matches the emotion, are available at http://peeter.eki.ee:5000/ without a license.
+
+Example
+^^^^^^^
+
+:file:`audios/120925.wav`
+
+.. image:: ./eesc/eesc-1.0.1-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./eesc/audios/120925.wav"></audio></p>
+
+Tables
+^^^^^^
+
+Click on a row to toggle a preview.
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>emotion.categories.test.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.agreement, text-matches-emotion</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.agreement</p></th>
+        <th class="head"><p>text-matches-emotion</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/120594.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        <td><p>True</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/107.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        <td><p>True</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/121200.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        <td><p>True</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/121190.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        <td><p>True</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/201.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>1.0</p></td>
+        <td><p>True</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">918 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>speaker, transcription</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>transcription</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>audios/120594.wav</p></td>
+        <td><p>Marju</p></td>
+        <td><p>Seda valmistati ette juba 2003. aastast ja ikka on mingi jama.</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/107.wav</p></td>
+        <td><p>Marju</p></td>
+        <td><p>Aitab!</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/121200.wav</p></td>
+        <td><p>Marju</p></td>
+        <td><p>Samamoodi aga enam edasi tegutseda ei saa!</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/121190.wav</p></td>
+        <td><p>Marju</p></td>
+        <td><p>Valitsus ei saa olla mingi kokutajate bande.</p></td>
+        </tr>
+                <tr>
+        <td><p>audios/201.wav</p></td>
+        <td><p>Marju</p></td>
+        <td><p>Sellised teemad ärritavad ja ma ei taha seda rohkem kommenteerida!</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">918 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>gender, language</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>Marit</p></td>
+        <td><p>female</p></td>
+        <td><p>est</p></td>
+        </tr>
+                <tr>
+        <td><p>Marju</p></td>
+        <td><p>female</p></td>
+        <td><p>est</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">2 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Min", "Max", "Labels", "Mappings"
+    "emotion", "str", "", "", "anger, happiness, neutral, sadness", "original"
+    "emotion.agreement", "float", "0", "1", "", ""
+    "gender", "str", "", "", "female, male", ""
+    "language", "str", "", "", "est", ""
+    "speaker", "str", "", "", "Marit, Marju", "gender, language"
+    "text-matches-emotion", "bool", "", "", "", ""
+    "transcription", "str", "", "", "", ""

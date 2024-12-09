@@ -10,7 +10,6 @@ Created by Kyubyong Park and Thomas Mulc
 ============= ======================
 version       1.0.0
 license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
-source        https://github.com/Kyubyong/css10
 usage         unrestricted
 languages     zho, nld, fin, fra, deu, ell, hun, jpn, rus, spa
 format        wav
@@ -19,8 +18,6 @@ sampling rate 22050
 bit depth     32
 duration      5 days 19:41:56.206122452
 files         63857, duration distribution: 1.0 s |css10-1.0.0-file-duration-distribution| 39.5 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/css10>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

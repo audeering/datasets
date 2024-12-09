@@ -10,7 +10,6 @@ Created by Justin Salamon, Christopher Jacoby, Juan Pablo Bello
 ============= ======================
 version       1.0.0
 license       `CC-BY-NC-3.0 <https://creativecommons.org/licenses/by-nc/3.0/>`__
-source        https://urbansounddataset.weebly.com
 usage         research
 languages     
 format        wav
@@ -19,8 +18,6 @@ sampling rate 8000, 11024, 11025, 16000, 22050, 24000, 32000, 44100, 48000, 9600
 bit depth     4, 8, 16, 24, 32
 duration      0 days 08:45:00.880612979
 files         8732, duration distribution: 0.1 s |urbansound8k-1.0.0-file-duration-distribution| 4.0 s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/urbansound8k>`__
-published     2024-11-27 by hwierstorf
 ============= ======================
 
 Description
@@ -41,6 +38,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 

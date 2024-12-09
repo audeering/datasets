@@ -11,7 +11,6 @@ Created by TA Nguyen, W-N Hsu, A D'Avirro, B Shi, I Gat, M Fazel-Zarani, T Remez
 ============= ======================
 version       1.0.0
 license       `CC-BY-NC-4.0 <https://creativecommons.org/licenses/by-nc/4.0/>`__
-source        https://github.com/facebookresearch/textlesslib/tree/main/examples/expresso/dataset
 usage         research
 languages     eng
 format        wav
@@ -21,8 +20,6 @@ bit depth     24
 duration      1 days 18:23:42.549854165
 files         11954, duration distribution: 0.6 s |expresso-1.0.0-file-duration-distribution| 1346.7 s
 segments      27545, duration distribution: nan s |expresso-1.0.0-segment-duration-distribution| nan s
-repository    `audb-public <s3.dualstack.eu-north-1.amazonaws.com/webapp/#/artifacts/browse/tree/General/audb-public/expresso>`__
-published     2024-12-05 by cgeng
 ============= ======================
 
 Description
@@ -43,6 +40,8 @@ Example
 
 Tables
 ^^^^^^
+
+Click on a row to toggle a preview.
 
 .. raw:: html
 
