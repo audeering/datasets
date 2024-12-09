@@ -1,6 +1,6 @@
 # eesc
 
-Publishes `eesc` on artifactory.
+Publishes the `eesc` dataset.
 
 For version `1.0.0`, the files in [1.0.0/sentence_reports_emotion](1.0.0/sentence_reports_emotion) were downloaded from
 http://peeter.eki.ee:5000/reports/segments by selecting each individual emotion, selecting `content influences` or

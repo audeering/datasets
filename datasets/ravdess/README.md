@@ -1,4 +1,3 @@
 # ravdess
 
-Publishes `ravdess` on Artifactory.
-
+Publishes `ravdess` (only audio files).

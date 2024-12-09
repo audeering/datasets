@@ -1,3 +1,3 @@
 # Emozionalmente
 
-Publishes `emozionalmente` on Artifactory.
+Publishes `emozionalmente`.

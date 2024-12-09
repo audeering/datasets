@@ -3,9 +3,7 @@
 This project holds code
 to convert the [emodb] database of acted emotions
 to [audformat]
-and published it with [audb]
-to a public Artifactory
-repository on https://audeering.jfrog.io.
+and published it with [audb].
 
 The databases is published under the [CC0-1.0] license
 and can be downloaded with the Python library [audb] by:

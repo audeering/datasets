@@ -4,9 +4,7 @@ This project holds code
 to convert the [cough-speech-sneeze] corpus
 containing coughing, sneezing, speech, and silence
 to [audformat]
-and publish it with [audb]
-to a public Artifactory repository
-on https://audeering.jfrog.io.
+and publish it with [audb].
 
 The databases is published under [CC BY 4.0]
 and can be downloaded with the Python library [audb]:

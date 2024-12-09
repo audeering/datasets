@@ -3,9 +3,7 @@
 This project holds code
 to convert the [micirp] dataset of microphone impulse responses
 to [audformat]
-and publish it with [audb]
-to a public Artifactory repository
-on https://audeering.jfrog.io.
+and publish it with [audb].
 
 The databases is published under [CC BY SA 4.0]
 and can be downloaded with the Python library [audb]:

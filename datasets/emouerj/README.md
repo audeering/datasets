@@ -1,3 +1,4 @@
-This project publishes the emoUERJ database is an emotional speech database in Portuguese. 
+# emouerj
 
-It contains 377 audios, which are variations of ten sentences pronounced in 4 different emotions (happiness, anger, sadness or neutral). The audios were recorded by eight speakers (4 mae, 4 female).
+Publishes the `emouerj`,
+an emotional speech dataset in Portuguese. 

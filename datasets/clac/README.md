@@ -1,6 +1,6 @@
-# CLAC
+# clac
 
-Publishes the Crowdsourced Language Assessment Corpus (CLAC) on Artifactory.
+Publishes the Crowdsourced Language Assessment Corpus (CLAC).
 
 The creation of the database is described in the
 following [paper](https://www.isca-speech.org/archive/pdfs/interspeech_2021/haulcy21_interspeech.pdf).

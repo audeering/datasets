@@ -3,8 +3,7 @@
 Converts the [ESC-50]
 Dataset for Environmental Sound Classification
 to [audformat]
-and publishes it with [audb]
-to Artifactory.
+and publishes it with [audb].
 
 [ESC-50]: https://github.com/karolpiczak/ESC-50
 [audformat]: https://github.com/audeering/audformat

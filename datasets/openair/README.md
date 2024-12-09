@@ -1,3 +1,3 @@
 # openair
 
-https://www.openair.hosted.york.ac.uk/?page_id=36
+Publishes [openair](https://www.openair.hosted.york.ac.uk/?page_id=36).
