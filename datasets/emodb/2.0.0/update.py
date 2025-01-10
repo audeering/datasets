@@ -8,7 +8,6 @@ import audeer
 import audformat
 import audiofile as af
 
-
 # Helpers
 emotion_mapping = {
     'W': 'anger',
@@ -37,18 +36,22 @@ transcription_mapping = {
     'b10': 'Die wird auf dem Platz sein, wo wir sie immer hinlegen.',
 }
 scheme_mapping = {
-    "emotion":"emotion",
-    "emotion.confidence":"confidence",
-    "emotion.naturalness":"naturalness",
-    "speaker":"speaker",
-    "duration":"duration",
-    "transcription":"transcription",
-    "gender":"gender",
-    "language":"language",
+    "emotion": "emotion",
+    "emotion.confidence": "confidence",
+    "emotion.naturalness": "naturalness",
+    "speaker": "speaker",
+    "duration": "duration",
+    "transcription": "transcription",
+    "gender": "gender",
+    "language": "language",
 }
+
+
 def convert_german_float(x):
     x = float(x.replace(",", "."))
-    return x/100
+    return x / 100
+
+
 # Prepare functions for getting information from file names
 def parse_names(names, from_i, to_i, is_number=False, mapping=None):
     for name in names:
@@ -56,6 +59,7 @@ def parse_names(names, from_i, to_i, is_number=False, mapping=None):
         if is_number:
             key = int(key)
         yield mapping[key] if mapping else key
+
 
 # Some constants
 
@@ -78,13 +82,13 @@ for folder in [folder_audio, folder_laryngo]:
 # Parse the list with label agreements and naturalness
 annotations = pd.read_csv("listener_judgements.txt", sep="\t", index_col="sample", encoding="ISO-8859-1")
 # Align the index with database index
-annotations = annotations.set_index(annotations.index.to_series()\
-                                    .map(lambda x: "wav/"+x))
+annotations = annotations.set_index(annotations.index.to_series() \
+                                    .map(lambda x: "wav/" + x))
 list_cols = ["recognized", "natural"]
 for col in list_cols:
     annotations[col] = annotations[col].map(lambda x: convert_german_float(x))
-annotations = annotations.rename(columns={"recognized":"emotion.confidence",\
-                                          "natural":"emotion.naturalness"})
+annotations = annotations.rename(columns={"recognized": "emotion.confidence", \
+                                          "natural": "emotion.naturalness"})
 
 # Get the new files
 file_list_all = os.listdir(folder_audio)
@@ -108,7 +112,7 @@ for f in file_list_new:
     shutil.copyfile(os.path.join(folder_audio, f), os.path.join(build_dir, "wav", f))
 print(f"copied {len(file_list_new)} new audio files to emodb.")
 for f in file_list_all:
-    shutil.copyfile(os.path.join(folder_laryngo, f),\
+    shutil.copyfile(os.path.join(folder_laryngo, f), \
                     os.path.join(build_dir, laryngo_dir, f))
 print(f"copied {len(file_list_all)} laryngogram files to emodb.")
 
@@ -128,16 +132,16 @@ durations = audeer.run_tasks(
 )
 transcriptions = list(parse_names(names, from_i=2, to_i=5))
 # Make a dataframe from all new information
-dict_all = {"emotion":emotions, "speaker":speakers, "duration":durations,\
-             "transcription":transcriptions}
+dict_all = {"emotion": emotions, "speaker": speakers, "duration": durations, \
+            "transcription": transcriptions}
 df_all = pd.DataFrame(dict_all, index=names)
 df_all = df_all.set_index(df_all.index.to_series().map(lambda x: f"wav/{x}.wav"))
 cols = ["emotion.naturalness", "emotion.confidence"]
 for col in cols:
     df_all[col] = "na"
     for ind_id, row in df_all.iterrows():
-            val = annotations.loc[ind_id, col]
-            df_all.loc[ind_id, col] = val
+        val = annotations.loc[ind_id, col]
+        df_all.loc[ind_id, col] = val
 # Add a new scheme for naturalness
 db.schemes['naturalness'] = audformat.Scheme(
     audformat.define.DataType.FLOAT,
@@ -159,26 +163,28 @@ for col in ["duration", "transcription", "speaker"]:
 # Emotions table
 df_emotion = db["emotion"].get()
 df_emotion = pd.concat([df_emotion, df_new_files[["emotion", "emotion.confidence"]]])
-df_emotion["emotion.naturalness"] = df_all["emotion.naturalness"].values
+df_emotion = pd.concat([df_emotion, df_all["emotion.naturalness"]], axis=1)
 df_emotion.index.name = "file"
+
 db['emotion'] = audformat.Table(df_emotion.index)
 for col in ["emotion", "emotion.confidence", "emotion.naturalness"]:
     db['emotion'][col] = audformat.Column(scheme_id=scheme_mapping[col])
     db['emotion'][col].set(df_emotion[col])
 # Train and test splits
-splits = {"train":audformat.define.SplitType.TRAIN, \
-    "test":audformat.define.SplitType.TEST}
+splits = {"train": audformat.define.SplitType.TRAIN, \
+          "test": audformat.define.SplitType.TEST}
 for split in splits.keys():
     df = db[f"emotion.categories.{split}.gold_standard"].get()
-    df_select = df_all[df_all.index.isin(df.index)]
+    df = pd.merge(df, df_all["emotion.naturalness"], left_index=True, right_index=True)
     db[f'emotion.categories.{split}.gold_standard']['emotion.naturalness'] = \
-          audformat.Column(scheme_id='naturalness', rater_id='gold')
-    db[f'emotion.categories.{split}.gold_standard']['emotion.naturalness'].set(df_select["emotion.naturalness"].values)
+        audformat.Column(scheme_id='naturalness', rater_id='gold')
+    db[f'emotion.categories.{split}.gold_standard']['emotion.naturalness'].set(df["emotion.naturalness"])
 #  A new table for the added files
 table_new_name = "emotion.categories.ambiguous"
-db[table_new_name] = audformat.Table(index_new)
+
+df_select = df_emotion[df_emotion.index.isin(index_new)]
+db[table_new_name] = audformat.Table(df_select.index)
 for col in ["emotion", "emotion.confidence", "emotion.naturalness"]:
-    df_select = df_all[df_all.index.isin(index_new)]
     db[table_new_name][col] = audformat.Column(scheme_id=scheme_mapping[col])
     db[table_new_name][col].set(df_select[col])
 
@@ -200,22 +206,21 @@ for col in ["emotion", "emotion.confidence", "emotion.naturalness"]:
 # Train and test splits
 for split in splits.keys():
     df = db[f"emotion.categories.{split}.gold_standard"].get()
-    df = df.set_index(df.index.to_series().\
-                              map(lambda x: x.replace("wav/", f"{folder_laryngo}/")))
-    db[f'laryngo.emotion.categories.{split}.gold_standard'] = audformat.Table(df.index,\
-        split_id = splits[split])
+    df = df.set_index(df.index.to_series(). \
+                      map(lambda x: x.replace("wav/", f"{folder_laryngo}/")))
+    db[f'laryngo.emotion.categories.{split}.gold_standard'] = audformat.Table(df.index, \
+                                                                              split_id=splits[split])
     for col in ["emotion", "emotion.confidence", "emotion.naturalness"]:
         db[f'laryngo.emotion.categories.{split}.gold_standard'][col] = \
             audformat.Column(scheme_id=scheme_mapping[col], rater_id='gold')
         db[f'laryngo.emotion.categories.{split}.gold_standard'][col].set(df[col].values)
     df = db[f"emotion.categories.{split}.gold_standard"].get()
-    df.set_index(df.index.to_series().\
-                              map(lambda x: x.replace("wav/", f"{folder_laryngo}/")))
-
+    df.set_index(df.index.to_series(). \
+                 map(lambda x: x.replace("wav/", f"{folder_laryngo}/")))
 
 df = db[table_new_name].get()
-df = df.set_index(df.index.to_series().\
-                            map(lambda x: x.replace("wav/", f"{folder_laryngo}/")))
+df = df.set_index(df.index.to_series(). \
+                  map(lambda x: x.replace("wav/", f"{folder_laryngo}/")))
 db[f'laryngo.{table_new_name}'] = audformat.Table(df.index)
 for col in ["emotion", "emotion.confidence", "emotion.naturalness"]:
     db[f'laryngo.{table_new_name}'][col] = \
@@ -223,12 +228,12 @@ for col in ["emotion", "emotion.confidence", "emotion.naturalness"]:
     db[f'laryngo.{table_new_name}'][col].set(df[col].values)
 
 # Lastly, update the description
-db.description = "Berlin Database of Emotional Speech."+\
-    " A German database of emotional utterances spoken by actors recorded"+\
-    " as a part of the DFG funded research project SE462/3-1 in 1997 and 1999."+\
-    " Recordings took place in the anechoic chamber of the Technical University"+\
-    " Berlin, department of Technical Acoustics. It contains about 800 utterances"+\
-    " from ten different actors expressing basic six emotions and neutral."
+db.description = "Berlin Database of Emotional Speech." + \
+                 " A German database of emotional utterances spoken by actors recorded" + \
+                 " as a part of the DFG funded research project SE462/3-1 in 1997 and 1999." + \
+                 " Recordings took place in the anechoic chamber of the Technical University" + \
+                 " Berlin, department of Technical Acoustics. It contains about 800 utterances" + \
+                 " from ten different actors expressing basic six emotions and neutral."
 
 db.save(build_dir, storage_format=audformat.define.TableStorageFormat.CSV)
 db = audformat.Database.load(build_dir)
