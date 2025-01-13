@@ -237,5 +237,19 @@ db.description = "Berlin Database of Emotional Speech." + \
 
 db.save(build_dir, storage_format=audformat.define.TableStorageFormat.CSV)
 db = audformat.Database.load(build_dir)
+
+# Check the correct creation of the database
+
+assert db['emotion'].index == db['files'].index
+assert db['files'].index == db['laryngo.files'].index
+assert db['laryngo.emotion'].index == db['laryngo.files'].index
+
+for split in ['train', 'test']:
+    assert db[f'laryngo.emotion.categories.{split}.gold_standard'].index == db[
+        f'emotion.categories.{split}.gold_standard'].index
+
+assert db['laryngo.emotion.categories.ambiguous'].index == db['emotion.categories.ambiguous'].index
+
+
 print(db)
 print("Done.")
