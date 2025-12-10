@@ -190,7 +190,7 @@ wheels = [
 ]
 
 [[package]]
-name = "berkley-function-call"
+name = "berkeley-function-calling-leaderboard"
 version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
@@ -337,9 +337,9 @@ name = "dohq-artifactory"
 version = "1.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pyjwt" },
-    { name = "python-dateutil" },
-    { name = "requests" },
+    { name = "pyjwt", marker = "python_full_version < '3.14'" },
+    { name = "python-dateutil", marker = "python_full_version < '3.14'" },
+    { name = "requests", marker = "python_full_version < '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/bc/2a/999ec6e8f6d62b4c956914153519edb07aa86ae2af87e5e4903d06b3ff5a/dohq_artifactory-1.0.1.tar.gz", hash = "sha256:c34adaf6faede3178e5355ce6a40ae92f03a126e2b2baa122f0b60285aeee51b", size = 46297, upload_time = "2025-04-08T08:42:58.831Z" }
 wheels = [
@@ -720,10 +720,10 @@ name = "requests"
 version = "2.32.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "certifi" },
-    { name = "charset-normalizer" },
-    { name = "idna" },
-    { name = "urllib3" },
+    { name = "certifi", marker = "python_full_version < '3.14'" },
+    { name = "charset-normalizer", marker = "python_full_version < '3.14'" },
+    { name = "idna", marker = "python_full_version < '3.14'" },
+    { name = "urllib3", marker = "python_full_version < '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz", hash = "sha256:dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf", size = 134517, upload_time = "2025-08-18T20:46:02.573Z" }
 wheels = [
