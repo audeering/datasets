@@ -74,7 +74,10 @@ doc_files = audeer.list_file_names(
     audeer.path(cache_dir, doc_dir),
     basenames=True,
 )
-dst_files = [f"{file.replace('_', '-')}l" for file in doc_files]
+dst_files = [
+    f"{audeer.replace_file_extension(file, "jsonl").replace('_', '-')}"
+    for file in doc_files
+]
 table_id = doc_dir.replace("_", "-")
 audeer.mkdir(build_dir, table_id)
 index = audformat.filewise_index([f"{table_id}/{file}" for file in dst_files])
