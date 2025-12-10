@@ -2,7 +2,7 @@ __pycache__/
 datasets.egg-info/
 build/
 cache/
-docs/__pycache__/
+__pycache__/
 docs/build/
 docs/cache/
 docs/datasets.csv
