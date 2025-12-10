@@ -60,7 +60,7 @@ for file in files:
     for n, question in enumerate(questions):
         path = audeer.path(build_dir, "json", topic, f"sample-{n}.json")
         with open(path, "w", encoding="utf-8") as fp:
-            json.dump([question], fp, ensure_ascii=False, indent=2)
+            json.dump(question, fp, ensure_ascii=False, indent=2)
     index = audformat.filewise_index(
         [f"{topic}/sample-{n}.json" for n in range(len(questions))]
     )
