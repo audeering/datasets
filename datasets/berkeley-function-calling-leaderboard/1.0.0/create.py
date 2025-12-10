@@ -44,9 +44,8 @@ db = audformat.Database(
 db.schemes["topic"] = audformat.Scheme("str")
 files = audeer.list_file_names(cache_dir, filetype="json", basenames=True)
 for file in files:
-    split = audeer.basename_wo_ext(file).lower().replace("_", "-")
-    db.splits[split] = audformat.Split("other")
-    audeer.mkdir(build_dir, "json", split)
+    topic = audeer.basename_wo_ext(file).lower().replace("_", "-")
+    audeer.mkdir(build_dir, "json", topic)
     question_file = audeer.path(cache_dir, file)
     answer_file = audeer.path(cache_dir, "possible_answer", file)
     questions = read_jsonl(question_file)
@@ -59,15 +58,15 @@ for file in files:
                 question |= answer
     # Store one question (+ potential answer) per json file
     for n, question in enumerate(questions):
-        path = audeer.path(build_dir, "json", split, f"sample-{n}.json")
+        path = audeer.path(build_dir, "json", topic, f"sample-{n}.json")
         with open(path, "w", encoding="utf-8") as fp:
             json.dump([question], fp, ensure_ascii=False, indent=2)
     index = audformat.filewise_index(
-        f"{split}/sample-{n}.json" for n in range(len(questions))
+        [f"{topic}/sample-{n}.json" for n in range(len(questions))]
     )
-    db[split] = audformat.Table(index, split_id=split)
-    db[split]["topic"] = audformat.Column(scheme_id="topic")
-    db[split]["topic"].set(split.removeprefix("bfcl-v3-"))
+    db[topic] = audformat.Table(index)
+    db[topic]["topic"] = audformat.Column(scheme_id="topic")
+    db[topic]["topic"].set(topic.removeprefix("bfcl-v3-"))
 
 # Table with function definitions
 doc_dir = "multi_turn_func_doc"
@@ -78,7 +77,7 @@ doc_files = audeer.list_file_names(
 dst_files = [f"{file.replace('_', '-')}l" for file in doc_files]
 table_id = doc_dir.replace("_", "-")
 audeer.mkdir(build_dir, table_id)
-index = audformat.filewise_index(f"{table_id}/{file}" for file in dst_files)
+index = audformat.filewise_index([f"{table_id}/{file}" for file in dst_files])
 db[table_id] = audformat.Table(index)
 for file, dst_file in zip(doc_files, dst_files):
     shutil.copyfile(
