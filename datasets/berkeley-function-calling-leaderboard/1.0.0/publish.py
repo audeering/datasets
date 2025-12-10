@@ -4,7 +4,7 @@ import audb
 build_dir = "build"
 
 repository = audb.Repository(
-    name="audb-internal",
+    name="audb-public",
     host="s3.dualstack.eu-north-1.amazonaws.com",
     backend="s3",
 )
