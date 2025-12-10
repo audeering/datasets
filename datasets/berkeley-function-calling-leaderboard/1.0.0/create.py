@@ -12,7 +12,7 @@ cache_dir = audeer.path("./cache")
 
 def read_jsonl(file):
     with open(file) as fp:
-        return [json.loads(line) for line in fp.readlines()]
+        return [json.loads(line) for line in fp]
 
 
 db = audformat.Database(
