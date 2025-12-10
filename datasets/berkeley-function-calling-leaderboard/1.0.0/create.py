@@ -52,11 +52,11 @@ for file in files:
     questions = read_jsonl(question_file)
     if os.path.exists(answer_file):
         answers = read_jsonl(answer_file)
+        answers_by_id = {answer["id"]: answer for answer in answers}
         for question in questions:
-            for answer in answers:
-                if question["id"] == answer["id"]:
-                    question |= answer
-                    break
+            answer = answers_by_id.get(question["id"])
+            if answer is not None:
+                question |= answer
     # Store one question (+ potential answer) per json file
     for n, question in enumerate(questions):
         path = audeer.path(build_dir, "json", split, f"sample-{n}.json")
