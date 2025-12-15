@@ -88,5 +88,5 @@ for file, dst_file in zip(doc_files, dst_files):
         audeer.path(build_dir, table_id, dst_file),
     )
 db[table_id]["topic"] = audformat.Column(scheme_id="topic")
-db[table_id]["topic"].set(audeer.basename_wo_ext(file) for file in dst_files)
+db[table_id]["topic"].set(list(audeer.basename_wo_ext(file) for file in dst_files))
 db.save(build_dir)
