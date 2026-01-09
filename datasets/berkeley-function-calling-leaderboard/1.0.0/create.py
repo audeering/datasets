@@ -11,7 +11,7 @@ cache_dir = audeer.path("./cache")
 
 
 def read_jsonl(file):
-    with open(file) as fp:
+    with open(file, encoding="utf-8") as fp:
         return [json.loads(line) for line in fp]
 
 

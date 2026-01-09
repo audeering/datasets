@@ -28,6 +28,15 @@ CLASS_TO_FUNC_DOC = {
     "VehicleControlAPI": "vehicle-control.jsonl",
 }
 
+# Explicit list of multi-turn benchmark topics that require func-doc loading
+MULTI_TURN_TOPICS = {
+    "bfcl-v3-multi-turn-base",
+    "bfcl-v3-multi-turn-composite",
+    "bfcl-v3-multi-turn-long-context",
+    "bfcl-v3-multi-turn-miss-func",
+    "bfcl-v3-multi-turn-miss-param",
+}
+
 
 def load_func_docs(func_doc_dir):
     """Load all function documentation from jsonl files.
@@ -150,12 +159,14 @@ def parse_function_call_string(call_str, func_param_names=None):
     positional_args = []
 
     # Simple parsing: split by comma, handle '=' for keyword args
+    # Track depth of nested structures to avoid splitting on commas inside them
     current_key = None
     current_value = ""
     in_string = False
     string_char = None
     paren_depth = 0
     bracket_depth = 0
+    brace_depth = 0  # Track {} for dict literals
     has_equals = False  # Track if current arg has '='
 
     i = 0
@@ -179,11 +190,17 @@ def parse_function_call_string(call_str, func_param_names=None):
             elif char == "]":
                 bracket_depth -= 1
                 current_value += char
-            elif char == "=" and current_key is None and paren_depth == 0 and bracket_depth == 0:
+            elif char == "{":
+                brace_depth += 1
+                current_value += char
+            elif char == "}":
+                brace_depth -= 1
+                current_value += char
+            elif char == "=" and current_key is None and paren_depth == 0 and bracket_depth == 0 and brace_depth == 0:
                 current_key = current_value.strip()
                 current_value = ""
                 has_equals = True
-            elif char == "," and paren_depth == 0 and bracket_depth == 0:
+            elif char == "," and paren_depth == 0 and bracket_depth == 0 and brace_depth == 0:
                 if has_equals and current_key is not None:
                     # Keyword argument
                     args[current_key] = parse_python_value(current_value.strip())
@@ -255,12 +272,18 @@ def convert_ground_truth_simple(ground_truth):
 
     Input format: [{"func_name": {"arg1": [val1], "arg2": [val2, alt_val2]}}]
     Output format: [{"name": "func_name", "arguments": "{...}"}]
+
+    Note: The original benchmark format stores multiple acceptable values per argument
+    as a list (e.g., "unit": ["units", ""]). This function selects only the first
+    value from each list for the converted output. Alternative values are not
+    preserved in the conversion.
     """
     tool_calls = []
     for item in ground_truth:
         if isinstance(item, dict):
             for func_name, args in item.items():
-                # Take the first value from each argument's list of alternatives
+                # Take the first value from each argument's list of alternatives.
+                # Alternative values (e.g., ["units", ""]) are not preserved.
                 parsed_args = {}
                 for arg_name, values in args.items():
                     if isinstance(values, list) and len(values) > 0:
@@ -296,6 +319,107 @@ def convert_ground_truth_multi_turn(ground_truth_turn, func_param_names=None):
     return tool_calls
 
 
+def collect_tools(data, func_docs):
+    """Collect tool definitions and handle delayed tools from missed_function.
+
+    Args:
+        data: The original JSON data
+        func_docs: Dict mapping class names to function definitions
+
+    Returns:
+        Tuple of (tools, delayed_tools, all_tools_by_name) where:
+        - tools: List of tool definitions for the initial system message
+        - delayed_tools: Dict mapping turn_idx to list of tools to add at that turn
+        - all_tools_by_name: Dict mapping function name to tool definition
+    """
+    tools = []
+    all_tools_by_name = {}
+
+    # Handle function definitions from the file itself
+    functions = data.get("function", [])
+    if isinstance(functions, str) and functions == "":
+        functions = []
+    if isinstance(functions, list):
+        for func in functions:
+            tool = convert_function_to_tool(func)
+            tools.append(tool)
+            all_tools_by_name[func["name"]] = tool
+
+    # For multi-turn files, get tools from path field
+    path = data.get("path", [])
+    if path and func_docs:
+        required_funcs = set()
+        for entry in path:
+            if "." in entry:
+                class_name, func_name = entry.split(".", 1)
+                required_funcs.add((class_name, func_name))
+
+        for class_name, func_name in required_funcs:
+            if class_name in func_docs:
+                for func in func_docs[class_name]:
+                    if func["name"] == func_name:
+                        tool = convert_function_to_tool(func)
+                        tools.append(tool)
+                        all_tools_by_name[func_name] = tool
+                        break
+
+    # Handle missed_function - functions to be provided at later turns
+    missed_function = data.get("missed_function", {})
+    missed_func_names = set()
+    delayed_tools = {}
+
+    for turn_idx_str, func_names in missed_function.items():
+        turn_idx = int(turn_idx_str)
+        delayed_tools[turn_idx] = []
+        for func_name in func_names:
+            missed_func_names.add(func_name)
+            if func_name in all_tools_by_name:
+                delayed_tools[turn_idx].append(all_tools_by_name[func_name])
+
+    # Remove missed functions from initial tools list
+    if missed_func_names:
+        tools = [t for t in tools if t["function"]["name"] not in missed_func_names]
+
+    return tools, delayed_tools, all_tools_by_name
+
+
+def normalize_ground_truth(ground_truth, func_param_names):
+    """Normalize ground_truth into a dict mapping turn index to tool calls.
+
+    Args:
+        ground_truth: The ground_truth data in any of the supported formats
+        func_param_names: Dict mapping function names to parameter name lists
+
+    Returns:
+        Dict mapping turn_idx (int) to list of tool call dicts
+    """
+    if not ground_truth or not isinstance(ground_truth, list) or len(ground_truth) == 0:
+        return {}
+
+    tool_calls_by_turn = {}
+    first_item = ground_truth[0]
+
+    if isinstance(first_item, list):
+        # Multi-turn format: list of lists of function call strings
+        for turn_idx, gt_turn in enumerate(ground_truth):
+            if gt_turn:
+                tool_calls = convert_ground_truth_multi_turn(gt_turn, func_param_names)
+                if tool_calls:
+                    tool_calls_by_turn[turn_idx] = tool_calls
+    elif isinstance(first_item, str):
+        # String format (exec-*): list of function call strings for single turn
+        tool_calls = convert_ground_truth_multi_turn(ground_truth, func_param_names)
+        if tool_calls:
+            tool_calls_by_turn[0] = tool_calls
+    elif isinstance(first_item, dict):
+        # Dict format (simple/parallel): all items are for single turn
+        tool_calls = convert_ground_truth_simple(ground_truth)
+        if tool_calls:
+            tool_calls_by_turn[0] = tool_calls
+
+    return tool_calls_by_turn
+
+
 def convert_file(data, func_docs=None, func_param_names=None):
     """Convert a single JSON file's data to the new format.
 
@@ -314,59 +438,8 @@ def convert_file(data, func_docs=None, func_param_names=None):
 
     conversation = []
 
-    # Handle function definitions - create system message with tools
-    functions = data.get("function", [])
-    tools = []
-    all_tools_by_name = {}  # Map function name to tool definition
-
-    if functions:
-        # Handle case where function is an empty string (chatable format)
-        if isinstance(functions, str) and functions == "":
-            functions = []
-        elif isinstance(functions, list) and len(functions) > 0:
-            for func in functions:
-                tool = convert_function_to_tool(func)
-                tools.append(tool)
-                all_tools_by_name[func["name"]] = tool
-
-    # For multi-turn files, get tools from path field
-    # path contains entries like "GorillaFileSystem.find", "TwitterAPI.post_tweet"
-    path = data.get("path", [])
-    if path and func_docs:
-        # Build a set of required function names from path
-        required_funcs = set()
-        for entry in path:
-            if "." in entry:
-                class_name, func_name = entry.split(".", 1)
-                required_funcs.add((class_name, func_name))
-
-        # Find matching functions from func_docs
-        for class_name, func_name in required_funcs:
-            if class_name in func_docs:
-                for func in func_docs[class_name]:
-                    if func["name"] == func_name:
-                        tool = convert_function_to_tool(func)
-                        tools.append(tool)
-                        all_tools_by_name[func_name] = tool
-                        break
-
-    # Handle missed_function - functions to be provided at later turns
-    # Format: {"turn_idx": ["func_name1", "func_name2"], ...}
-    missed_function = data.get("missed_function", {})
-    missed_func_names = set()
-    delayed_tools = {}  # Map turn_idx (int) to list of tool definitions
-
-    for turn_idx_str, func_names in missed_function.items():
-        turn_idx = int(turn_idx_str)
-        delayed_tools[turn_idx] = []
-        for func_name in func_names:
-            missed_func_names.add(func_name)
-            if func_name in all_tools_by_name:
-                delayed_tools[turn_idx].append(all_tools_by_name[func_name])
-
-    # Remove missed functions from initial tools list
-    if missed_func_names:
-        tools = [t for t in tools if t["function"]["name"] not in missed_func_names]
+    # Collect tools and handle delayed tools
+    tools, delayed_tools, _ = collect_tools(data, func_docs)
 
     # Build system message
     system_message = {"role": "system"}
@@ -377,6 +450,7 @@ def convert_file(data, func_docs=None, func_param_names=None):
         system_message["initial_config"] = initial_config
 
     # Add path if present (for multi-turn files)
+    path = data.get("path", [])
     if path:
         system_message["path"] = path
 
@@ -393,23 +467,12 @@ def convert_file(data, func_docs=None, func_param_names=None):
     if len(system_message) > 1:
         conversation.append(system_message)
 
+    # Normalize ground_truth into per-turn tool calls
+    ground_truth = data.get("ground_truth", [])
+    tool_calls_by_turn = normalize_ground_truth(ground_truth, func_param_names)
+
     # Handle questions - can be nested array (multi-turn) or string (chatable)
     questions = data.get("question", [])
-    ground_truth = data.get("ground_truth", [])
-
-    # Determine ground_truth format:
-    # 1. Multi-turn: list of lists of strings [["func1()", "func2()"], ["func3()"]]
-    # 2. String format (exec-*): list of strings ["func(args)"]
-    # 3. Dict format (simple/parallel): list of dicts [{"func_name": {"arg": [val]}}]
-    gt_format = None
-    if ground_truth and isinstance(ground_truth, list) and len(ground_truth) > 0:
-        first_item = ground_truth[0]
-        if isinstance(first_item, list):
-            gt_format = "multi_turn"
-        elif isinstance(first_item, str):
-            gt_format = "string"
-        elif isinstance(first_item, dict):
-            gt_format = "dict"
 
     if isinstance(questions, str):
         # Chatable format: question is a plain string
@@ -432,34 +495,17 @@ def convert_file(data, func_docs=None, func_param_names=None):
             # Add delayed tools if any are scheduled for this turn
             # (must come before assistant response so the assistant can use them)
             if turn_idx in delayed_tools and delayed_tools[turn_idx]:
-                delayed_system_msg = {
+                conversation.append({
                     "role": "system",
                     "tools": delayed_tools[turn_idx]
-                }
-                conversation.append(delayed_system_msg)
+                })
 
-            # Add assistant response if we have ground_truth for this turn
-            if gt_format == "multi_turn":
-                # Multi-turn format: ground_truth[turn_idx] is a list of function call strings
-                if turn_idx < len(ground_truth):
-                    gt_turn = ground_truth[turn_idx]
-                    if gt_turn:  # Skip empty turns
-                        tool_calls = convert_ground_truth_multi_turn(gt_turn, func_param_names)
-                        if tool_calls:
-                            assistant_msg = {"role": "assistant", "tool-call": tool_calls}
-                            conversation.append(assistant_msg)
-            elif turn_idx == 0 and gt_format == "string":
-                # String format (exec-*): list of function call strings for single turn
-                tool_calls = convert_ground_truth_multi_turn(ground_truth, func_param_names)
-                if tool_calls:
-                    assistant_msg = {"role": "assistant", "tool-call": tool_calls}
-                    conversation.append(assistant_msg)
-            elif turn_idx == 0 and gt_format == "dict":
-                # Dict format (simple/parallel): all ground_truth items are for the single turn
-                tool_calls = convert_ground_truth_simple(ground_truth)
-                if tool_calls:
-                    assistant_msg = {"role": "assistant", "tool-call": tool_calls}
-                    conversation.append(assistant_msg)
+            # Add assistant response if we have tool calls for this turn
+            if turn_idx in tool_calls_by_turn:
+                conversation.append({
+                    "role": "assistant",
+                    "tool-call": tool_calls_by_turn[turn_idx]
+                })
 
     return conversation
 
@@ -477,9 +523,9 @@ def convert_json_file(input_path, output_path, func_docs=None, func_param_names=
         json.dump(conversation, f, ensure_ascii=False, indent=2)
 
 
-def is_multi_turn_dir(dir_name):
-    """Check if a directory is a multi-turn benchmark directory."""
-    return "multi-turn" in dir_name
+def is_multi_turn_topic(topic_name):
+    """Check if a topic is a multi-turn benchmark that requires func-doc loading."""
+    return topic_name in MULTI_TURN_TOPICS
 
 
 def main():
@@ -507,14 +553,13 @@ def main():
     print(f"Found {total} JSON files to convert")
 
     converted = 0
-    skipped = 0
     errors = []
 
     for json_file in json_files:
         try:
-            # Determine if this is a multi-turn file
-            parent_dir = json_file.parent.name
-            is_multi_turn = is_multi_turn_dir(parent_dir)
+            # Determine if this is a multi-turn file based on topic name
+            topic_name = json_file.parent.name
+            is_multi_turn = is_multi_turn_topic(topic_name)
             use_func_docs = func_docs if is_multi_turn else None
             use_param_names = func_param_names if is_multi_turn else None
 
@@ -526,8 +571,6 @@ def main():
             errors.append((str(json_file), str(e)))
 
     print(f"\nConversion complete: {converted}/{total} files converted")
-    if skipped:
-        print(f"Skipped {skipped} already-converted files")
 
     if errors:
         print(f"\nErrors ({len(errors)}):")
