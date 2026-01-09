@@ -376,6 +376,15 @@ def convert_file(data, func_docs=None, func_param_names=None):
     if initial_config:
         system_message["initial_config"] = initial_config
 
+    # Add path if present (for multi-turn files)
+    if path:
+        system_message["path"] = path
+
+    # Add involved_classes if present (for multi-turn files)
+    involved_classes = data.get("involved_classes")
+    if involved_classes:
+        system_message["involved_classes"] = involved_classes
+
     # Add tools if we have any
     if tools:
         system_message["tools"] = tools
