@@ -317,13 +317,17 @@ def convert_file(data, func_docs=None, func_param_names=None):
     # Handle function definitions - create system message with tools
     functions = data.get("function", [])
     tools = []
+    all_tools_by_name = {}  # Map function name to tool definition
 
     if functions:
         # Handle case where function is an empty string (chatable format)
         if isinstance(functions, str) and functions == "":
             functions = []
         elif isinstance(functions, list) and len(functions) > 0:
-            tools = [convert_function_to_tool(func) for func in functions]
+            for func in functions:
+                tool = convert_function_to_tool(func)
+                tools.append(tool)
+                all_tools_by_name[func["name"]] = tool
 
     # For multi-turn files, get tools from path field
     # path contains entries like "GorillaFileSystem.find", "TwitterAPI.post_tweet"
@@ -341,8 +345,28 @@ def convert_file(data, func_docs=None, func_param_names=None):
             if class_name in func_docs:
                 for func in func_docs[class_name]:
                     if func["name"] == func_name:
-                        tools.append(convert_function_to_tool(func))
+                        tool = convert_function_to_tool(func)
+                        tools.append(tool)
+                        all_tools_by_name[func_name] = tool
                         break
+
+    # Handle missed_function - functions to be provided at later turns
+    # Format: {"turn_idx": ["func_name1", "func_name2"], ...}
+    missed_function = data.get("missed_function", {})
+    missed_func_names = set()
+    delayed_tools = {}  # Map turn_idx (int) to list of tool definitions
+
+    for turn_idx_str, func_names in missed_function.items():
+        turn_idx = int(turn_idx_str)
+        delayed_tools[turn_idx] = []
+        for func_name in func_names:
+            missed_func_names.add(func_name)
+            if func_name in all_tools_by_name:
+                delayed_tools[turn_idx].append(all_tools_by_name[func_name])
+
+    # Remove missed functions from initial tools list
+    if missed_func_names:
+        tools = [t for t in tools if t["function"]["name"] not in missed_func_names]
 
     # Build system message
     system_message = {"role": "system"}
@@ -395,6 +419,15 @@ def convert_file(data, func_docs=None, func_param_names=None):
                 # Single message format
                 converted = convert_message(turn)
                 conversation.append(converted)
+
+            # Add delayed tools if any are scheduled for this turn
+            # (must come before assistant response so the assistant can use them)
+            if turn_idx in delayed_tools and delayed_tools[turn_idx]:
+                delayed_system_msg = {
+                    "role": "system",
+                    "tools": delayed_tools[turn_idx]
+                }
+                conversation.append(delayed_system_msg)
 
             # Add assistant response if we have ground_truth for this turn
             if gt_format == "multi_turn":
