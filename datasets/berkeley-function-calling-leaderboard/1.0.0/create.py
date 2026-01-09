@@ -62,7 +62,7 @@ for file in files:
         with open(path, "w", encoding="utf-8") as fp:
             json.dump(question, fp, ensure_ascii=False, indent=2)
     index = audformat.filewise_index(
-        [f"{topic}/sample-{n}.json" for n in range(len(questions))]
+        [f"json/{topic}/sample-{n}.json" for n in range(len(questions))]
     )
     db[topic] = audformat.Table(index)
     db[topic]["topic"] = audformat.Column(scheme_id="topic")
@@ -80,13 +80,9 @@ dst_files = [
 ]
 table_id = doc_dir.replace("_", "-")
 audeer.mkdir(build_dir, table_id)
-index = audformat.filewise_index([f"{table_id}/{file}" for file in dst_files])
-db[table_id] = audformat.Table(index)
 for file, dst_file in zip(doc_files, dst_files):
     shutil.copyfile(
         audeer.path(cache_dir, doc_dir, file),
         audeer.path(build_dir, table_id, dst_file),
     )
-db[table_id]["topic"] = audformat.Column(scheme_id="topic")
-db[table_id]["topic"].set(list(audeer.basename_wo_ext(file) for file in dst_files))
 db.save(build_dir)
