@@ -75,7 +75,7 @@ doc_files = audeer.list_file_names(
     basenames=True,
 )
 dst_files = [
-    f"{audeer.replace_file_extension(file, "jsonl").replace('_', '-')}"
+    f"{audeer.replace_file_extension(file, 'jsonl').replace('_', '-')}"
     for file in doc_files
 ]
 table_id = doc_dir.replace("_", "-")
