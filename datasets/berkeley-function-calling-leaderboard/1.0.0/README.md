@@ -6,6 +6,6 @@ You need to run:
 bash download.sh
 uv run create.sh
 uv run convert_format.py
-uv run add-turns.py
+uv run add_turns.py
 uv run publish.py
 ```
