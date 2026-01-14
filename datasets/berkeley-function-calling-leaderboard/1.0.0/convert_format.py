@@ -268,7 +268,7 @@ def parse_python_value(value_str):
 
 
 def convert_ground_truth_simple(ground_truth):
-    """Convert simple/parallel ground_truth format to tool-call list.
+    """Convert simple/parallel ground_truth format to tool_calls list.
 
     Input format: [{"func_name": {"arg1": [val1], "arg2": [val2, alt_val2]}}]
     Output format: [{"name": "func_name", "arguments": "{...}"}]
@@ -299,7 +299,7 @@ def convert_ground_truth_simple(ground_truth):
 
 
 def convert_ground_truth_multi_turn(ground_truth_turn, func_param_names=None):
-    """Convert multi-turn ground_truth format for a single turn to tool-call list.
+    """Convert multi-turn ground_truth format for a single turn to tool_calls list.
 
     Input format: ["cd(folder='document')", "mkdir(dir_name='temp')"]
     Output format: [{"name": "cd", "arguments": "{...}"}, ...]
@@ -504,7 +504,7 @@ def convert_file(data, func_docs=None, func_param_names=None):
             if turn_idx in tool_calls_by_turn:
                 conversation.append({
                     "role": "assistant",
-                    "tool-call": tool_calls_by_turn[turn_idx]
+                    "tool_calls": tool_calls_by_turn[turn_idx]
                 })
 
     return conversation
