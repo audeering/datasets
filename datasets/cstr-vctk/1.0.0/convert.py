@@ -197,11 +197,11 @@ def flatten_files(dir_in: str, dir_out: str) -> pd.Index:
 
 
 def main():
-    data_path = "data/"
+    data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
     directory_dataset = "VCTK-Corpus-0.92"
     extracted_files = os.path.join(data_path, "extracted", directory_dataset)
     speaker_audio_dirs = os.path.join(extracted_files, "wav48_silence_trimmed")
-    db_root = "build"
+    db_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "build")
     # Audio files are copied into the build dir so audb.publish can find them
     # at paths relative to db_root (e.g. flac/p225_001_mic1.flac).
     flattened_files = os.path.join(db_root, "flac")
@@ -400,4 +400,5 @@ def main():
     db.save(db_root)
 
 
-main()
+if __name__ == "__main__":
+    main()
