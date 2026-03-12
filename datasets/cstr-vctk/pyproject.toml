@@ -1,0 +1,17 @@
+[project]
+name = "cstr-vctk"
+version = "1.0.0"
+description = "CSTR VCTK corpus converter for audb"
+requires-python = ">=3.13"
+dependencies = [
+    "audb",
+    "audeer",
+    "audformat",
+    "pandas",
+    "tqdm",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.3.0",
+]
