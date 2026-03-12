@@ -144,7 +144,7 @@ def flatten_files(dir_in: str, dir_out: str) -> pd.Index:
     If the output directory already exists: validate that the therein
     contained, flattened-out files are matching the ones in the input directory.
 
-    Returns a Pandas Index with the relative file paths.
+    Returns a Pandas Index with the absolute file paths.
     """
     files = []
     # Collect all source files first to check for name collisions across speakers
