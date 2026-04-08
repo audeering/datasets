@@ -7,7 +7,7 @@ Transformations:
 - Convert role "user" to "human"
 - Convert "content" key to "text"
 - Wrap function definitions in Qwen format with "tools" in system message
-- Convert parameter "type": "dict" to "type": "object" for JSON Schema compliance
+- Convert non-standard parameter types to valid JSON Schema types (e.g. dict->object, float->number)
 - Flatten multi-turn question arrays into a conversation list
 - For multi-turn benchmarks, fetch tool definitions from multi-turn-func-doc
 - Store conversation-level metadata (initial_config, path, involved_classes)
@@ -81,18 +81,35 @@ def load_func_docs(func_doc_dir):
     return func_docs, func_param_names
 
 
-def convert_dict_to_object(obj):
-    """Recursively convert type: "dict" to type: "object" in parameters."""
+TYPE_MAP = {
+    "dict": "object",
+    "float": "number",
+    "double": "number",
+    "long": "integer",
+    "tuple": "array",
+    "String": "string",
+    "char": "string",
+    "Array": "array",
+    "ArrayList": "array",
+    "HashMap": "object",
+    "Boolean": "boolean",
+    "any": "string",
+    "": "string",
+}
+
+
+def normalize_json_schema_types(obj):
+    """Recursively convert non-standard types to valid JSON Schema types."""
     if isinstance(obj, dict):
         result = {}
         for key, value in obj.items():
-            if key == "type" and value == "dict":
-                result[key] = "object"
+            if key == "type" and isinstance(value, str) and value in TYPE_MAP:
+                result[key] = TYPE_MAP[value]
             else:
-                result[key] = convert_dict_to_object(value)
+                result[key] = normalize_json_schema_types(value)
         return result
     elif isinstance(obj, list):
-        return [convert_dict_to_object(item) for item in obj]
+        return [normalize_json_schema_types(item) for item in obj]
     else:
         return obj
 
@@ -104,7 +121,7 @@ def convert_function_to_tool(func):
         "function": {
             "name": func["name"],
             "description": func.get("description", ""),
-            "parameters": convert_dict_to_object(func.get("parameters", {})),
+            "parameters": normalize_json_schema_types(func.get("parameters", {})),
         },
     }
 
