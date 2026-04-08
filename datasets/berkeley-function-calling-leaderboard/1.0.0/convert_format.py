@@ -1,7 +1,7 @@
 """Convert JSON files in build/json to the specification format.
 
 This script transforms the Berkeley Function Calling Leaderboard JSON files
-to match the data format specification for Audio Language Models.
+to match the iva-prompt-format specification.
 
 Transformations:
 - Convert role "user" to "human"
@@ -10,6 +10,10 @@ Transformations:
 - Convert parameter "type": "dict" to "type": "object" for JSON Schema compliance
 - Flatten multi-turn question arrays into a conversation list
 - For multi-turn benchmarks, fetch tool definitions from multi-turn-func-doc
+- Store conversation-level metadata (initial_config, path, involved_classes)
+  in a "meta" role cell as the first cell of the conversation
+- Use nested tool_calls format: {"type": "function", "function": {"name": ..., "arguments": {...}}}
+- Mark ground truth assistant turns with meta.source = "truth"
 """
 
 import json
@@ -271,7 +275,7 @@ def convert_ground_truth_simple(ground_truth):
     """Convert simple/parallel ground_truth format to tool_calls list.
 
     Input format: [{"func_name": {"arg1": [val1], "arg2": [val2, alt_val2]}}]
-    Output format: [{"name": "func_name", "arguments": "{...}"}]
+    Output format: [{"type": "function", "function": {"name": "func_name", "arguments": {...}}}]
 
     Note: The original benchmark format stores multiple acceptable values per argument
     as a list (e.g., "unit": ["units", ""]). This function selects only the first
@@ -292,8 +296,11 @@ def convert_ground_truth_simple(ground_truth):
                         parsed_args[arg_name] = values
 
                 tool_calls.append({
-                    "name": func_name,
-                    "arguments": json.dumps(parsed_args),
+                    "type": "function",
+                    "function": {
+                        "name": func_name,
+                        "arguments": parsed_args,
+                    },
                 })
     return tool_calls
 
@@ -302,7 +309,7 @@ def convert_ground_truth_multi_turn(ground_truth_turn, func_param_names=None):
     """Convert multi-turn ground_truth format for a single turn to tool_calls list.
 
     Input format: ["cd(folder='document')", "mkdir(dir_name='temp')"]
-    Output format: [{"name": "cd", "arguments": "{...}"}, ...]
+    Output format: [{"type": "function", "function": {"name": "cd", "arguments": {...}}}, ...]
 
     Args:
         ground_truth_turn: List of function call strings
@@ -313,8 +320,11 @@ def convert_ground_truth_multi_turn(ground_truth_turn, func_param_names=None):
         if isinstance(call_str, str):
             name, args_json = parse_function_call_string(call_str, func_param_names)
             tool_calls.append({
-                "name": name,
-                "arguments": args_json,
+                "type": "function",
+                "function": {
+                    "name": name,
+                    "arguments": json.loads(args_json),
+                },
             })
     return tool_calls
 
@@ -441,31 +451,27 @@ def convert_file(data, func_docs=None, func_param_names=None):
     # Collect tools and handle delayed tools
     tools, delayed_tools, _ = collect_tools(data, func_docs)
 
-    # Build system message
-    system_message = {"role": "system"}
+    # Build meta cell for conversation-level metadata (must be first cell)
+    meta_cell = {"role": "meta"}
 
-    # Add initial_config if present (for multi-turn files)
     initial_config = data.get("initial_config")
     if initial_config:
-        system_message["initial_config"] = initial_config
+        meta_cell["initial_config"] = initial_config
 
-    # Add path if present (for multi-turn files)
     path = data.get("path", [])
     if path:
-        system_message["path"] = path
+        meta_cell["path"] = path
 
-    # Add involved_classes if present (for multi-turn files)
     involved_classes = data.get("involved_classes")
     if involved_classes:
-        system_message["involved_classes"] = involved_classes
+        meta_cell["involved_classes"] = involved_classes
 
-    # Add tools if we have any
+    if len(meta_cell) > 1:
+        conversation.append(meta_cell)
+
+    # Build system message with tools
     if tools:
-        system_message["tools"] = tools
-
-    # Only add system message if it has content beyond just role
-    if len(system_message) > 1:
-        conversation.append(system_message)
+        conversation.append({"role": "system", "tools": tools})
 
     # Normalize ground_truth into per-turn tool calls
     ground_truth = data.get("ground_truth", [])
@@ -504,7 +510,8 @@ def convert_file(data, func_docs=None, func_param_names=None):
             if turn_idx in tool_calls_by_turn:
                 conversation.append({
                     "role": "assistant",
-                    "tool_calls": tool_calls_by_turn[turn_idx]
+                    "tool_calls": tool_calls_by_turn[turn_idx],
+                    "meta": {"source": "truth"},
                 })
 
     return conversation
