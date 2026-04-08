@@ -6,7 +6,9 @@ import audeer
 import audformat
 
 
-build_dir = audeer.mkdir("./build")
+build_dir = audeer.path("./build")
+audeer.rmdir(build_dir)
+audeer.mkdir(build_dir)
 cache_dir = audeer.path("./cache")
 
 
