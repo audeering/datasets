@@ -1,3 +1,39 @@
+# ===== PROJECT ===========================================================
+#
+[project]
+name = 'datasets'
+authors = [
+    {name = 'Hagen Wierstorf', email = 'hwierstorf@audeering.com'},
+]
+description = 'Overview of public audb datasets'
+readme = 'README.rst'
+license = 'MIT'
+license-files = ['LICENSE']
+keywords = [
+    'audio',
+    'data',
+    'dataset',
+    'machine learning',
+]
+requires-python = '>=3.10'
+# Get version dynamically from git
+# (needs setuptools_scm tools config below)
+dynamic = ['version']
+
+[project.urls]
+repository = 'https://github.com/audeering/datasets/'
+documentation = 'https://audeering.github.io/datasets/'
+
+
+# ===== Dependency groups =================================================
+[dependency-groups]
+dev = [
+    'audbcards >= 0.4.3',
+    'sphinx',
+    'sphinx-audeering-theme >=1.4.1',
+    'toml',
+]
+
 # ----- codespell ---------------------------------------------------------
 [tool.codespell]
 builtin = 'clear,rare,informal,usage,names'
@@ -127,3 +163,9 @@ ignore-names = [
 #
 [tool.ruff.lint.pydocstyle]
 convention = 'google'
+
+
+# ----- setuptools_scm ----------------------------------------------------
+#
+# Use setuptools_scm to get version from git
+[tool.setuptools_scm]

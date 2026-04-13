@@ -6,20 +6,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 2
 
     - name: Cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: .cache/audbcards
         key: audbcards
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+        python-version: '3.12'
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@3259c6206f993105e3a61b142c2d97bf4b9ef83d
 
     # Remove apt repos that are known to break from time to time
     # See https://github.com/actions/virtual-environments/issues/323
@@ -32,16 +35,15 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install --no-install-recommends --yes libsndfile1 ffmpeg mediainfo
-        pip install -r docs/requirements.txt
 
     - name: Build documentation
       run: |
         export AUDBCARDS_CACHE_ROOT=".cache/audbcards"
-        python pre-fill-cache.py
-        python -m sphinx docs/ docs/build/ -b html
+        uv run python pre-fill-cache.py
+        uv run python -m sphinx docs/ docs/build/ -b html
 
     - name: Deploy documentation to Github pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/build
