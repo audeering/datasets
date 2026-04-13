@@ -24,6 +24,9 @@ jobs:
       with:
         python-version: '3.12'
 
+    - name: Install uv
+      uses: astral-sh/setup-uv@3259c6206f993105e3a61b142c2d97bf4b9ef83d
+
     # Remove apt repos that are known to break from time to time
     # See https://github.com/actions/virtual-environments/issues/323
     - name: Remove broken apt repos
