@@ -16,7 +16,7 @@ format        wav
 channel       1, 2
 sampling rate 44100, 48000
 bit depth     16
-duration      0 days 07:49:55.467746030
+duration      0 days 07:49:55.467746032
 files         7000, duration distribution: 2.8 s |subesco-1.0.0-file-duration-distribution| 6.0 s
 ============= ======================
 

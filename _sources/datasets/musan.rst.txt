@@ -16,7 +16,7 @@ format        wav
 channel       1
 sampling rate 16000
 bit depth     16
-duration      4 days 13:17:22.582937499
+duration      4 days 13:17:22.582937500
 files         2016, duration distribution: 0.0 s |musan-1.0.0-file-duration-distribution| 1048.0 s
 ============= ======================
 

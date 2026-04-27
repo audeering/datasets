@@ -1,0 +1,1338 @@
+.. _datasets-berkeley-function-calling-leaderboard:
+
+berkeley-function-calling-leaderboard
+-------------------------------------
+
+============= ======================
+version       1.0.0
+license       `apache-2.0 <https://www.apache.org/licenses/LICENSE-2.0>`__
+usage         unrestricted
+languages     eng
+format        json
+channel       
+sampling rate 
+bit depth     
+duration      0 days 00:00:00
+files         5251, duration distribution: each file is 0.0 s
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The Berkeley function calling leaderboard is a live leaderboard to evaluate the ability of different LLMs to call functions (also referred to as tools). We built this dataset from our learnings to be representative of most users' function calling use-cases, for example, in agents, as a part of enterprise workflows, etc. To this end, our evaluation dataset spans diverse categories, and across multiple languages. Checkout the Leaderboard at gorilla.cs.berkeley.edu/leaderboard.html and further info at https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard.
+
+Example
+^^^^^^^
+
+:file:`json/bfcl-v3-exec-simple/sample-89.json`
+
+.. code:: json
+
+  [
+    {
+      "role": "system",
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "calculate_nutritional_needs",
+            "description": "Calculates the nutritional needs of a person based on their weight, height, age, gender, activity level, and goal.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "weight": {
+                  "type": "number",
+                  "description": "The weight of the person in kilograms."
+                },
+                "height": {
+                  "type": "number",
+                  "description": "The height of the person in centimeters."
+                },
+                "age": {
+                  "type": "number",
+                  "description": "The age of the person in years."
+                },
+                "gender": {
+                  "type": "string",
+                  "description": "The gender of the person. Possible options [male, female, other]."
+                },
+                "activity_level": {
+                  "type": "integer",
+                  "description": "The activity level of the person. Possible options [1,2,3,4,5]."
+                },
+                "goal": {
+                  "type": "string",
+                  "description": "The goal of the person. Possible options [lose, gain, maintain]."
+                }
+              },
+              "required": [
+                "weight",
+                "height",
+                "age",
+                "gender",
+                "activity_level",
+                "goal"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "human",
+      "text": "I have an 80-year-old female client who is 170 cm tall, weighs 59 kg, and is quite active with an activity level of 4. She's looking to reduce her weight. Could you calculate her daily nutritional needs based on these details?"
+    },
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "type": "function",
+          "function": {
+            "name": "calculate_nutritional_needs",
+            "arguments": {
+              "weight": 59,
+              "height": 170,
+              "age": 80,
+              "gender": "female",
+              "activity_level": 4,
+              "goal": "lose"
+            }
+          }
+        }
+      ],
+      "meta": {
+        "source": "truth"
+      }
+    }
+  ]
+
+
+Tables
+^^^^^^
+
+Click on a row to toggle a preview.
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-chatable</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-chatable/sample-0.json</p></td>
+        <td><p>chatable</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-chatable/sample-1.json</p></td>
+        <td><p>chatable</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-chatable/sample-2.json</p></td>
+        <td><p>chatable</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-chatable/sample-3.json</p></td>
+        <td><p>chatable</p></td>
+        <td><p>1</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-chatable/sample-4.json</p></td>
+        <td><p>chatable</p></td>
+        <td><p>1</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-exec-multiple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-exec-multiple/sample-0.json</p></td>
+        <td><p>exec-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-multiple/sample-1.json</p></td>
+        <td><p>exec-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-multiple/sample-2.json</p></td>
+        <td><p>exec-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-multiple/sample-3.json</p></td>
+        <td><p>exec-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-multiple/sample-4.json</p></td>
+        <td><p>exec-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">50 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-exec-parallel</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-exec-parallel/sample-0.json</p></td>
+        <td><p>exec-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel/sample-1.json</p></td>
+        <td><p>exec-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel/sample-2.json</p></td>
+        <td><p>exec-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel/sample-3.json</p></td>
+        <td><p>exec-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel/sample-4.json</p></td>
+        <td><p>exec-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">50 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-exec-parallel-multiple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-exec-parallel-multiple/sample-0.json</p></td>
+        <td><p>exec-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel-multiple/sample-1.json</p></td>
+        <td><p>exec-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel-multiple/sample-2.json</p></td>
+        <td><p>exec-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel-multiple/sample-3.json</p></td>
+        <td><p>exec-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-parallel-multiple/sample-4.json</p></td>
+        <td><p>exec-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">40 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-exec-simple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-exec-simple/sample-0.json</p></td>
+        <td><p>exec-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-simple/sample-1.json</p></td>
+        <td><p>exec-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-simple/sample-2.json</p></td>
+        <td><p>exec-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-simple/sample-3.json</p></td>
+        <td><p>exec-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-exec-simple/sample-4.json</p></td>
+        <td><p>exec-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">100 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-irrelevance</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-irrelevance/sample-0.json</p></td>
+        <td><p>irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-irrelevance/sample-1.json</p></td>
+        <td><p>irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-irrelevance/sample-2.json</p></td>
+        <td><p>irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-irrelevance/sample-3.json</p></td>
+        <td><p>irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-irrelevance/sample-4.json</p></td>
+        <td><p>irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">240 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-java</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-java/sample-0.json</p></td>
+        <td><p>java</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-java/sample-1.json</p></td>
+        <td><p>java</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-java/sample-2.json</p></td>
+        <td><p>java</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-java/sample-3.json</p></td>
+        <td><p>java</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-java/sample-4.json</p></td>
+        <td><p>java</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">100 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-javascript</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-javascript/sample-0.json</p></td>
+        <td><p>javascript</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-javascript/sample-1.json</p></td>
+        <td><p>javascript</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-javascript/sample-2.json</p></td>
+        <td><p>javascript</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-javascript/sample-3.json</p></td>
+        <td><p>javascript</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-javascript/sample-4.json</p></td>
+        <td><p>javascript</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">50 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-live-irrelevance</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-live-irrelevance/sample-0.json</p></td>
+        <td><p>live-irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-irrelevance/sample-1.json</p></td>
+        <td><p>live-irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-irrelevance/sample-2.json</p></td>
+        <td><p>live-irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-irrelevance/sample-3.json</p></td>
+        <td><p>live-irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-irrelevance/sample-4.json</p></td>
+        <td><p>live-irrelevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">882 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-live-multiple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-live-multiple/sample-0.json</p></td>
+        <td><p>live-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-multiple/sample-1.json</p></td>
+        <td><p>live-multiple</p></td>
+        <td><p>4</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-multiple/sample-2.json</p></td>
+        <td><p>live-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-multiple/sample-3.json</p></td>
+        <td><p>live-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-multiple/sample-4.json</p></td>
+        <td><p>live-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">1053 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-live-parallel</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-live-parallel/sample-0.json</p></td>
+        <td><p>live-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel/sample-1.json</p></td>
+        <td><p>live-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel/sample-2.json</p></td>
+        <td><p>live-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel/sample-3.json</p></td>
+        <td><p>live-parallel</p></td>
+        <td><p>4</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel/sample-4.json</p></td>
+        <td><p>live-parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">16 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-live-parallel-multiple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-live-parallel-multiple/sample-0.json</p></td>
+        <td><p>live-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel-multiple/sample-1.json</p></td>
+        <td><p>live-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel-multiple/sample-2.json</p></td>
+        <td><p>live-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel-multiple/sample-3.json</p></td>
+        <td><p>live-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-parallel-multiple/sample-4.json</p></td>
+        <td><p>live-parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">24 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-live-relevance</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-live-relevance/sample-0.json</p></td>
+        <td><p>live-relevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-relevance/sample-1.json</p></td>
+        <td><p>live-relevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-relevance/sample-2.json</p></td>
+        <td><p>live-relevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-relevance/sample-3.json</p></td>
+        <td><p>live-relevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-relevance/sample-4.json</p></td>
+        <td><p>live-relevance</p></td>
+        <td><p>2</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">18 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-live-simple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-live-simple/sample-0.json</p></td>
+        <td><p>live-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-simple/sample-1.json</p></td>
+        <td><p>live-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-simple/sample-2.json</p></td>
+        <td><p>live-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-simple/sample-3.json</p></td>
+        <td><p>live-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-live-simple/sample-4.json</p></td>
+        <td><p>live-simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">258 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-multi-turn-base</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-multi-turn-base/sample-0.json</p></td>
+        <td><p>multi-turn-base</p></td>
+        <td><p>10</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-base/sample-1.json</p></td>
+        <td><p>multi-turn-base</p></td>
+        <td><p>10</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-base/sample-2.json</p></td>
+        <td><p>multi-turn-base</p></td>
+        <td><p>12</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-base/sample-3.json</p></td>
+        <td><p>multi-turn-base</p></td>
+        <td><p>6</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-base/sample-4.json</p></td>
+        <td><p>multi-turn-base</p></td>
+        <td><p>8</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-multi-turn-composite</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-multi-turn-composite/sample-0.json</p></td>
+        <td><p>multi-turn-composite</p></td>
+        <td><p>12</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-composite/sample-1.json</p></td>
+        <td><p>multi-turn-composite</p></td>
+        <td><p>12</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-composite/sample-2.json</p></td>
+        <td><p>multi-turn-composite</p></td>
+        <td><p>13</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-composite/sample-3.json</p></td>
+        <td><p>multi-turn-composite</p></td>
+        <td><p>8</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-composite/sample-4.json</p></td>
+        <td><p>multi-turn-composite</p></td>
+        <td><p>10</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-multi-turn-long-context</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-multi-turn-long-context/sample-0.json</p></td>
+        <td><p>multi-turn-long-context</p></td>
+        <td><p>10</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-long-context/sample-1.json</p></td>
+        <td><p>multi-turn-long-context</p></td>
+        <td><p>10</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-long-context/sample-2.json</p></td>
+        <td><p>multi-turn-long-context</p></td>
+        <td><p>12</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-long-context/sample-3.json</p></td>
+        <td><p>multi-turn-long-context</p></td>
+        <td><p>6</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-long-context/sample-4.json</p></td>
+        <td><p>multi-turn-long-context</p></td>
+        <td><p>8</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-multi-turn-miss-func</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-func/sample-0.json</p></td>
+        <td><p>multi-turn-miss-func</p></td>
+        <td><p>11</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-func/sample-1.json</p></td>
+        <td><p>multi-turn-miss-func</p></td>
+        <td><p>11</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-func/sample-2.json</p></td>
+        <td><p>multi-turn-miss-func</p></td>
+        <td><p>13</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-func/sample-3.json</p></td>
+        <td><p>multi-turn-miss-func</p></td>
+        <td><p>7</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-func/sample-4.json</p></td>
+        <td><p>multi-turn-miss-func</p></td>
+        <td><p>9</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-multi-turn-miss-param</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-param/sample-0.json</p></td>
+        <td><p>multi-turn-miss-param</p></td>
+        <td><p>11</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-param/sample-1.json</p></td>
+        <td><p>multi-turn-miss-param</p></td>
+        <td><p>11</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-param/sample-2.json</p></td>
+        <td><p>multi-turn-miss-param</p></td>
+        <td><p>13</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-param/sample-3.json</p></td>
+        <td><p>multi-turn-miss-param</p></td>
+        <td><p>7</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multi-turn-miss-param/sample-4.json</p></td>
+        <td><p>multi-turn-miss-param</p></td>
+        <td><p>9</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-multiple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-multiple/sample-0.json</p></td>
+        <td><p>multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multiple/sample-1.json</p></td>
+        <td><p>multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multiple/sample-2.json</p></td>
+        <td><p>multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multiple/sample-3.json</p></td>
+        <td><p>multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-multiple/sample-4.json</p></td>
+        <td><p>multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-parallel</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-parallel/sample-0.json</p></td>
+        <td><p>parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel/sample-1.json</p></td>
+        <td><p>parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel/sample-2.json</p></td>
+        <td><p>parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel/sample-3.json</p></td>
+        <td><p>parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel/sample-4.json</p></td>
+        <td><p>parallel</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-parallel-multiple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-parallel-multiple/sample-0.json</p></td>
+        <td><p>parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel-multiple/sample-1.json</p></td>
+        <td><p>parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel-multiple/sample-2.json</p></td>
+        <td><p>parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel-multiple/sample-3.json</p></td>
+        <td><p>parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-parallel-multiple/sample-4.json</p></td>
+        <td><p>parallel-multiple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">200 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-rest</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-rest/sample-0.json</p></td>
+        <td><p>rest</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-rest/sample-1.json</p></td>
+        <td><p>rest</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-rest/sample-2.json</p></td>
+        <td><p>rest</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-rest/sample-3.json</p></td>
+        <td><p>rest</p></td>
+        <td><p>2</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-rest/sample-4.json</p></td>
+        <td><p>rest</p></td>
+        <td><p>2</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">70 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>bfcl-v3-simple</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-simple/sample-0.json</p></td>
+        <td><p>simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-simple/sample-1.json</p></td>
+        <td><p>simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-simple/sample-2.json</p></td>
+        <td><p>simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-simple/sample-3.json</p></td>
+        <td><p>simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-simple/sample-4.json</p></td>
+        <td><p>simple</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">400 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>bfcl-v3-sql</p></td>
+        <td><p>filewise</p></td>
+        <td><p>topic, turns</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>topic</p></th>
+        <th class="head"><p>turns</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>json/bfcl-v3-sql/sample-0.json</p></td>
+        <td><p>sql</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-sql/sample-1.json</p></td>
+        <td><p>sql</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-sql/sample-2.json</p></td>
+        <td><p>sql</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-sql/sample-3.json</p></td>
+        <td><p>sql</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>json/bfcl-v3-sql/sample-4.json</p></td>
+        <td><p>sql</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">100 rows x 2 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype"
+    "topic", "str"
+    "turns", "int"

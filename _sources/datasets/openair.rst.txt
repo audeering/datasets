@@ -16,7 +16,7 @@ format        wav
 channel       1, 2, 4
 sampling rate 44100, 48000, 96000
 bit depth     16, 24, 32
-duration      0 days 00:41:02.663684169
+duration      0 days 00:41:02.663684170
 files         341, duration distribution: 1.0 s |openair-1.0.0-file-duration-distribution| 23.0 s
 ============= ======================
 

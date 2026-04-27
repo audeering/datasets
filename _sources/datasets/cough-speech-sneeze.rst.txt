@@ -81,7 +81,7 @@ Click on a row to toggle a preview.
                 <tr>
         <td><p>coughing/kopzxumj430_40.94-41.8.wav</p></td>
         <td><p>coughing</p></td>
-        <td><p>0 days 00:00:00.860000</p></td>
+        <td><p>0 days 00:00:00.000860</p></td>
         </tr>
                 <tr>
         <td><p>coughing/kopzxumj430_37.98-39.18.wav</p></td>

@@ -16,7 +16,7 @@ format        wav
 channel       1
 sampling rate 22050
 bit depth     32
-duration      5 days 19:41:56.206122452
+duration      5 days 19:41:56.206122449
 files         63857, duration distribution: 1.0 s |css10-1.0.0-file-duration-distribution| 39.5 s
 ============= ======================
 

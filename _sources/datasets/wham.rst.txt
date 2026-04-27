@@ -16,7 +16,7 @@ format        wav
 channel       2
 sampling rate 16000
 bit depth     32
-duration      3 days 09:41:18.774249999
+duration      3 days 09:41:18.774250
 files         28000, duration distribution: 3.4 s |wham-1.0.0-file-duration-distribution| 47.7 s
 ============= ======================
 

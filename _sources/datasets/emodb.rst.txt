@@ -1,4 +1,4 @@
-.. |emodb-1.4.1-file-duration-distribution| image:: ./emodb/emodb-1.4.1-file-duration-distribution.png
+.. |emodb-2.0.0-file-duration-distribution| image:: ./emodb/emodb-2.0.0-file-duration-distribution.png
 
 .. _datasets-emodb:
 
@@ -8,7 +8,7 @@ emodb
 Created by Felix Burkhardt, Astrid Paeschke, Miriam Rolfes, Walter Sendlmeier, Benjamin Weiss
 
 ============= ======================
-version       1.4.1
+version       2.0.0
 license       `CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/>`__
 usage         unrestricted
 languages     deu
@@ -16,25 +16,25 @@ format        wav
 channel       1
 sampling rate 16000
 bit depth     16
-duration      0 days 00:24:47.092187500
-files         535, duration distribution: 1.2 s |emodb-1.4.1-file-duration-distribution| 9.0 s
+duration      0 days 01:15:01.955750
+files         1632, duration distribution: 1.2 s |emodb-2.0.0-file-duration-distribution| 9.0 s
 ============= ======================
 
 Description
 ^^^^^^^^^^^
 
-Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research project SE462/3-1 in 1997 and 1999. Recordings took place in the anechoic chamber of the Technical University Berlin, department of Technical Acoustics. It contains about 500 utterances from ten different actors expressing basic six emotions and neutral.
+Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research project SE462/3-1 in 1997 and 1999. Recordings took place in the anechoic chamber of the Technical University Berlin, department of Technical Acoustics. It contains about 800 utterances from ten different actors expressing basic six emotions and neutral.
 
 Example
 ^^^^^^^
 
-:file:`wav/13b09La.wav`
+:file:`wav/14b01Na.wav`
 
-.. image:: ./emodb/emodb-1.4.1-player-waveform.png
+.. image:: ./emodb/emodb-2.0.0-player-waveform.png
 
 .. raw:: html
 
-    <p><audio controls src="./emodb/wav/13b09La.wav"></audio></p>
+    <p><audio controls src="./emodb/wav/14b01Na.wav"></audio></p>
 
 Tables
 ^^^^^^
@@ -55,7 +55,7 @@ Click on a row to toggle a preview.
                     <tr onClick="toggleRow(this)" class="row-even clickable grid">
         <td><p>emotion</p></td>
         <td><p>filewise</p></td>
-        <td><p>emotion, emotion.confidence</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
         <td class="expanded-row-content hide-row">
 
     
@@ -65,6 +65,7 @@ Click on a row to toggle a preview.
         <th class="head"><p>file</p></th>
         <th class="head"><p>emotion</p></th>
         <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
         </tr>
     </thead>
     <tbody>
@@ -72,28 +73,33 @@ Click on a row to toggle a preview.
         <td><p>wav/03a01Fa.wav</p></td>
         <td><p>happiness</p></td>
         <td><p>0.9</p></td>
+        <td><p>0.75</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a01Nc.wav</p></td>
         <td><p>neutral</p></td>
         <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a01Wa.wav</p></td>
         <td><p>anger</p></td>
         <td><p>0.95</p></td>
+        <td><p>0.9</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a02Fc.wav</p></td>
         <td><p>happiness</p></td>
         <td><p>0.85</p></td>
+        <td><p>0.6</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a02Nc.wav</p></td>
         <td><p>neutral</p></td>
         <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
         </tr>
-            <tr><td><p class="table-statistic">535 rows x 2 columns</p></td></tr>
+            <tr><td><p class="table-statistic">816 rows x 3 columns</p></td></tr>
     </tbody>
     </table>
 
@@ -101,9 +107,9 @@ Click on a row to toggle a preview.
     </td>
     </tr>
                 <tr onClick="toggleRow(this)" class="row-odd clickable grid">
-        <td><p>emotion.categories.test.gold_standard</p></td>
+        <td><p>emotion.categories.ambiguous</p></td>
         <td><p>filewise</p></td>
-        <td><p>emotion, emotion.confidence</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
         <td class="expanded-row-content hide-row">
 
     
@@ -113,35 +119,41 @@ Click on a row to toggle a preview.
         <th class="head"><p>file</p></th>
         <th class="head"><p>emotion</p></th>
         <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
         </tr>
     </thead>
     <tbody>
                     <tr>
-        <td><p>wav/12a01Fb.wav</p></td>
-        <td><p>happiness</p></td>
-        <td><p>0.95</p></td>
-        </tr>
-                <tr>
-        <td><p>wav/12a01Lb.wav</p></td>
-        <td><p>boredom</p></td>
-        <td><p>0.9</p></td>
-        </tr>
-                <tr>
-        <td><p>wav/12a01Nb.wav</p></td>
-        <td><p>neutral</p></td>
-        <td><p>0.95</p></td>
-        </tr>
-                <tr>
-        <td><p>wav/12a01Wc.wav</p></td>
-        <td><p>anger</p></td>
-        <td><p>0.95</p></td>
-        </tr>
-                <tr>
-        <td><p>wav/12a02Ac.wav</p></td>
+        <td><p>wav/09b01Ad.wav</p></td>
         <td><p>fear</p></td>
-        <td><p>0.9</p></td>
+        <td><p>0.45</p></td>
+        <td><p>0.3</p></td>
         </tr>
-            <tr><td><p class="table-statistic">231 rows x 2 columns</p></td></tr>
+                <tr>
+        <td><p>wav/16b01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.4</p></td>
+        <td><p>0.15</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/08a02Ec.wav</p></td>
+        <td><p>disgust</p></td>
+        <td><p>0.7</p></td>
+        <td><p>0.25</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/14b09Nb.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.75</p></td>
+        <td><p>0.65</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/12b09Fb.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.7</p></td>
+        <td><p>0.3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">281 rows x 3 columns</p></td></tr>
     </tbody>
     </table>
 
@@ -149,9 +161,9 @@ Click on a row to toggle a preview.
     </td>
     </tr>
                 <tr onClick="toggleRow(this)" class="row-even clickable grid">
-        <td><p>emotion.categories.train.gold_standard</p></td>
+        <td><p>emotion.categories.test.gold_standard</p></td>
         <td><p>filewise</p></td>
-        <td><p>emotion, emotion.confidence</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
         <td class="expanded-row-content hide-row">
 
     
@@ -161,35 +173,41 @@ Click on a row to toggle a preview.
         <th class="head"><p>file</p></th>
         <th class="head"><p>emotion</p></th>
         <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
         </tr>
     </thead>
     <tbody>
                     <tr>
-        <td><p>wav/03a01Fa.wav</p></td>
+        <td><p>wav/12a01Fb.wav</p></td>
         <td><p>happiness</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.7</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/12a01Lb.wav</p></td>
+        <td><p>boredom</p></td>
         <td><p>0.9</p></td>
+        <td><p>0.7</p></td>
         </tr>
                 <tr>
-        <td><p>wav/03a01Nc.wav</p></td>
+        <td><p>wav/12a01Nb.wav</p></td>
         <td><p>neutral</p></td>
-        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.75</p></td>
         </tr>
                 <tr>
-        <td><p>wav/03a01Wa.wav</p></td>
+        <td><p>wav/12a01Wc.wav</p></td>
         <td><p>anger</p></td>
         <td><p>0.95</p></td>
+        <td><p>0.8</p></td>
         </tr>
                 <tr>
-        <td><p>wav/03a02Fc.wav</p></td>
-        <td><p>happiness</p></td>
-        <td><p>0.85</p></td>
+        <td><p>wav/12a02Ac.wav</p></td>
+        <td><p>fear</p></td>
+        <td><p>0.9</p></td>
+        <td><p>0.65</p></td>
         </tr>
-                <tr>
-        <td><p>wav/03a02Nc.wav</p></td>
-        <td><p>neutral</p></td>
-        <td><p>1.0</p></td>
-        </tr>
-            <tr><td><p class="table-statistic">304 rows x 2 columns</p></td></tr>
+            <tr><td><p class="table-statistic">231 rows x 3 columns</p></td></tr>
     </tbody>
     </table>
 
@@ -197,9 +215,63 @@ Click on a row to toggle a preview.
     </td>
     </tr>
                 <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>emotion.categories.train.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>wav/03a01Fa.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.9</p></td>
+        <td><p>0.75</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a01Wa.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Fc.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.85</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+                <tr>
+        <td><p>wav/03a02Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">304 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
         <td><p>files</p></td>
         <td><p>filewise</p></td>
-        <td><p>duration, speaker, transcription</p></td>
+        <td><p>duration, transcription, speaker</p></td>
         <td class="expanded-row-content hide-row">
 
     
@@ -208,42 +280,312 @@ Click on a row to toggle a preview.
     <tr>
         <th class="head"><p>file</p></th>
         <th class="head"><p>duration</p></th>
-        <th class="head"><p>speaker</p></th>
         <th class="head"><p>transcription</p></th>
+        <th class="head"><p>speaker</p></th>
         </tr>
     </thead>
     <tbody>
                     <tr>
         <td><p>wav/03a01Fa.wav</p></td>
         <td><p>0 days 00:00:01.898250</p></td>
-        <td><p>3</p></td>
         <td><p>a01</p></td>
+        <td><p>3</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a01Nc.wav</p></td>
         <td><p>0 days 00:00:01.611250</p></td>
-        <td><p>3</p></td>
         <td><p>a01</p></td>
+        <td><p>3</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a01Wa.wav</p></td>
         <td><p>0 days 00:00:01.877812500</p></td>
-        <td><p>3</p></td>
         <td><p>a01</p></td>
+        <td><p>3</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a02Fc.wav</p></td>
         <td><p>0 days 00:00:02.006250</p></td>
-        <td><p>3</p></td>
         <td><p>a02</p></td>
+        <td><p>3</p></td>
         </tr>
                 <tr>
         <td><p>wav/03a02Nc.wav</p></td>
         <td><p>0 days 00:00:01.439812500</p></td>
-        <td><p>3</p></td>
         <td><p>a02</p></td>
+        <td><p>3</p></td>
         </tr>
-            <tr><td><p class="table-statistic">535 rows x 3 columns</p></td></tr>
+            <tr><td><p class="table-statistic">816 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>laryngo.emotion</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>laryngo/03a01Fa.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.9</p></td>
+        <td><p>0.75</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a01Wa.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a02Fc.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.85</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a02Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">816 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>laryngo.emotion.categories.ambiguous</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>laryngo/09b01Ad.wav</p></td>
+        <td><p>fear</p></td>
+        <td><p>0.45</p></td>
+        <td><p>0.3</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/16b01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.4</p></td>
+        <td><p>0.15</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/08a02Ec.wav</p></td>
+        <td><p>disgust</p></td>
+        <td><p>0.7</p></td>
+        <td><p>0.25</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/14b09Nb.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.75</p></td>
+        <td><p>0.65</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/12b09Fb.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.7</p></td>
+        <td><p>0.3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">281 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>laryngo.emotion.categories.test.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>laryngo/12a01Fb.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.7</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/12a01Lb.wav</p></td>
+        <td><p>boredom</p></td>
+        <td><p>0.9</p></td>
+        <td><p>0.7</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/12a01Nb.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.75</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/12a01Wc.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.8</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/12a02Ac.wav</p></td>
+        <td><p>fear</p></td>
+        <td><p>0.9</p></td>
+        <td><p>0.65</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">231 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>laryngo.emotion.categories.train.gold_standard</p></td>
+        <td><p>filewise</p></td>
+        <td><p>emotion, emotion.confidence, emotion.naturalness</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>emotion</p></th>
+        <th class="head"><p>emotion.confidence</p></th>
+        <th class="head"><p>emotion.naturalness</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>laryngo/03a01Fa.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.9</p></td>
+        <td><p>0.75</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a01Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a01Wa.wav</p></td>
+        <td><p>anger</p></td>
+        <td><p>0.95</p></td>
+        <td><p>0.9</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a02Fc.wav</p></td>
+        <td><p>happiness</p></td>
+        <td><p>0.85</p></td>
+        <td><p>0.6</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a02Nc.wav</p></td>
+        <td><p>neutral</p></td>
+        <td><p>1.0</p></td>
+        <td><p>0.95</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">304 rows x 3 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>laryngo.files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>duration, transcription, speaker</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>duration</p></th>
+        <th class="head"><p>transcription</p></th>
+        <th class="head"><p>speaker</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>laryngo/03a01Fa.wav</p></td>
+        <td><p>0 days 00:00:01.898250</p></td>
+        <td><p>a01</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a01Nc.wav</p></td>
+        <td><p>0 days 00:00:01.611250</p></td>
+        <td><p>a01</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a01Wa.wav</p></td>
+        <td><p>0 days 00:00:01.877812500</p></td>
+        <td><p>a01</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a02Fc.wav</p></td>
+        <td><p>0 days 00:00:02.006250</p></td>
+        <td><p>a02</p></td>
+        <td><p>3</p></td>
+        </tr>
+                <tr>
+        <td><p>laryngo/03a02Nc.wav</p></td>
+        <td><p>0 days 00:00:01.439812500</p></td>
+        <td><p>a02</p></td>
+        <td><p>3</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">816 rows x 3 columns</p></td></tr>
     </tbody>
     </table>
 
@@ -321,5 +663,6 @@ Schemes
     "emotion", "str", "", "", "anger, boredom, disgust, fear, happiness, neutral, sadness", ""
     "gender", "str", "", "", "female, male", ""
     "language", "str", "", "", "", ""
+    "naturalness", "float", "0", "1", "", ""
     "speaker", "int", "", "", "3, 8, 9, 10, 11, 12, 13, 14, 15, 16", "age, gender, language"
     "transcription", "str", "", "", "a01, a02, a04, a05, a07, b01, b02, b03, b09, b10", "✓"

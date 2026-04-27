@@ -1,0 +1,230 @@
+.. |cstr-vctk-1.0.0-file-duration-distribution| image:: ./cstr-vctk/cstr-vctk-1.0.0-file-duration-distribution.png
+
+.. _datasets-cstr-vctk:
+
+cstr-vctk
+---------
+
+Created by Junichi Yamagishi, Christophe Veaux, Kirsten MacDonald
+
+============= ======================
+version       1.0.0
+license       `CC-BY-4.0 <https://datashare.ed.ac.uk/bitstream/handle/10283/3443/license_text.txt>`__
+usage         commercial
+languages     eng
+format        flac
+channel       1
+sampling rate 48000
+bit depth     16
+duration      3 days 10:39:12.224729167
+files         88328, duration distribution: 1.2 s |cstr-vctk-1.0.0-file-duration-distribution| 16.6 s
+============= ======================
+
+Description
+^^^^^^^^^^^
+
+The CSTR's VCTK Corpus (Centre for Speech Technology Voice Cloning Toolkit) includes speech data uttered by 110 English speakers with various accents. Each speaker reads out about 400 sentences, which were selected from a newspaper, the rainbow passage and an elicitation paragraph used for the speech accent archive. The newspaper texts were taken from Herald Glasgow, with permission from Herald & Times Group. Each speaker has a different set of the newspaper texts selected based a greedy algorithm that increases the contextual and phonetic coverage. The details of the text selection algorithms are described in the following paper: C. Veaux, J. Yamagishi and S. King, "The voice bank corpus: Design, collection and data analysis of a large regional accent speech database,https://doi.org/10.1109/ICSDA.2013.6709856 The rainbow passage and elicitation paragraph are the same for all speakers. The rainbow passage can be found at International Dialects of English Archive: (http://web.ku.edu/~idea/readings/rainbow.htm). The elicitation paragraph is identical to the one used for the speech accent archive (http://accent.gmu.edu). The details of the the speech accent archive can be found at http://www.ualberta.ca/~aacl2009/PDFs/WeinbergerKunath2009AACL.pdf All speech data was recorded using an identical recording setup: an omni-directional microphone (DPA 4035) and a small diaphragm condenser microphone with very wide bandwidth (Sennheiser MKH 800), 96kHz sampling frequency at 24 bits and in a hemi-anechoic chamber of the University of Edinburgh. (However, two speakers, p280 and p315 had technical issues of the audio recordings using MKH 800). All recordings were converted into 16 bits, were downsampled to 48 kHz, and were manually end-pointed. This corpus was originally aimed for HMM-based text-to-speech synthesis systems, especially for speaker-adaptive HMM-based speech synthesis that uses average voice models trained on multiple speakers and speaker adaptation technologies. This corpus is also suitable for DNN-based multi-speaker text-to-speech synthesis systems and neural waveform modeling. The dataset was was referenced in the Google DeepMind work on WaveNet: https://arxiv.org/pdf/1609.03499.pdf . Please note while text files containing transcripts of the speech are provided for 109 of the 110 recordings, in the '/txt' folder, the 'p315' text was lost due to a hard disk error.
+
+Example
+^^^^^^^
+
+:file:`flac/p245_099_mic1.flac`
+
+.. image:: ./cstr-vctk/cstr-vctk-1.0.0-player-waveform.png
+
+.. raw:: html
+
+    <p><audio controls src="./cstr-vctk/flac/p245_099_mic1.flac"></audio></p>
+
+Tables
+^^^^^^
+
+Click on a row to toggle a preview.
+
+.. raw:: html
+
+    <table class="clickable docutils align-default">
+        <thead>
+    <tr class="row-odd grid header">
+        <th class="head"><p>ID</p></th>
+        <th class="head"><p>Type</p></th>
+        <th class="head"><p>Columns</p></th>
+        </tr>
+    </thead>
+        <tbody>
+                    <tr onClick="toggleRow(this)" class="row-even clickable grid">
+        <td><p>files</p></td>
+        <td><p>filewise</p></td>
+        <td><p>recording_id, speaker, age, gender, language, accent, region, transcription, microphone</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>file</p></th>
+        <th class="head"><p>recording_id</p></th>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>age</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        <th class="head"><p>accent</p></th>
+        <th class="head"><p>region</p></th>
+        <th class="head"><p>transcription</p></th>
+        <th class="head"><p>microphone</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>flac/p225_001_mic1.flac</p></td>
+        <td><p>p225_001</p></td>
+        <td><p>p225</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        <td><p>Please call Stella.</p></td>
+        <td><p>mic1</p></td>
+        </tr>
+                <tr>
+        <td><p>flac/p225_001_mic2.flac</p></td>
+        <td><p>p225_001</p></td>
+        <td><p>p225</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        <td><p>Please call Stella.</p></td>
+        <td><p>mic2</p></td>
+        </tr>
+                <tr>
+        <td><p>flac/p225_002_mic1.flac</p></td>
+        <td><p>p225_002</p></td>
+        <td><p>p225</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        <td><p>Ask her to bring these things with her from the store.</p></td>
+        <td><p>mic1</p></td>
+        </tr>
+                <tr>
+        <td><p>flac/p225_002_mic2.flac</p></td>
+        <td><p>p225_002</p></td>
+        <td><p>p225</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        <td><p>Ask her to bring these things with her from the store.</p></td>
+        <td><p>mic2</p></td>
+        </tr>
+                <tr>
+        <td><p>flac/p225_003_mic1.flac</p></td>
+        <td><p>p225_003</p></td>
+        <td><p>p225</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        <td><p>Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother...</p></td>
+        <td><p>mic1</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">88328 rows x 9 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+                <tr onClick="toggleRow(this)" class="row-odd clickable grid">
+        <td><p>speaker</p></td>
+        <td><p>misc</p></td>
+        <td><p>age, gender, language, accent, region</p></td>
+        <td class="expanded-row-content hide-row">
+
+    
+    <table class="docutils field-list align-default preview">
+    <thead>
+    <tr>
+        <th class="head"><p>speaker</p></th>
+        <th class="head"><p>age</p></th>
+        <th class="head"><p>gender</p></th>
+        <th class="head"><p>language</p></th>
+        <th class="head"><p>accent</p></th>
+        <th class="head"><p>region</p></th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+        <td><p>p225</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        </tr>
+                <tr>
+        <td><p>p226</p></td>
+        <td><p>22</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Surrey</p></td>
+        </tr>
+                <tr>
+        <td><p>p227</p></td>
+        <td><p>38</p></td>
+        <td><p>male</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Cumbria</p></td>
+        </tr>
+                <tr>
+        <td><p>p228</p></td>
+        <td><p>22</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        </tr>
+                <tr>
+        <td><p>p229</p></td>
+        <td><p>23</p></td>
+        <td><p>female</p></td>
+        <td><p>eng</p></td>
+        <td><p>English</p></td>
+        <td><p>Southern England</p></td>
+        </tr>
+            <tr><td><p class="table-statistic">110 rows x 5 columns</p></td></tr>
+    </tbody>
+    </table>
+
+    
+    </td>
+    </tr>
+            </tbody>
+    </table>
+
+
+Schemes
+^^^^^^^
+
+.. csv-table::
+    :header-rows: 1
+
+    "ID", "Dtype", "Labels"
+    "accent", "str", ""
+    "age", "int", ""
+    "gender", "str", "female, male"
+    "language", "str", "eng"
+    "microphone", "str", "mic1, mic2"
+    "recording_id", "str", ""
+    "region", "str", ""
+    "speaker", "str", ""
+    "transcription", "str", ""

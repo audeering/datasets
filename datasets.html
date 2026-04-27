@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Datasets &mdash; datasets</title>
@@ -69,7 +70,7 @@
             
             
               <div class="version">
-                v1.1.1
+                v1.2.0
               </div>
             
           
@@ -97,6 +98,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="datasets/air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/berkeley-function-calling-leaderboard.html">berkeley-function-calling-leaderboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/clac.html">clac</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/cmu-mosei.html">cmu-mosei</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/cmu-mosi.html">cmu-mosi</a></li>
@@ -104,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/crema-d.html">crema-d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/cstr-vctk.html">cstr-vctk</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/eesc.html">eesc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/emodb.html">emodb</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasets/emouerj.html">emouerj</a></li>
@@ -170,20 +173,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="datasets">
-<span id="id1"></span><h1>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">¶</a></h1>
-<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Dec 09, 2024
+  <section id="datasets">
+<span id="id1"></span><h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">¶</a></h1>
+<p>Datasets available with <a class="reference external" href="https://audeering.github.io/audb/">audb</a> as of Apr 27, 2026
 in the
 repository
 <strong>audb-public</strong>.
 For each dataset, the latest version is shown.</p>
-<table class="colwidths-given docutils align-default">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 30%" />
-<col style="width: 11%" />
-<col style="width: 6%" />
-<col style="width: 38%" />
+<col style="width: 15.2%" />
+<col style="width: 30.3%" />
+<col style="width: 10.6%" />
+<col style="width: 6.1%" />
+<col style="width: 37.9%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>name</p></th>
@@ -200,47 +203,59 @@ For each dataset, the latest version is shown.</p>
 <td><p>1.4.2</p></td>
 <td><p>azimuth, distance, mode, reverberation-time, room</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/clac.html">clac</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/berkeley-function-calling-leaderboard.html">berkeley-function-calling-leaderboard</a></p></td>
+<td><p>The Berkeley function calling leaderboard is a live leaderboard to evaluate the ability of different LLMs to call functions (also referred to as to…</p></td>
+<td><p><a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">apache-2.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>topic, turns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/clac.html">clac</a></p></td>
 <td><p>The Crowdsourced Language Assessment Corpus (CLAC) consists of audio recordings and automatically-generated transcripts from 1,832 speakers for sev…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a></p></td>
 <td><p>1.1.0</p></td>
 <td><p>speaker: [age, gender, country, region, city, education(years), symptoms], age, city, country, education(years), gender, region, symptoms, task-name, transcript</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="datasets/cmu-mosei.html">cmu-mosei</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/cmu-mosei.html">cmu-mosei</a></p></td>
 <td><p>Multimodal Opinion Sentiment and Emotion Intensity Sentiment and emotion annotated multimodal data automatically collected from YouTube. The datase…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
 <td><p>1.2.4</p></td>
 <td><p>emotion.intensity, emotion.presence, sentiment, sentiment.binarized, sentiment.binary, sentiment.binary.old, transcription</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/cmu-mosi.html">cmu-mosi</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/cmu-mosi.html">cmu-mosi</a></p></td>
 <td><p>Opinion-level annotated corpus of sentiment and subjectivity analysis in online videos. The dataset is annotated with labels for subjectivity, sent…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
 <td><p>1.1.1</p></td>
 <td><p>gender, phoneme, sentiment, sentiment.binarized, sentiment.binary, sentiment.binary.old, transcription</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="datasets/cochlscene.html">cochlscene</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/cochlscene.html">cochlscene</a></p></td>
 <td><p>Cochl Acoustic Scene Dataset (CochlScene), is an acoustic scene dataset whose recordings are fully collected from crowdsourcing participants. Most …</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a></p></td>
 <td><p>1.0.0</p></td>
 <td><p>scene</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/cough-speech-sneeze.html">cough-speech-sneeze</a></p></td>
 <td><p>Cough-speech-sneeze: a data set of human sounds This dataset was collected by Dr. Shahin Amiriparian. It contains samples of human speech, coughing…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p></td>
 <td><p>2.0.1</p></td>
 <td><p>category</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="datasets/crema-d.html">crema-d</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/crema-d.html">crema-d</a></p></td>
 <td><p>CREMA-D: Crowd-sourced Emotional Mutimodal Actors Dataset CREMA-D is a data set of 7,442 original clips from 91 actors.  These clips were from 48 m…</p></td>
 <td><p><a class="reference external" href="http://opendatacommons.org/licenses/odbl/1.0/">Open Data Commons Open Database License (ODbL) v1.0</a></p></td>
 <td><p>1.3.0</p></td>
 <td><p>emotion: [anger, disgust, fear, happiness, neutral, no_agreement, sadness], speaker: [age, sex, race, ethnicity], corrupted, emotion.agreement, emotion.intensity, emotion.level, sentence, votes</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="datasets/css10.html">css10</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="datasets/css10.html">css10</a></p></td>
 <td><p>CSS10 is a collection of single speaker speech data for 10 languages. Each of them consists of audio files recorded by a single volunteer and their…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
 <td><p>1.0.0</p></td>
-<td><p>speaker:], language, normalized-transcription, transcription</p></td>
+<td><p>speaker, language, normalized-transcription, transcription</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="datasets/cstr-vctk.html">cstr-vctk</a></p></td>
+<td><p>The CSTR’s VCTK Corpus (Centre for Speech Technology Voice Cloning Toolkit) includes speech data uttered by 110 English speakers with various accen…</p></td>
+<td><p><a class="reference external" href="https://datashare.ed.ac.uk/bitstream/handle/10283/3443/license_text.txt">CC-BY-4.0</a></p></td>
+<td><p>1.0.0</p></td>
+<td><p>speaker, accent, age, gender, language, microphone, recording_id, region, transcription</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="datasets/eesc.html">eesc</a></p></td>
 <td><p>The establishment of the Estonian Emotional Speech Corpus (EESC) began in 2006 within the framework of the National Programme for Estonian Language…</p></td>
@@ -251,8 +266,8 @@ For each dataset, the latest version is shown.</p>
 <tr class="row-odd"><td><p><a class="reference external" href="datasets/emodb.html">emodb</a></p></td>
 <td><p>Berlin Database of Emotional Speech. A German database of emotional utterances spoken by actors recorded as a part of the DFG funded research proje…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></p></td>
-<td><p>1.4.1</p></td>
-<td><p>emotion: [anger, boredom, disgust, fear, happiness, sadness, neutral], speaker: [age, gender, language], age, confidence, gender, language, transcription</p></td>
+<td><p>2.0.0</p></td>
+<td><p>emotion: [anger, boredom, disgust, fear, happiness, sadness, neutral], speaker: [age, gender, language], age, confidence, gender, language, naturalness, transcription</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="datasets/emouerj.html">emouerj</a></p></td>
 <td><p>emoUERJ contains recordings of 10 portuguese sentences pronounced by 8 speakers in 4 emotions: happiness,anger,sadness,neutral.</p></td>
@@ -276,7 +291,7 @@ For each dataset, the latest version is shown.</p>
 <td><p>Expresso is a dataset of expressive speech recordings. It contains read speech and singing in various styles including default, confused, enunciate…</p></td>
 <td><p><a class="reference external" href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a></p></td>
 <td><p>1.0.0</p></td>
-<td><p>speaker:], channel, corpus, id, speaking_style, style</p></td>
+<td><p>speaker, channel, corpus, id, speaking_style, style</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="datasets/fsdnoisy18k.html">fsdnoisy18k</a></p></td>
 <td><p>FSDnoisy18k is an audio dataset collected with the aim of fostering the investigation of label noise in sound event classification. It contains 42….</p></td>
@@ -384,7 +399,7 @@ For each dataset, the latest version is shown.</p>
 </table>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
 
            </div>
@@ -409,7 +424,7 @@ For each dataset, the latest version is shown.</p>
         
         
         
-          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/09 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2026/04/27 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>
@@ -441,17 +456,15 @@ For each dataset, the latest version is shown.</p>
     
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/table-preview.js"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=fd6eb6e6"></script>
+        <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+        <script src="_static/table-preview.js?v=a02f8c22"></script>
     
 
   
 
+  <script type="text/javascript" src="_static/js/jquery.js"></script>
   <script type="text/javascript" src="_static/js/theme.js"></script>
 
   <script type="text/javascript">

@@ -162,7 +162,7 @@ Click on a row to toggle a preview.
         <td><p>male</p></td>
         <td><p>2</p></td>
         <td><p>south africa</p></td>
-        <td><p>0 days 00:00:22.021250</p></td>
+        <td><p>0 days 00:00:00.022021250</p></td>
         </tr>
                 <tr>
         <td><p>wav/afrikaans3.wav</p></td>
@@ -173,7 +173,7 @@ Click on a row to toggle a preview.
         <td><p>male</p></td>
         <td><p>418</p></td>
         <td><p>south africa</p></td>
-        <td><p>0 days 00:00:26.932250</p></td>
+        <td><p>0 days 00:00:00.026932250</p></td>
         </tr>
                 <tr>
         <td><p>wav/afrikaans4.wav</p></td>
@@ -195,7 +195,7 @@ Click on a row to toggle a preview.
         <td><p>male</p></td>
         <td><p>1432</p></td>
         <td><p>south africa</p></td>
-        <td><p>0 days 00:00:20.297125</p></td>
+        <td><p>0 days 00:00:00.020297125</p></td>
         </tr>
             <tr><td><p class="table-statistic">2138 rows x 8 columns</p></td></tr>
     </tbody>

@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>eesc &mdash; datasets</title>
@@ -32,7 +33,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="emodb" href="emodb.html" />
-    <link rel="prev" title="css10" href="css10.html" />
+    <link rel="prev" title="cstr-vctk" href="cstr-vctk.html" />
     
       
     
@@ -67,7 +68,7 @@
             
             
               <div class="version">
-                v1.1.1
+                v1.2.0
               </div>
             
           
@@ -95,6 +96,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="air.html">air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="berkeley-function-calling-leaderboard.html">berkeley-function-calling-leaderboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clac.html">clac</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cmu-mosei.html">cmu-mosei</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cmu-mosi.html">cmu-mosi</a></li>
@@ -102,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cough-speech-sneeze.html">cough-speech-sneeze</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crema-d.html">crema-d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="css10.html">css10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cstr-vctk.html">cstr-vctk</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">eesc</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
@@ -175,14 +178,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="eesc">
-<span id="datasets-eesc"></span><h1>eesc<a class="headerlink" href="#eesc" title="Permalink to this heading">¶</a></h1>
+  <section id="eesc">
+<span id="datasets-eesc"></span><h1>eesc<a class="headerlink" href="#eesc" title="Link to this heading">¶</a></h1>
 <p>Created by Rene Altrov, Hille Pajupuu (Institute of the Estonian Language)</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 86%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>version</p></td>
 <td><p>1.0.1</p></td>
@@ -216,17 +215,17 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
 <p>The establishment of the Estonian Emotional Speech Corpus (EESC) began in 2006 within the framework of the National Programme for Estonian Language Technology at the Institute of the Estonian Language. The corpus contains 1,234 Estonian sentences that express anger, joy and sadness, or are neutral. Two female speakers were chosen to read the sentences, and were instructed: Read the text so that you render its mood. The text passages chosen were journalistic texts, unanimously recognised by readers in a special test, to contain the emotions of joy, anger or sadness. Listening test subjects heard isolated sentences without seeing the text and then had to decide which emotion the sentences contained. The available choices were the three emotions: sadness, anger, or joy, or neutral speech. At least 30 Estonians listened to each sentence. In 908 sentences more than 50% of listeners identified one and the same emotion, or neutrality. Additionally, another test was performed where 14 other subjects had to decide on the emotion or neutrality of each sentence by reading the text (and not listening to the audio). Emotions determined by listening or reading only did not always coincide. Note that the dataset files, transcription, and gold standard emotion labels are available under a CC-BY-3.0 license, but the additional labels of speaker information, emotion agreement, and whether the text matches the emotion, are available at <a class="reference external" href="http://peeter.eki.ee:5000/">http://peeter.eki.ee:5000/</a> without a license.</p>
-</div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
 <p><code class="file docutils literal notranslate"><span class="pre">audios/120925.wav</span></code></p>
 <img alt="../_images/eesc-1.0.1-player-waveform.png" src="../_images/eesc-1.0.1-player-waveform.png" />
-<p><audio controls src="./eesc/audios/120925.wav"></audio></p></div>
-<div class="section" id="tables">
-<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this heading">¶</a></h2>
+<p><audio controls src="./eesc/audios/120925.wav"></audio></p></section>
+<section id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Link to this heading">¶</a></h2>
 <p>Click on a row to toggle a preview.</p>
 <table class="clickable docutils align-default">
     <thead>
@@ -373,18 +372,10 @@
 </td>
 </tr>
         </tbody>
-</table></div>
-<div class="section" id="schemes">
-<h2>Schemes<a class="headerlink" href="#schemes" title="Permalink to this heading">¶</a></h2>
+</table></section>
+<section id="schemes">
+<h2>Schemes<a class="headerlink" href="#schemes" title="Link to this heading">¶</a></h2>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>ID</p></th>
 <th class="head"><p>Dtype</p></th>
@@ -446,8 +437,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -460,7 +451,7 @@
         <a href="emodb.html" class="btn btn-neutral float-right" title="emodb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="css10.html" class="btn btn-neutral float-left" title="css10" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cstr-vctk.html" class="btn btn-neutral float-left" title="cstr-vctk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -472,7 +463,7 @@
         
         
         
-          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2024/12/09 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
+          Built with <a href="https://www.sphinx-doc.org">Sphinx</a> on 2026/04/27 using the <a href="https://github.com/audeering/sphinx-audeering-theme/">audEERING theme</a>
         
     </p>
   </div>
@@ -504,17 +495,15 @@
     
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/table-preview.js"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+        <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+        <script src="../_static/table-preview.js?v=a02f8c22"></script>
     
 
   
 
+  <script type="text/javascript" src="../_static/js/jquery.js"></script>
   <script type="text/javascript" src="../_static/js/theme.js"></script>
 
   <script type="text/javascript">

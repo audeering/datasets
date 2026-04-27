@@ -16,7 +16,7 @@ format        wav
 channel       1
 sampling rate 44100
 bit depth     16
-duration      1 days 18:29:50.962131518
+duration      1 days 18:29:50.962131519
 files         18532, duration distribution: 0.3 s |fsdnoisy18k-1.0.0-file-duration-distribution| 30.0 s
 ============= ======================
 

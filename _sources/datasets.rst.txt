@@ -21,6 +21,7 @@ For each dataset, the latest version is shown.
     :hidden:
 
     datasets/air
+    datasets/berkeley-function-calling-leaderboard
     datasets/clac
     datasets/cmu-mosei
     datasets/cmu-mosi
@@ -28,6 +29,7 @@ For each dataset, the latest version is shown.
     datasets/cough-speech-sneeze
     datasets/crema-d
     datasets/css10
+    datasets/cstr-vctk
     datasets/eesc
     datasets/emodb
     datasets/emouerj
