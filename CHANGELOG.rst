@@ -7,6 +7,15 @@ The format is based on `Keep a Changelog`_,
 and this project adheres to `Semantic Versioning`_.
 
 
+Version 1.2.0 (2026-04-27)
+--------------------------
+
+* Added: ``cstr-vctk`` v1.0.0
+* Added: ``emodb`` v2.0.0
+* Added: ``berkeley-function-calling-leaderboard`` v1.0.0
+* Changed: depend on ``audbcards>=0.4.3``
+
+
 Version 1.1.1 (2024-12-09)
 --------------------------
 
